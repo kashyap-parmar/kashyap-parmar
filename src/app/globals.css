@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    :root {
+        --background-hero:
+            radial-gradient(ellipse at top, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+            radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+
+    }
+
+    .dark {
+        --background-hero:
+            radial-gradient(ellipse at top, rgba(59, 131, 246, 0.132) 0%, transparent 50%),
+            radial-gradient(ellipse at bottom, rgba(42, 31, 66, 0.61) 0%, transparent 50%);
+
+    }
+}
+
+@layer components {
+    .hero-bg {
+        background: var(--background-hero);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+@keyframes logo-glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+    }
+}
+
+html,
+body {
+    background-color: transparent;
+}
+
+.logo-animate {
+    animation: logo-glow 3s ease-in-out infinite;
+}
+
+.card-glow {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.section-bg {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+}
+
+
+.text-gradient {
+    @apply bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
