@@ -33,16 +33,16 @@ const ProjectSectionCard = ({ ele }) => {
                         width={200}
                         height={300}
                         alt={ele?.alt}
-                        className="w-full group-hover:opacity-100 h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                        className="w-full group-hover:opacity-100 h-full from-black bg-gradient-to-r object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     />
                     {ele?.featured && (
-                        <p className="absolute top-4 text-xs left-4 font-semibold shadow bg-transparent text-white rounded-full py-[0.125rem] px-[0.625rem]">
+                        <p className="absolute top-4 text-xs left-4 font-semibold shadow text-primary dark:border-[#1e293b] bg-white rounded-full py-[0.125rem] px-[0.625rem]">
                             Featured
                         </p>
                     )}
 
                     {ele?.category && (
-                        <p className="absolute top-4 text-xs right-4 font-semibold dark:text-[#f8fafc] dark:border-[#1e293b] dark:bg-[#020817e6] bg-white rounded-full py-[0.125rem] px-[0.625rem]">
+                        <p className="absolute top-4 text-xs right-4 font-semibold dark:text-white dark:border-[#1e293b] dark:bg-[#020817e6] bg-white rounded-full py-[0.125rem] px-[0.625rem]">
                             {ele?.category}
                         </p>
                     )}
@@ -60,14 +60,14 @@ const ProjectSectionCard = ({ ele }) => {
                         )}
 
                         {ele?.live && (
-                            <button className="group-hover:flex hidden font-medium cursor-pointer shadow-sm text-xs px-3 py-2 text-white justify-center items-center bg-primary rounded-full gap-x-4">
+                            <Link href={ele?.live} target='_blank' className="group-hover:flex hidden font-medium cursor-pointer shadow-sm text-xs px-3 py-2 text-white justify-center items-center bg-primary rounded-full gap-x-4">
                                 <Icon
                                     icon={"lucide:external-link"}
                                     height={18}
                                     width={18}
                                 />
                                 Live
-                            </button>
+                            </Link>
                         )}
                     </div>
                 </div>
@@ -99,7 +99,7 @@ const ProjectSectionCard = ({ ele }) => {
                         )}
                     </div>
 
-                    <Link href={`/all-projects/${ele?.id}`}>
+                    <Link href={`/projects/${ele?.id}`}>
                         <button className="w-full text-sm group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300 ease-in-out cursor-pointer rounded-full py-2 px-4 bg-white border-[1px] border-[#e2e8f0] flex justify-center items-center gap-x-4 dark:bg-[#020817] dark:border-[#1e293b] dark:text-white dark:hover:bg-[#1e293b]">
                             View Details
                             <Icon

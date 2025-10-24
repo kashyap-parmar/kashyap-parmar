@@ -1,14 +1,13 @@
 "use client"
 import React from 'react'
-import Icon from '../icon';
+import Link from 'next/link';
+import { Icon, AboutMeBigCardReuse, AboutMeSmallCardReuse } from '@/components';
 import {
     aboutMeBigCard,
     aboutMeSmallCard
 } from '@/mock/data';
 import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery';
-import AboutMeBigCardReuse from './aboutMeBigCardReuse';
-import AboutMeSmallCardReuse from './aboutMeSmallCardReuse';
-import Link from 'next/link';
+import { Element } from 'react-scroll';
 
 // ----------------------------------------------
 
@@ -17,7 +16,7 @@ const AboutMeSection = () => {
     const coustomXL = useSafeMediaQuery("(min-width:1364px)");
 
     return (
-        <>
+        <Element name='about'>
             <div id='about' className='py-28 w-full flex justify-center dark:bg-[#040B1C] section-bg items-center'>
                 <div className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center ${coustomXL ? "px-0" : "px-8"}`}>
 
@@ -110,7 +109,7 @@ const AboutMeSection = () => {
 
                 </div>
             </div >
-        </>
+        </Element>
     )
 }
 

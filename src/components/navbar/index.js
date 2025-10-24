@@ -1,41 +1,59 @@
 "use client";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Icon from "../icon";
+import { Link, Element } from 'react-scroll';
+import NextLink from "next/link";
 import { navbarData } from "@/mock/data";
-import MobileNavbar from "../mobileNavbar";
-import { Link } from 'react-scroll';
+import { MobileNavbar, Icon } from "@/components";
 
 // ---------------------------------------------------
 
-const Navbar = () => {
-
-    const [navbarList] = useState(navbarData);
+const Navbar = ({ show }) => {
     const { theme, setTheme } = useTheme();
+    const pathname = usePathname();
+    const regex = /^\/(#\w+)?$/;
+
+    console.log("pathname:", regex.test(pathname));
 
     return (
-        <>
+        <div
+            className={`${pathname.includes("project") && !show ? "hidden" : "block"} sticky top-[30px] z-[10000] `}
+        >
             {/* Desktop Navbar */}
-            <nav className="sticky top-[30px] z-[10000] items-center justify-center hidden w-full bg-transparent lg:flex">
+            <nav className={`lg:flex items-center justify-center hidden w-full bg-transparent `}>
                 <div className="flex px-8 card-glow items-center py-4 max-w-[860px] justify-between w-full backdrop-blur-xl rounded-full bg-[#FDFEFF] dark:bg-[#030919] transition-colors duration-300">
                     <Link to="contact">
                         <p className="cursor-pointer text-2xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                             Mern <span className="dark:text-white text-black" > Developer </span>
                         </p>
                     </Link>
-                    <div className="flex gap-8">
-                        {navbarList.map((ele, index) => (
+                    <div className={`${regex.test(pathname) ? "flex" : "hidden"}  gap-8 `}>
+                        {navbarData.map((ele, index) => (
                             <Link
                                 key={index}
                                 to={ele.url}
                                 spy={true}
                                 smooth={true}
                                 duration={300}
+                                offset={-30}
+                                onSetActive={(name) => console.log("Active section:", name)}
                                 className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
-                                activeClass="text-primary"
+                                activeClass="!text-primary"
                             >
                                 {ele.title}
                             </Link>
+                        ))}
+                    </div>
+                    <div className={`${regex.test(pathname) ? "hidden" : "flex"}  gap-8 `}>
+                        {navbarData.map((ele, index) => (
+                            <NextLink
+                                key={index}
+                                href={`/#${ele?.url}`}
+                                className={`dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400`}
+                            >
+                                {ele.title}
+                            </NextLink>
                         ))}
                     </div>
                     <button
@@ -50,7 +68,7 @@ const Navbar = () => {
 
             {/* Mobile Navbar */}
             <MobileNavbar />
-        </>
+        </div>
     );
 };
 

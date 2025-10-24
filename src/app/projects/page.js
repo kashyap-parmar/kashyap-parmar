@@ -5,9 +5,7 @@ import React from 'react'
 
 const AllProjectPage = () => {
     return (
-        <>
-            <ViewAllProjectComponent />
-        </>
+        <ViewAllProjectComponent />
     )
 }
 

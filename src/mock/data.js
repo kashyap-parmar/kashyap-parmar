@@ -1,4 +1,8 @@
 import { BlogImg, ProjectImg } from "@/assets"
+import DentalSemCRMImg from "../../public/images/dental-sem-crm.png"
+import mxmnews from "../../public/images/mxm-news.png"
+import moustachescapes from "../../public/images/moustachescapes.png"
+import slafs from "../../public/images/slafs.png"
 
 export const navbarData = [
     {
@@ -90,13 +94,13 @@ export const aboutMeBigCard = [
     },
     {
         icon: "tabler:code",
-        heading: "15+",
+        heading: "7+",
         desc: "Projects Completed",
         color: "#22c55e"
     },
     {
         icon: "mdi:people-outline",
-        heading: "8+",
+        heading: "5+",
         desc: "Happy Client",
         color: "#a855f7"
     },
@@ -304,233 +308,376 @@ export const FeaturedSkillsData = [
 export const SampleProjectsData = [
     {
         id: 1,
-        title: "E-Commerce Platform",
-        description: "Full-stack MERN application with payment integration, inventory management, and admin dashboard.",
-        image: ProjectImg,
-        alt: "E-Commerce",
-        tech: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-        github: "#",
-        live: "#",
-        category: "Full Stack",
-        featured: true,
-        keyFeatures: [
-            "User Authentication & Authorization",
-            "Shopping Cart & Wishlist",
-            "Inventory Management",
-            "Admin Dashboard",
-            "Search & Filtering",
-            "Real-time Updates",
-            "Secure Payment Processing",
-            "Order Tracking",
-            "Product Reviews & Ratings",
-            "Responsive Design"
-        ],
-        challengeSolutions: [
-            {
-                title: "Real-time Inventory Management",
-                desc: "Implemented WebSocket connections to ensure inventory updates are reflected across all user sessions immediately, preventing overselling and maintaining data consistency."
-            },
-            {
-                title: "Payment Security",
-                desc: "Integrated Stripe's secure payment processing with proper error handling, webhook management, and PCI compliance to ensure safe transactions."
-            },
-            {
-                title: "Performance Optimization",
-                desc: "Optimized database queries, implemented proper indexing, and used Redis caching to handle high traffic loads efficiently."
-            }
-        ]
-    },
-    {
-        id: 2,
-        title: "Social Media Dashboard",
-        description: "Real-time analytics dashboard for social media management with data visualization.",
-        image: ProjectImg,
-        alt: "Social Media Dashboard",
-        tech: ["React", "D3.js", "Node.js", "PostgreSQL"],
-        github: "#",
-        live: "#",
+        title: "Dental Sem CRM",
+        company: "Hupp Technologies Pvt Ltd",
+        companyUrl: "https://hupp.tech/",
+        description: `The Dental SEM CRM is an advanced Customer Relationship Management platform built to streamline dental clinic operations and enhance patient engagement. As a Frontend Developer, I was responsible for designing and developing an intuitive and responsive user interface using React.js, ensuring a seamless user experience across all devices.
+
+The CRM enables clinics to efficiently manage their daily workflow — from treatment tracking and appointment booking to lead management and payment handling. It includes a structured, step-by-step follow-up system, allowing users to monitor the progress of each lead through various stages (such as inquiry, consultation, treatment, and follow-up). This feature helps dental professionals track patient journeys and ensure timely engagement.
+
+A robust reporting and analytics module was also integrated to provide insights into lead conversions, treatment statistics, and revenue performance. The payment section supports secure handling of transactions, ensuring transparency and accuracy in clinic finances.
+
+Security and role management were key focuses of this project. The entire system was built on a Role-Based Access Control (RBAC) architecture, ensuring that each user — whether an admin, doctor, or staff member — had specific permissions aligned with their responsibilities.
+
+Overall, the Dental SEM CRM successfully improved clinic efficiency, patient follow-up consistency, and data-driven decision-making, offering a complete solution for modern dental practices.`,
+        image: DentalSemCRMImg,
+        alt: "CRM",
+        tech: ["React JS", "Redux", "REST APIs", "JavaScript", "CSS3", "HTML5"],
+        github: null,
+        live: "https://www.dental-sem.co.uk/",
         category: "Frontend",
         featured: true,
         keyFeatures: [
             "User Authentication & Authorization",
-            "Shopping Cart & Wishlist",
-            "Inventory Management",
-            "Admin Dashboard",
-            "Search & Filtering",
-            "Real-time Updates",
-            "Secure Payment Processing",
-            "Order Tracking",
-            "Product Reviews & Ratings",
-            "Responsive Design"
+            "Lead & Appointment Management",
+            "Step-by-Step Follow-Up System",
+            "Treatment Management",
+            "Audit log management",
+            "Role-Based Access Control (RBAC)",
+            "Reports & Analytics Dashboard",
+            "Responsive Frontend UI",
+            "Notification & Reminder System",
+            "Search & Filter Functionality",
+            "Scalable Architecture",
         ],
         challengeSolutions: [
             {
-                title: "Real-time Inventory Management",
-                desc: "Implemented WebSocket connections to ensure inventory updates are reflected across all user sessions immediately, preventing overselling and maintaining data consistency."
+                title: "Dynamic Lead Tracking & Stage Management",
+                desc: "Developed a flexible lead tracking interface that updates in real-time as users move leads between different stages (Inquiry → Consultation → Treatment → Follow-up). Implemented efficient state management using Redux to maintain smooth UI updates without performance lag."
             },
             {
-                title: "Payment Security",
-                desc: "Integrated Stripe's secure payment processing with proper error handling, webhook management, and PCI compliance to ensure safe transactions."
+                title: "Role-Based Access Control (RBAC) Implementation",
+                desc: "Configured a scalable RBAC structure that restricted feature visibility and actions based on user roles such as Admin, Doctor, and Staff. This ensured secure data handling and a clear workflow separation within the CRM."
             },
             {
-                title: "Performance Optimization",
-                desc: "Optimized database queries, implemented proper indexing, and used Redis caching to handle high traffic loads efficiently."
+                title: "Data Visualization & Reporting",
+                desc: "Integrated dynamic chart components for visualizing treatment, lead, and payment reports. Leveraged chart libraries and optimized API integration for fast, responsive analytics rendering across devices."
+            },
+            {
+                title: "Appointment & Follow-Up Automation",
+                desc: "Created an interactive appointment scheduling and follow-up module with real-time status updates. Added reminder logic to reduce missed appointments and enhance patient engagement."
+            },
+            {
+                title: "Frontend Performance Optimization",
+                desc: "Optimized React components, reduced unnecessary re-renders, and implemented lazy loading for heavy UI sections, improving load times and overall application performance."
+            }
+        ]
+
+    },
+    {
+        id: 2,
+        title: "SBA Loans",
+        company: "Jain Bhavesh Solution",
+        companyUrl: "https://www.jbsolutions.in/",
+        description: `The SBA Loans CRM is a comprehensive banking loan management platform designed to automate and streamline the entire loan approval lifecycle for financial institutions. This system is primarily used by bank managers and account executives to process, verify, and approve loan requests with complete transparency and efficiency.
+
+Developed entirely with Next.js, this project includes both frontend and backend functionalities, offering a secure and seamless experience. The CRM manages everything from initial loan requests to final approval, with multiple verification stages such as document upload, pre-qualification, eligibility check, and approval or rejection. Each loan request moves through a defined workflow that ensures compliance and accountability at every stage.
+
+I integrated Google Drive API to handle document uploads and storage securely, allowing the bank staff to access and verify borrower documents directly through the system without manual file handling. The backend APIs were built to support authentication, data validation, and stage transitions, ensuring smooth communication between users and system logic.
+
+With a focus on automation and data integrity, the SBA Loans CRM enhances operational speed, minimizes manual intervention, and provides a transparent overview of every loan request. It serves as a powerful solution for banking professionals to handle loan processing efficiently and securely.`,
+        image: ProjectImg,
+        alt: "Banking CRM",
+        tech: ["Next.js", "Node.js", "Express JS", "MongoDB", "REST APIs", "Google Drive API", "CSS3", "HTML5"],
+        github: null,
+        live: null,
+        category: "Fullstack",
+        featured: false,
+        keyFeatures: [
+            "Loan Request & Tracking System",
+            "Multi-Stage Loan Approval Workflow",
+            "Document Verification & Management",
+            "Google Drive Integration for Secure File Handling",
+            "Role-Based Access for Managers & Staff",
+            "Real-Time Loan Status Updates",
+            "Applicant Eligibility & Qualification Check",
+            "Automated Notifications & Alerts",
+            "Responsive Dashboard Interface",
+            "Secure Authentication & Authorization"
+        ],
+        challengeSolutions: [
+            {
+                title: "Multi-Stage Loan Workflow Management",
+                desc: "Developed a dynamic stage-based workflow to manage loan requests across multiple stages like Pre-Qualification, Verification, and Approval. Ensured seamless transitions with clear progress tracking for each request."
+            },
+            {
+                title: "Google Drive API Integration",
+                desc: "Integrated Google Drive API to handle document uploads and verification securely, allowing bank staff to access borrower files directly through the CRM with role-based access control."
+            },
+            {
+                title: "Backend API & Data Validation",
+                desc: "Built custom Next.js APIs to handle form submissions, validation, and stage updates with robust error handling and secure data exchange between frontend and backend."
+            },
+            {
+                title: "Access Control & Authentication",
+                desc: "Implemented secure authentication and role-based authorization for bank managers, staff, and admin users to ensure data privacy and prevent unauthorized access."
+            },
+            {
+                title: "Performance & Scalability",
+                desc: "Optimized API responses, database queries, and caching strategies to maintain fast performance and scalability even under high data load."
             }
         ]
     },
     {
         id: 3,
-        title: "Task Management App",
-        description: "Collaborative project management tool with real-time updates and team collaboration.",
-        image: ProjectImg,
-        alt: "Task Management",
-        tech: ["React", "Socket.io", "Express", "MongoDB"],
-        github: "#",
-        live: "#",
-        category: "Full Stack",
+        title: "MXM News",
+        description: `MXM News is a modern news aggregation platform built with Next.js that curates and displays trending articles from multiple reliable sources and publishers. The platform delivers real-time news updates in a visually engaging card layout, categorized into various sections like Entertainment, Sports, Technology, and Business.
+
+Users can sign up and personalize their news experience by selecting preferred categories, saving articles, and receiving personalized recommendations based on their reading interests. I implemented secure user authentication and state management to maintain user sessions and preferences efficiently.
+
+A custom push notification system was also integrated to keep users informed of breaking news or updates in their chosen categories. The project features a responsive design with smooth navigation and optimized API handling to ensure fast loading and performance.
+
+Overall, MXM News provides a dynamic and personalized news-reading experience, merging real-time data aggregation with intelligent user preference tracking for a smarter and more engaging platform.`,
+        image: mxmnews,
+        alt: "News Aggregator App",
+        tech: ["Next.js", "Node.js", "MongoDB", "REST APIs", "CSS3", "Firebase Cloud Messaging"],
+        github: null,
+        live: "https://mxmnews.com/",
+        category: "Fullstack",
         featured: false,
         keyFeatures: [
+            "Real-Time News Aggregation",
+            "Category-Based News Filtering",
+            "Personalized User Dashboard",
             "User Authentication & Authorization",
-            "Shopping Cart & Wishlist",
-            "Inventory Management",
-            "Admin Dashboard",
-            "Search & Filtering",
-            "Real-time Updates",
-            "Secure Payment Processing",
-            "Order Tracking",
-            "Product Reviews & Ratings",
-            "Responsive Design"
+            "Save & Bookmark News Articles",
+            "Push Notification System for Breaking News",
+            "Responsive Card-Based UI Design",
+            "Interest-Based News Recommendations",
+            "Optimized API Handling & Caching",
+            "Dark Mode Support for Better UX"
         ],
         challengeSolutions: [
             {
-                title: "Real-time Inventory Management",
-                desc: "Implemented WebSocket connections to ensure inventory updates are reflected across all user sessions immediately, preventing overselling and maintaining data consistency."
+                title: "News Aggregation from Multiple Sources",
+                desc: "Integrated third-party APIs to fetch and combine articles from various publishers, ensuring up-to-date and relevant content while maintaining performance through API rate optimization."
             },
             {
-                title: "Payment Security",
-                desc: "Integrated Stripe's secure payment processing with proper error handling, webhook management, and PCI compliance to ensure safe transactions."
+                title: "Personalized News Recommendations",
+                desc: "Developed an interest-based recommendation system that filters and displays news according to each user’s saved categories and reading history."
             },
             {
-                title: "Performance Optimization",
-                desc: "Optimized database queries, implemented proper indexing, and used Redis caching to handle high traffic loads efficiently."
+                title: "Push Notification System",
+                desc: "Implemented Firebase Cloud Messaging to send real-time push notifications for breaking news and category-specific updates, improving user engagement."
+            },
+            {
+                title: "User Authentication & Data Management",
+                desc: "Integrated secure login and registration using JWT-based authentication. Stored user preferences, saved news, and selected categories in MongoDB for persistent personalization."
+            },
+            {
+                title: "Performance Optimization & UI Responsiveness",
+                desc: "Used Next.js dynamic rendering and caching to reduce API load and implemented responsive, mobile-friendly card layouts for a seamless reading experience across devices."
             }
         ]
     },
     {
         id: 4,
-        title: "Weather Forecast App",
-        description: "Modern weather application with location-based forecasts and interactive maps.",
-        image: ProjectImg,
-        alt: "Weather Forecast",
-        tech: ["React", "API Integration", "Tailwind CSS"],
-        github: "#",
-        live: "#",
+        title: "Moustachescapes – Hotel Booking Platform",
+        description: `Moustachescapes is a fully responsive and SEO-optimized hotel booking platform developed using Next.js and Tailwind CSS. The platform allows users to explore and book luxury stays across India's most popular travel destinations including Udaipur, Manali, Jaipur, Goa, Kashmir, ETC. 
+
+The website provides an immersive experience with detailed hotel pages featuring room types, amenities, photo galleries, nearby attractions, and food inclusions/exclusions. I was responsible for building a smooth, responsive user interface and implementing Server-Side Rendering (SSR) for improved SEO and faster page loads.
+
+A secure payment gateway was integrated using Airpay, ensuring smooth and safe online transactions for customers. The platform also includes a dedicated blog section to share travel insights and destination guides, enhancing content-driven marketing for organic reach.
+
+With its visually appealing design, optimized performance, and user-centric structure, Moustachescapes helps travelers find, compare, and book the best luxury accommodations directly from the official website.`,
+        image: moustachescapes,
+        alt: "Hotel Booking Website",
+        tech: ["Next.js", "Tailwind CSS", "Airpay Payment Gateway", "REST APIs", "JavaScript", "SEO Optimization", "HTML5"],
+        github: null,
+        live: "https://moustachescapes.com/",
         category: "Frontend",
-        featured: false,
+        featured: true,
         keyFeatures: [
-            "User Authentication & Authorization",
-            "Shopping Cart & Wishlist",
-            "Inventory Management",
-            "Admin Dashboard",
-            "Search & Filtering",
-            "Real-time Updates",
-            "Secure Payment Processing",
-            "Order Tracking",
-            "Product Reviews & Ratings",
-            "Responsive Design"
+            "Hotel Search & Booking System",
+            "Location-Based Hotel Listing",
+            "Detailed Hotel & Room Information",
+            "Amenities, Discounts & Offers Display",
+            "Integrated Airpay Payment Gateway",
+            "Responsive & Mobile-Friendly UI",
+            "SEO-Optimized Architecture with SSR",
+            "Blog Section for Travel Guides",
+            "High-Quality Image Gallery for Hotels",
+            "Attraction & Destination Highlights"
         ],
         challengeSolutions: [
             {
-                title: "Real-time Inventory Management",
-                desc: "Implemented WebSocket connections to ensure inventory updates are reflected across all user sessions immediately, preventing overselling and maintaining data consistency."
+                title: "SEO Optimization with SSR",
+                desc: "Implemented Server-Side Rendering (SSR) in Next.js to improve website performance and SEO ranking, ensuring faster load times and better visibility on search engines."
             },
             {
-                title: "Payment Security",
-                desc: "Integrated Stripe's secure payment processing with proper error handling, webhook management, and PCI compliance to ensure safe transactions."
+                title: "Dynamic Hotel & Location Management",
+                desc: "Built dynamic pages for multiple hotel destinations with reusable components, allowing the admin to easily add or modify hotels and attractions."
             },
             {
-                title: "Performance Optimization",
-                desc: "Optimized database queries, implemented proper indexing, and used Redis caching to handle high traffic loads efficiently."
+                title: "Payment Integration with Airpay",
+                desc: "Integrated Airpay payment gateway to enable secure and reliable online transactions with proper error handling and transaction validation."
+            },
+            {
+                title: "Responsive UI/UX Development",
+                desc: "Designed and developed a fully responsive layout using Tailwind CSS to ensure seamless user experience across all devices and screen sizes."
+            },
+            {
+                title: "Image Gallery & Blog Implementation",
+                desc: "Added interactive image galleries for hotel rooms and integrated a content-driven blog section to improve user engagement and organic SEO reach."
             }
         ]
     },
     {
         id: 5,
-        title: "Blog Platform",
-        description: "Full-featured blogging platform with rich text editor and user authentication.",
-        image: ProjectImg,
-        alt: "Weather Forecast",
-        tech: ["Next.js", "MongoDB", "JWT", "Tailwind CSS"],
-        github: "#",
-        live: "#",
-        category: "Full Stack",
-        featured: true,
+        title: "SLA-FS – Financial Services Website",
+        description: `SLA-FS is a finance company website built to showcase their services and help clients make informed investment decisions. The platform highlights various financial solutions, including personalized budgeting, wealth creation and management, children's education planning, retirement planning, emergency fund management, and risk mitigation strategies. It also focuses on empowering women to achieve financial independence.
+
+Developed using Next.js with SCSS, the website emphasizes a smooth and engaging user experience through animated interactions. To address performance issues caused by the animation library, I implemented lazy loading and Server-Side Rendering (SSR), significantly improving page load speed and responsiveness.
+
+Although the website primarily serves as a portfolio and service showcase, it effectively communicates SLA-FS's expertise and builds trust with potential clients. The combination of modern UI/UX, optimized performance, and informative content ensures a professional and engaging digital presence for the company.`,
+        image: slafs,
+        alt: "Financial Services Website",
+        tech: ["Next.js", "SCSS", "JavaScript", "Animations Library", "SSR Optimization", "Lazy Loading"],
+        github: null,
+        live: "https://slafs.in/",
+        category: "Frontend",
+        featured: false,
         keyFeatures: [
-            "User Authentication & Authorization",
-            "Shopping Cart & Wishlist",
-            "Inventory Management",
-            "Admin Dashboard",
-            "Search & Filtering",
-            "Real-time Updates",
-            "Secure Payment Processing",
-            "Order Tracking",
-            "Product Reviews & Ratings",
-            "Responsive Design"
+            "Showcase of Financial Services",
+            "Custom Budgeting & Lifestyle Planning",
+            "Children's Education & Retirement Planning",
+            "Wealth Creation & Management Insights",
+            "Risk Mitigation Guidance",
+            "Interactive Animations for Better UX",
+            "Server-Side Rendering (SSR) for Performance",
+            "Lazy Loading Implementation",
+            "Responsive & Mobile-Friendly Design",
+            "Informative & Professional Layout"
         ],
         challengeSolutions: [
             {
-                title: "Real-time Inventory Management",
-                desc: "Implemented WebSocket connections to ensure inventory updates are reflected across all user sessions immediately, preventing overselling and maintaining data consistency."
+                title: "Performance Issues due to Animations",
+                desc: "The animations library enhanced UX but caused slow page loads. I implemented lazy loading for heavy components and optimized rendering to improve overall page speed."
             },
             {
-                title: "Payment Security",
-                desc: "Integrated Stripe's secure payment processing with proper error handling, webhook management, and PCI compliance to ensure safe transactions."
+                title: "SSR Implementation",
+                desc: "Applied Server-Side Rendering in Next.js to ensure faster initial load, better SEO, and improved performance across all devices."
             },
             {
-                title: "Performance Optimization",
-                desc: "Optimized database queries, implemented proper indexing, and used Redis caching to handle high traffic loads efficiently."
+                title: "Responsive & Engaging UI",
+                desc: "Designed a clean, responsive layout using SCSS, ensuring a smooth browsing experience across desktops, tablets, and mobile devices."
+            },
+            {
+                title: "Content Organization for Clarity",
+                desc: "Structured the website to highlight key services clearly and professionally, making it easy for potential clients to understand SLA-FS's offerings."
+            },
+            {
+                title: "Optimized UX with Animations",
+                desc: "Added subtle animations to enhance user interaction while keeping performance in check through optimization techniques."
             }
         ]
     },
     {
         id: 6,
-        title: "Portfolio Website",
-        description: "Responsive portfolio website with modern animations and optimized performance.",
+        title: "Gamerji Fantasy Sport",
+        description: `Gamerji Fantasy Sport is a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities. I specifically worked on the Picker (Picker) Game module, where users can create their own teams and compete according to Picker (Picker) Game rules in either public or private matches.
+
+As a dedicated MERN stack developer, I built both the frontend and backend for managing private and public Picker (Picker) flows, including database management, admin panel functionalities, and real-time game updates. Socket.IO was integrated to handle real-time data transfer, ensuring smooth gameplay and instant updates. The platform also included payment gateway integration for managing deposits and winnings.
+
+This project allowed users to enjoy interactive fantasy gaming experiences with secure, real-time operations and a fully managed administrative workflow.`,
         image: ProjectImg,
-        alt: "Weather Forecast",
-        tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-        github: "#",
-        live: "#",
-        category: "Frontend",
-        featured: false,
+        alt: "Fantasy Sports Platform",
+        tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.IO", "CSS", "REST APIs", "Payment Gateway Integration"],
+        github: null,
+        live: null,
+        category: "Fullstack",
+        featured: true,
         keyFeatures: [
-            "User Authentication & Authorization",
-            "Shopping Cart & Wishlist",
-            "Inventory Management",
-            "Admin Dashboard",
-            "Search & Filtering",
-            "Real-time Updates",
-            "Secure Payment Processing",
-            "Order Tracking",
-            "Product Reviews & Ratings",
-            "Responsive Design"
+            "Fantasy Cricket & Gambling Platform",
+            "Picker Game: Public & Private Matches",
+            "Team Creation & Management",
+            "Real-Time Game Updates with Socket.IO",
+            "Admin Panel for Public Picker Creation",
+            "Frontend & Backend MERN Stack Development",
+            "Database Design & Management",
+            "Secure Payment Gateway Integration",
+            "Interactive & Responsive UI",
+            "Real-Time Score & Event Tracking"
         ],
         challengeSolutions: [
             {
-                title: "Real-time Inventory Management",
-                desc: "Implemented WebSocket connections to ensure inventory updates are reflected across all user sessions immediately, preventing overselling and maintaining data consistency."
+                title: "Real-Time Gameplay Management",
+                desc: "Integrated Socket.IO to handle instant updates for game events, team scores, and player actions, ensuring smooth and synchronized gameplay for all users."
             },
             {
-                title: "Payment Security",
-                desc: "Integrated Stripe's secure payment processing with proper error handling, webhook management, and PCI compliance to ensure safe transactions."
+                title: "Private & Public Picker Flow",
+                desc: "Developed dynamic logic to allow users to create private matches and participate in public Pickers generated by the admin, maintaining proper access control and game rules."
             },
             {
-                title: "Performance Optimization",
-                desc: "Optimized database queries, implemented proper indexing, and used Redis caching to handle high traffic loads efficiently."
+                title: "MERN Fullstack Development",
+                desc: "Built frontend and backend components using React.js, Node.js, Express, and MongoDB, ensuring seamless integration and data consistency across the platform."
+            },
+            {
+                title: "Admin Panel Functionality",
+                desc: "Created an admin panel to manage public Picker games, monitor user activity, and enforce game rules efficiently."
+            },
+            {
+                title: "Payment Gateway Integration",
+                desc: "Integrated a payment system to handle deposits and winnings securely, ensuring reliable transactions for all users."
+            }
+        ]
+    },
+    {
+        id: 7,
+        title: "PROAITS-CRM",
+        description: `PROAITS is a CRM platform designed to automate and optimize the hiring process for multiple companies through a microservices-based backend architecture. It enables companies to manage recruitment workflows including company profiles, contacts, jobs, and candidates efficiently.
+
+Each module — Company, Company Contacts, Jobs, and Candidates — features complete CRUD operations with Role-Based Access Control (RBAC). The system includes advanced capabilities such as audit logging, analytics and reporting, backend-driven filtering and pagination, push notifications, and global plus Boolean search functionality. Additionally, it supports AI-powered resume parsing using Python and integrates Outlook email for seamless communication across modules.
+
+We are expanding the platform with AI-driven features like automated screening, candidate communication, and performance-based filtering.
+
+As a backend developer, I worked on architecting and developing the microservices using Node.js with TypeScript, Express.js, and PostgreSQL with Prisma ORM. I also implemented Docker for containerization and set up CI/CD pipelines for automated deployment and scalability.`,
+        image: ProjectImg,
+        alt: "Hiring CRM System",
+        tech: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Docker", "CI/CD", "Microservices", "Outlook Integration", "Python (AI Resume Parsing)"],
+        github: null,
+        live: null,
+        category: "Backend",
+        featured: true,
+        keyFeatures: [
+            "Microservices-Based Backend Architecture",
+            "Role-Based Access Control (RBAC)",
+            "Comprehensive CRUD Operations for All Modules",
+            "Audit Logs and Reporting with Analytics",
+            "Backend-Driven Filtering and Pagination",
+            "Push Notifications System",
+            "Global and Boolean Search (AND, OR, NOT)",
+            "AI-Powered Resume Parsing (Python Integration)",
+            "Outlook Email Integration for Communication",
+            "CI/CD Deployment with Docker"
+        ],
+        challengeSolutions: [
+            {
+                title: "Scalable Microservices Architecture",
+                desc: "Implemented modular backend services for independent deployment and scaling of core CRM modules like jobs, candidates, and companies."
+            },
+            {
+                title: "AI Resume Parsing",
+                desc: "Integrated Python-based AI model for resume parsing, enabling structured data extraction and faster candidate profiling."
+            },
+            {
+                title: "Advanced Search and Filtering",
+                desc: "Developed complex backend logic for global and Boolean search functionality, allowing efficient filtering of records across multiple modules."
+            },
+            {
+                title: "RBAC and Audit Logs",
+                desc: "Ensured secure user access and accountability by implementing role-based permissions and maintaining detailed audit logs of all user actions."
+            },
+            {
+                title: "Outlook Integration & Automation",
+                desc: "Integrated Outlook APIs to manage candidate and client communications directly from within the CRM ecosystem."
+            },
+            {
+                title: "CI/CD and Docker Deployment",
+                desc: "Configured Dockerized services with continuous integration and deployment pipelines for automated and consistent delivery."
             }
         ]
     }
-
 ]
 
 // ---------------------------------------------------

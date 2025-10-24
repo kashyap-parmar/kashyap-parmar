@@ -50,7 +50,7 @@ const WorkTogetherSection = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <p className="font-semibold text-lg">Email</p>
-                                        <p className="text-[#64748b]">kashyap209p@gail.com</p>
+                                        <p className="text-[#64748b]">kashyap209p@gmail.com</p>
                                     </div>
                                 </div>
                                 <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
