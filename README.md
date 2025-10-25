@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👋 Hi, I'm Kashyap Parmar  
 
-## Getting Started
+🚀 **MERN Stack Developer | Freelancer | Tech Enthusiast**
 
-First, run the development server:
+I'm a passionate **Full Stack Developer** specializing in the **MERN (MongoDB, Express.js, React.js, Node.js)** stack.  
+With 3 years of hands-on experience building **scalable web applications, CRMs, SaaS products, and SEO-optimized static websites**,  
+I love turning complex problems into elegant, high-performing solutions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💡 About Me  
+- 🧠 Currently sharpening my backend & API development skills in **Node.js & Express.js**  
+- 💼 Previously worked on real-world projects like **CRMs, Staffing Portals, Hotel Booking Platforms, and Consultancy Websites**  
+- 🌍 Started my **freelancing journey** to collaborate globally and help businesses build powerful digital products  
+- 🧩 Love working with **Next.js**, **Tailwind CSS**, and crafting seamless **UI/UX experiences**  
+- 🎯 Exploring **AI automation tools** and how they can enhance web development  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧰 Tech Stack  
 
-## Learn More
+**Frontend:**  
+React.js | Next.js | Tailwind CSS | SCSS | Bootstrap | Motion UI  
 
-To learn more about Next.js, take a look at the following resources:
+**Backend:**  
+Node.js | Express.js | REST APIs | JWT Auth  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Database:**  
+MongoDB | Mongoose  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Others:**  
+Git | GitHub | SEO Optimization | Deployment | API Integration | Meta Developer APIs  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔥 Featured Projects  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🦷 **Dental SEM CRM** – A CRM system for dental professionals to manage marketing and clients efficiently  
+- 💼 **PROTINGENT INDIA** – Staffing and Employee Sourcing platform built using Next.js & Tailwind CSS  
+- 🏨 **Hotel Booking Website** – SEO-optimized, SSR-enabled website for hotel management and reservations  
+- 💹 **SLA Mutual Fund Consultancy** – Static website for a finance consultancy built with Next.js and Motion UI  
+
+---
+
+## 🌱 Currently Learning  
+- Building **AI-powered tools and automation services** for businesses  
+- Improving my **DevOps and backend performance optimization** skills  
+
+---
+
+## 🤝 Let’s Connect  
+
+💌 **Email:** [your-email@example.com]  
+🌐 **Portfolio:** [your-portfolio-link.com]  
+💼 **LinkedIn:** [linkedin.com/in/kashyapparmar](#)  
+🐙 **GitHub:** [github.com/kashyapparmar](#)  
+
+---
+
+> “Code is not just logic — it’s creativity that solves real problems.”  
+
+⭐ If you like my work, consider giving a star to my projects or connecting for collaboration!

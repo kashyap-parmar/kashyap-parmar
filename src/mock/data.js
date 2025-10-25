@@ -536,7 +536,7 @@ Although the website primarily serves as a portfolio and service showcase, it ef
         github: null,
         live: "https://slafs.in/",
         category: "Frontend",
-        featured: false,
+        featured: true,
         keyFeatures: [
             "Showcase of Financial Services",
             "Custom Budgeting & Lifestyle Planning",
