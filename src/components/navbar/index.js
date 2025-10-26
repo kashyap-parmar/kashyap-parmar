@@ -18,7 +18,7 @@ const Navbar = ({ show }) => {
 
     return (
         <div
-            className={`${pathname.includes("project") && !show ? "hidden" : "block"} sticky top-[30px] z-[10000] `}
+            className={`${(pathname.includes("project") || pathname.includes("blog")) && !show ? "hidden" : "block"} sticky top-[30px] z-[10000] `}
         >
             {/* Desktop Navbar */}
             <nav className={`lg:flex items-center justify-center hidden w-full bg-transparent `}>

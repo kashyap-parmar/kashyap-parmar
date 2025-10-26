@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Icon from "../icon";
+import Link from "next/link";
 
 // -----------------------------------------
 
@@ -85,14 +86,22 @@ const WorkTogetherSection = () => {
                             <div className="flex flex-col gap-y-6">
                                 <p className="text-lg font-semibold">Follow Me</p>
                                 <div className="flex gap-x-4 justify-start items-center">
-                                    <button className="flex justify-center shadow-sm rounded-full text-sm font-medium px-8 py-2 bg-white border-[1px] dark:bg-[#020817] dark:border-[#1e293b] dark:hover:bg-[#1e293b] border-[#e2e8f0] items-center gap-x-2 hover:bg-[#f1f5f9]">
+                                    <Link
+                                        href={"https://github.com/kashyap-parmar"}
+                                        target="_blank"
+                                        className="flex justify-center shadow-sm rounded-full text-sm font-medium px-8 py-2 bg-white border-[1px] dark:bg-[#020817] dark:border-[#1e293b] dark:hover:bg-[#1e293b] border-[#e2e8f0] items-center gap-x-2 hover:bg-[#f1f5f9]"
+                                    >
                                         <Icon icon={"line-md:github"} />
                                         Github
-                                    </button>
-                                    <button className="flex justify-center shadow-sm rounded-full text-sm font-medium px-8 py-2 bg-white border-[1px] dark:bg-[#020817] dark:border-[#1e293b] dark:hover:bg-[#1e293b] border-[#e2e8f0] items-center gap-x-2 hover:bg-[#f1f5f9]">
+                                    </Link>
+                                    <Link
+                                        href={"https://www.linkedin.com/in/kashyap-parmar-872040242/"}
+                                        target="_blank"
+                                        className="flex justify-center shadow-sm rounded-full text-sm font-medium px-8 py-2 bg-white border-[1px] dark:bg-[#020817] dark:border-[#1e293b] dark:hover:bg-[#1e293b] border-[#e2e8f0] items-center gap-x-2 hover:bg-[#f1f5f9]"
+                                    >
                                         <Icon icon={"meteor-icons:linkedin"} />
                                         LinkedIn
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -32,15 +32,15 @@ const HeroSection = () => {
                                 </span>
                             </p>
                             <p className='text-xl lg:text-2xl text-[#64748b] dark:text-[#94a3b8] font-medium'>
-                                More Than Just Code,
+                                Code is not just logic —
                                 <span className='text-black ml-2 dark:text-white'>
-                                    It&apos;s Your Digital Vision
+                                    it’s creativity that solves real problems
                                 </span>
                             </p>
                         </div>
 
                         <div className='pt-8'>
-                            <p className='text-lg text-[#64748b] dark:text-[#94a3b8] leading-relaxed'>
+                            <p className='text-lg text-justify text-[#64748b] dark:text-[#94a3b8] leading-relaxed'>
                                 As a skilled MERN stack developer, I bring ideas to life by creating dynamic, responsive, and user-centric web applications. Whether it&apos;s designing intuitive front-end interfaces or building robust back-end systems, I ensure every project is both scalable and optimized for performance.
                             </p>
                         </div>

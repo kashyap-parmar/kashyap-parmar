@@ -63,7 +63,7 @@ const ViewAllProjectComponent = () => {
                         <div className="w-full flex flex-col pt-10 gap-y-4">
                             <p className="text-2xl font-semibold">Featured Projects</p>
                             <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center">
-                                {SampleProjectsData.map((ele, index) => {
+                                {SampleProjectsData?.filter((el) => el?.featured).map((ele, index) => {
                                     return (
                                         <ProjectSectionCard ele={ele} key={index} />
                                     );

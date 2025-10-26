@@ -21,7 +21,6 @@ const Home = () => {
 			<TechnicalExpertiseSection />
 			<RecentProjectSection />
 			<WorkExpSection />
-			<BlogSection />
 			<WorkTogetherSection />
 		</div>
 	)

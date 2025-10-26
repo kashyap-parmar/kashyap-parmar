@@ -64,14 +64,14 @@ const AboutMeSection = () => {
                             <p className='text-2xl font-bold'>
                                 Building Digital Excellence
                             </p>
-                            <p className='text-lg text-[#64748b] leading-relaxed'>
+                            <p className='text-lg text-justify text-[#64748b] leading-relaxed'>
                                 I specialize in creating dynamic, scalable web applications using the MERN stack. My passion lies in solving complex problems through clean, efficient code and delivering exceptional user experiences.
                             </p>
-                            <p className='text-lg text-[#64748b] leading-relaxed'>
+                            <p className='text-lg text-justify text-[#64748b] leading-relaxed'>
                                 From concept to deployment, I ensure every project meets the highest standards of quality and performance. My approach combines technical expertise with creative problem-solving to bring your vision to life.
                             </p>
                             <div className='flex flex-col md:flex-row gap-y-4 md:gap-x-4 pt-2'>
-                                <button className='flex dark:hover:bg-[#1e293b] border-[#e2e8f0] dark:bg-[#020817] dark:border-[#1e293b]  hover:bg-[#f1f5f9] rounded-full shadow-sm border-[1px] justify-center font-medium text-sm py-2 px-4 items-center gap-x-2'>
+                                <button className='hidden dark:hover:bg-[#1e293b] border-[#e2e8f0] dark:bg-[#020817] dark:border-[#1e293b]  hover:bg-[#f1f5f9] rounded-full shadow-sm border-[1px] justify-center font-medium text-sm py-2 px-4 items-center gap-x-2'>
                                     <Icon
                                         icon={"material-symbols:download-rounded"}
                                         width={20}
@@ -80,7 +80,7 @@ const AboutMeSection = () => {
                                     <p className='text-[#020817] dark:text-white'>Download Resume</p>
                                 </button>
                                 <Link href={"/#contact"}>
-                                    <button className='flex dark:hover:bg-[#1e293b] hover:border-[#e2e8f0] hover:bg-[#f1f5f9] rounded-full justify-center font-medium text-sm py-2 px-4 items-center gap-x-2'>
+                                    <button className='flex border dark:hover:bg-[#1e293b] hover:border-[#e2e8f0] hover:bg-[#f1f5f9] rounded-full justify-center font-medium text-sm py-2 px-4 items-center gap-x-2'>
                                         <Icon
                                             icon={"proicons:chat"}
                                             width={20}

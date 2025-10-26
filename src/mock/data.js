@@ -25,10 +25,10 @@ export const navbarData = [
         title: "Experience",
         url: 'experience'
     },
-    {
-        title: "Blog",
-        url: 'blog'
-    },
+    // {
+    //     title: "Blog",
+    //     url: 'blog'
+    // },
     {
         title: "Contact",
         url: 'contact'
@@ -177,6 +177,12 @@ export const FeaturedSkillsData = [
                 type: "Framework"
             },
             {
+                icon: "simple-icons:mui",
+                heading: "MUI component",
+                level: "Advanced",
+                type: "Library"
+            },
+            {
                 icon: "proicons:javascript",
                 heading: "Javascript",
                 level: "Expert",
@@ -232,7 +238,7 @@ export const FeaturedSkillsData = [
         ]
     },
     {
-        title: "Database & Storage",
+        title: "Database & ORM / ODM",
         data: [
             {
                 icon: "teenyicons:mongodb-outline",
@@ -382,7 +388,8 @@ With a focus on automation and data integrity, the SBA Loans CRM enhances operat
         github: null,
         live: null,
         category: "Fullstack",
-        featured: false,
+        featured: true,
+        confidential: true,
         keyFeatures: [
             "Loan Request & Tracking System",
             "Multi-Stage Loan Approval Workflow",
@@ -536,7 +543,7 @@ Although the website primarily serves as a portfolio and service showcase, it ef
         github: null,
         live: "https://slafs.in/",
         category: "Frontend",
-        featured: true,
+        featured: false,
         keyFeatures: [
             "Showcase of Financial Services",
             "Custom Budgeting & Lifestyle Planning",
@@ -587,6 +594,7 @@ This project allowed users to enjoy interactive fantasy gaming experiences with 
         live: null,
         category: "Fullstack",
         featured: true,
+        underDevelopment: true,
         keyFeatures: [
             "Fantasy Cricket & Gambling Platform",
             "Picker Game: Public & Private Matches",
@@ -639,6 +647,7 @@ As a backend developer, I worked on architecting and developing the microservice
         live: null,
         category: "Backend",
         featured: true,
+        underDevelopment: true,
         keyFeatures: [
             "Microservices-Based Backend Architecture",
             "Role-Based Access Control (RBAC)",

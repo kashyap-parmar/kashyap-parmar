@@ -4,7 +4,7 @@ import { Icon as Ic } from "@iconify/react"
 
 const Icon = ({ className, height, width, rotate, color, style, icon, onClick, ...props }) => {
     return (
-        <div
+        <span
             className={className}
             style={{ overflow: "none" }}
             onClick={onClick}
@@ -19,7 +19,7 @@ const Icon = ({ className, height, width, rotate, color, style, icon, onClick, .
                 className={`h-auto ${color}`}
                 style={style}
             />
-        </div >
+        </span >
     )
 }
 

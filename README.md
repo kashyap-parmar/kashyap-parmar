@@ -9,7 +9,7 @@ I love turning complex problems into elegant, high-performing solutions.
 ---
 
 ## 💡 About Me  
-- 🧠 Experienced in backend & API development using **Node.js** and **Express.js**, currently exploring **PostgreSQL** for relational database management.
+- 🧠 Experienced in MERN Stack development using **Node.js** and **Express.js**, currently exploring **PostgreSQL** for relational database management.
 - 💼 Previously worked on real-world projects like **CRMs, Staffing Portals, Hotel Booking Platforms, and Consultancy Websites**  
 - 🌍 Started my **freelancing journey** to collaborate globally and help businesses build powerful digital products  
 - 🧩 Love working with **Next.js**, **Tailwind CSS**, and crafting seamless **UI/UX experiences**  
@@ -34,17 +34,19 @@ Git | GitHub | Gitlab | JIRA | Trello | SEO Optimization | API Integration
 ---
 
 ## 🔥 Featured Projects  
+> These are some of the major projects I worked on during my **professional journey** while collaborating with various IT companies.
 
 - 🦷 **Dental SEM CRM** – A CRM system for dental professionals to manage marketing and clients efficiently  
+- 💹 **SBA Loans** – CRM is a comprehensive banking loan management platform designed to automate and streamline the entire loan approval lifecycle for financial institutions.
 - 🏨 **Moustachescapes - Hotel Booking** – SEO-optimized, SSR-enabled website for hotel booking and reservations  
-- 💼 **PROAITS-CRM** – A CRM with microservices-based backend architecture platform designed to automate and optimize the hiring process.
-- 💹 **SLA Mutual Fund Consultancy** – Static website for a finance consultancy built with Next.js and Motion UI.
 - 💹 **Gamerji Fantasy Sport** – a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities.
+- 💼 **PROAITS-CRM** – A CRM with microservices-based backend architecture platform designed to automate and optimize the hiring process.
 
 ---
 
 ## 🌱 Currently Learning  
 - Building **AI-powered tools and automation services** for businesses  
+- Exploring **AI integration within MERN stack applications** to enhance automation, decision-making, and user experience
 - Improving my **DevOps and backend performance optimization** skills  
 
 ---
