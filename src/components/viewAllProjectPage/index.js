@@ -1,7 +1,5 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState } from "react";
 import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
 import { SampleProjectsData } from "@/mock/data";
 import { CustomNavbar, ProjectSectionCard, Icon } from "@/components";
@@ -9,23 +7,14 @@ import { CustomNavbar, ProjectSectionCard, Icon } from "@/components";
 // --------------------------------------
 
 const ViewAllProjectComponent = () => {
+    const [selectedFilter, setSelectedFilter] = useState("All");
     const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
-    const truncateDesc = (text = "", limit = 85) => {
-        if (!text) return "";
-        return text.length > limit ? text.substring(0, limit) + "..." : text;
-    };
-
-    const truncateHeading = (text = "", limit = 20) => {
-        if (!text) return "";
-        return text.length > limit ? text.substring(0, limit) + "..." : text;
-    };
 
     return (
         <>
             <div className="w-full dark:bg-[#020817]">
                 {/* Navbar  */}
-                <CustomNavbar path={"/"} title="Projects that Speak" subTitleBtn="Home" />
+                <CustomNavbar path={"/"} title="Works That Speak" subTitleBtn="Home" />
 
                 <div className="w-fill flex justify-center items-center pt-12">
                     <div
@@ -42,16 +31,41 @@ const ViewAllProjectComponent = () => {
                                 />
                             </div>
                             <div className="flex justify-between lg:justify-evenly items-center w-full lg:w-[30%]">
-                                <button className="shadow font-medium text-xs hover:bg-[#2563ebe6] text-white bg-primary px-2 lg:px-3 py-2 rounded-md">
+                                <button
+                                    onClick={() => setSelectedFilter("All")}
+                                    className={`
+                                ${selectedFilter === "All" ? "text-white bg-primary" : "text-black bg-white"} 
+                                shadow font-medium text-xs hover:bg-[#2563ebe6]  px-2 lg:px-3 py-2 rounded-md`
+                                    }>
                                     All
                                 </button>
-                                <button className="shadow font-medium text-xs hover:bg-[#f1f5f9] text-black bg-white px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]">
+
+                                <button
+                                    onClick={() => setSelectedFilter("Full Stack")}
+                                    className={`
+                                ${selectedFilter === "Full Stack" ?
+                                            "text-white bg-primary"
+                                            : "text-black bg-white dark:hover:bg-[#1e293b]"
+                                        } 
+                                shadow font-medium text-xs hover:bg-[#f1f5f9] px-2 lg:px-3 py-2 rounded-md  dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]`
+                                    }>
                                     Full Stack
                                 </button>
-                                <button className="shadow font-medium text-xs hover:bg-[#f1f5f9] text-black bg-white px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]">
+
+                                <button
+                                    onClick={() => setSelectedFilter("Frontend")}
+                                    className={`
+                                ${selectedFilter === "Frontend" ? "text-white bg-primary" : "text-black bg-white"} 
+                                shadow font-medium text-xs hover:bg-[#f1f5f9]  px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]`
+                                    }>
                                     Frontend
                                 </button>
-                                <button className="shadow font-medium text-xs hover:bg-[#f1f5f9] text-black bg-white px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]">
+                                <button
+                                    onClick={() => setSelectedFilter("Backend")}
+                                    className={`
+                                ${selectedFilter === "Backend" ? "text-white bg-primary" : "text-black bg-white"} 
+                                shadow font-medium text-xs hover:bg-[#f1f5f9]  px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]`
+                                    }>
                                     Backend
                                 </button>
                             </div>
@@ -73,7 +87,7 @@ const ViewAllProjectComponent = () => {
 
                         {/* All Project  */}
                         <div className="w-full flex flex-col pt-10 gap-y-4">
-                            <p className="text-2xl font-semibold">All Project</p>
+                            <p className="text-2xl font-semibold">All Projects</p>
                             <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center">
                                 {SampleProjectsData.map((ele, index) => {
                                     return (
