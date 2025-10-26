@@ -39,7 +39,7 @@ Git | GitHub | Gitlab | JIRA | Trello | SEO Optimization | API Integration
 - 🦷 **Dental SEM CRM** – A CRM system for dental professionals to manage marketing and clients efficiently  
 - 💹 **SBA Loans** – CRM is a comprehensive banking loan management platform designed to automate and streamline the entire loan approval lifecycle for financial institutions.
 - 🏨 **Moustachescapes - Hotel Booking** – SEO-optimized, SSR-enabled website for hotel booking and reservations  
-- 💹 **Gamerji Fantasy Sport** – a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities.
+- 🏏 **Gamerji Fantasy Sport** – a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities.
 - 💼 **PROAITS-CRM** – A CRM with microservices-based backend architecture platform designed to automate and optimize the hiring process.
 
 ---
