@@ -2,9 +2,9 @@
 
 🚀 **MERN Stack Developer | Freelancer | Tech Enthusiast**
 
-I'm a passionate **Full Stack Developer** specializing in the **MERN (MongoDB, Express.js, React.js, Node.js)** stack including Next js and PostgreSQL with Prisma ORM,  
-With 3 years of hands-on experience building **scalable web applications, CRMs, SaaS products, and SEO-optimized static websites**,  
-I love turning complex problems into elegant, high-performing solutions.
+- I'm a passionate **Full Stack Developer** specializing in the **MERN (MongoDB, Express.js, React.js, Node.js)** stack including Next js and PostgreSQL with Prisma ORM,  
+- With 3 years of hands-on experience building **scalable web applications, CRMs, SaaS products, and SEO-optimized static websites**,  
+- I love turning complex problems into elegant, high-performing solutions.
 
 ---
 
