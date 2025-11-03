@@ -12,7 +12,7 @@ import {
 
 const Home = () => {
 	return (
-		<div className='w-full flex flex-col gap-28' >
+		<div className='w-full flex flex-col' >
 			<HeroSection />
 			<AboutMeSection />
 			<TechnicalExpertiseSection />

@@ -1,8 +1,11 @@
-import { BlogImg, ProjectImg } from "@/assets"
-import DentalSemCRMImg from "../../public/images/dental-sem-crm.png"
-import mxmnews from "../../public/images/mxm-news.png"
-import moustachescapes from "../../public/images/moustachescapes.png"
-import slafs from "../../public/images/slafs.png"
+import {
+    blogImg,
+    dentalSemCrm,
+    moustachescapes,
+    mxmNews,
+    projectImg,
+    slafs,
+} from "../../public"
 
 // -----------------------------------------------------------------------------------
 
@@ -13,6 +16,7 @@ export const city = process.env.NEXT_PUBLIC_CITY;
 export const country = process.env.NEXT_PUBLIC_COUNTRY;
 export const github = process.env.NEXT_PUBLIC_GITHUB;
 export const linkedin = process.env.NEXT_PUBLIC_LINKEDIN;
+export const LiveURL = process.env.NEXT_PUBLIC_LIVE_URL;
 
 export const navbarData = [
     {
@@ -337,7 +341,7 @@ export const SampleProjectsData = [
 <p>Security and role management were key focuses of this project. The entire system was built on a Role-Based Access Control (RBAC) architecture, ensuring that each user — whether an admin, doctor, or staff member — had specific permissions aligned with their responsibilities.</p>
 
 <p>Overall, the Dental SEM CRM successfully improved clinic efficiency, patient follow-up consistency, and data-driven decision-making, offering a complete solution for modern dental practices.</p>`,
-        image: DentalSemCRMImg,
+        image: dentalSemCrm,
         alt: "Dental SEM CRM",
         tech: ["React JS", "Redux", "REST APIs", "JavaScript", "CSS3", "HTML5"],
         github: null,
@@ -395,7 +399,7 @@ export const SampleProjectsData = [
 <p>I integrated Google Drive API to handle document uploads and storage securely, allowing the bank staff to access and verify borrower documents directly through the system without manual file handling. The backend APIs were built to support authentication, data validation, and stage transitions, ensuring smooth communication between users and system logic.</p>
 
 <p>With a focus on automation and data integrity, the SBA Loans CRM enhances operational speed, minimizes manual intervention, and provides a transparent overview of every loan request. It serves as a powerful solution for banking professionals to handle loan processing efficiently and securely.</p>`,
-        image: ProjectImg,
+        image: projectImg,
         alt: "SBA Loans, CRM",
         tech: ["Next.js", "Node.js", "Express JS", "MongoDB", "REST APIs", "Google Drive API", "CSS3", "HTML5"],
         github: null,
@@ -452,11 +456,11 @@ export const SampleProjectsData = [
 <p>A custom push notification system was also integrated to keep users informed of breaking news or updates in their chosen categories. The project features a responsive design with smooth navigation and optimized API handling to ensure fast loading and performance.</p>
 
 <p>Overall, MXM News provides a dynamic and personalized news-reading experience, merging real-time data aggregation with intelligent user preference tracking for a smarter and more engaging platform.</p>`,
-        image: mxmnews,
+        image: mxmNews,
         alt: "MXM news Aggregator App",
         tech: ["Next.js", "Node.js", "MongoDB", "REST APIs", "CSS3", "Firebase Cloud Messaging"],
         github: null,
-        live: "https://mxmnews.com/",
+        live: "https://mxmNews.com/",
         category: "Full Stack",
         projectCategory: "News Aggregation Platform",
         featured: false,
@@ -616,7 +620,7 @@ export const SampleProjectsData = [
 <p>As a dedicated MERN stack developer, I built both the frontend and backend for managing private and public Picker (Picker) flows, including database management, admin panel functionalities, and real-time game updates. Socket.IO was integrated to handle real-time data transfer, ensuring smooth gameplay and instant updates. The platform also included payment gateway integration for managing deposits and winnings.</p>
 
 <p>This project allowed users to enjoy interactive fantasy gaming experiences with secure, real-time operations and a fully managed administrative workflow.</p>`,
-        image: ProjectImg,
+        image: projectImg,
         alt: "Fantasy Sports Platform",
         tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.IO", "CSS", "REST APIs", "Payment Gateway Integration"],
         github: null,
@@ -673,7 +677,7 @@ export const SampleProjectsData = [
 <p>We are expanding the platform with AI-driven features like automated screening, candidate communication, and performance-based filtering.</p>
 
 <p>As a backend developer, I worked on architecting and developing the microservices using Node.js with TypeScript, Express.js, and PostgreSQL with Prisma ORM. I also implemented Docker for containerization and set up CI/CD pipelines for automated deployment and scalability.</p>`,
-        image: ProjectImg,
+        image: projectImg,
         alt: "Hiring CRM System",
         tech: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Docker", "CI/CD", "Microservices", "Outlook Integration", "Python (AI Resume Parsing)"],
         github: null,
@@ -792,8 +796,8 @@ export const workExpSection = [
 export const SampleBlogData = [
     {
         id: 1,
-        img: BlogImg,
-        alt: "BlogImg",
+        img: blogImg,
+        alt: "blogImg",
         uploadDate: "December 15, 2024",
         readTime: "8 min",
         title: "Building Scalable MERN Applications: Best Practices",
@@ -807,8 +811,8 @@ export const SampleBlogData = [
     },
     {
         id: 2,
-        img: BlogImg,
-        alt: "BlogImg",
+        img: blogImg,
+        alt: "blogImg",
         uploadDate: "December 15, 2024",
         readTime: "8 min",
         title: "Modern React Development: Hooks and Performance",
@@ -822,8 +826,8 @@ export const SampleBlogData = [
     },
     {
         id: 3,
-        img: BlogImg,
-        alt: "BlogImg",
+        img: blogImg,
+        alt: "blogImg",
         uploadDate: "December 15, 2024",
         readTime: "8 min",
         title: "API Design Principles for Node.js Applications",

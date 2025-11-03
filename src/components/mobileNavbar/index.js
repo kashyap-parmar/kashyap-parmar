@@ -1,20 +1,18 @@
 "use client";
-import React, { useState } from "react";
-import Icon from "../icon";
-import { navbarData } from "@/mock/data";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from 'react-scroll';
+import { Icon } from "@/components";
+import { navbarData } from "@/mock/data";
 
 // -----------------------------------------
 
 const MobileNavbar = () => {
-
-    const [navbarList, setNavbarList] = useState(navbarData);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { theme, setTheme } = useTheme();
 
     return (
-        <>
+        <div className="w-full bg-transparent sticky top-0 z-[10000] relative">
             {/* Sticky Mobile Navbar */}
             <div className="left-0 right-0 mx-6 backdrop-blur-xl bg-[#FDFEFF] dark:bg-[#030919] card-glow flex items-center px-6 py-4 justify-between lg:hidden rounded-full">
                 <div>
@@ -59,28 +57,26 @@ const MobileNavbar = () => {
             {isMenuOpen && (
                 <div className="fixed top-[110px] z-[10000] left-0 right-0 mx-6 bg-white dark:bg-[#030919] card-glow flex items-center p-9 px-6 justify-between lg:hidden rounded-2xl">
                     <div className="flex flex-col gap-6">
-                        {navbarList.length > 0 &&
-                            navbarList.map((ele, index) => {
-                                return (
-                                    <Link
-                                        key={index}
-                                        to={ele.url}
-                                        spy={true}
-                                        smooth={true}
-                                        duration={300}
-                                        onClick={() => setIsMenuOpen(false)}
-                                        activeClass="text-primary"
-                                        className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
-                                    >
-                                        {ele.title}
-                                    </Link>
-
-                                );
-                            })}
+                        {navbarData?.length > 0 && navbarData?.map((ele, index) => {
+                            return (
+                                <Link
+                                    key={index}
+                                    to={ele.url}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={300}
+                                    // onClick={() => setIsMenuOpen(false)}
+                                    activeClass="text-primary"
+                                    className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
+                                >
+                                    {ele.title}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 };
 

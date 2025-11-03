@@ -8,7 +8,10 @@ import { SampleProjectsData } from "@/mock/data";
 
 const RecentProjectSection = () => {
     return (
-        <div id="projects" className="max-w-full flex justify-center dark:bg-[#040B1C] section-bg items-center lapxl:px-0 p-4 sm:px-8 overflow-hidden">
+        <div
+            id="projects"
+            className="pt-28 max-w-full flex justify-center dark:bg-[#040B1C] section-bg items-center lapxl:px-0 p-4 sm:px-8 overflow-hidden"
+        >
             <div className={`max-w-[1300px] w-[full] flex flex-col gap-y-16 justify-center items-center`}>
                 <div className="w-full flex flex-col justify-center items-center gap-y-12">
                     <div className="w-full flex gap-y-6 justify-center items-center flex-col">
