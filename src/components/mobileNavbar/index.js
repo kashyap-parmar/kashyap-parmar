@@ -12,7 +12,7 @@ const MobileNavbar = () => {
     const { theme, setTheme } = useTheme();
 
     return (
-        <div className="w-full bg-transparent sticky top-0 z-[10000] relative">
+        <div className="w-full bg-transparent sticky top-0 z-[10000]">
             {/* Sticky Mobile Navbar */}
             <div className="left-0 right-0 mx-6 backdrop-blur-xl bg-[#FDFEFF] dark:bg-[#030919] card-glow flex items-center px-6 py-4 justify-between lg:hidden rounded-full">
                 <div>
