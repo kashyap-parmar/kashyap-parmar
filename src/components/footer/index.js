@@ -1,20 +1,22 @@
 "use client";
 import React from "react";
-import Icon from "../icon";
-import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
 import Link from "next/link";
-import { navbarData } from "@/mock/data";
+import { Icon } from "@/components";
+import {
+    email,
+    github,
+    linkedin,
+    navbarData
+} from "@/mock/data";
 
-// ----------------------------------------
+// -----------------------------------------------------------
 
 const Footer = () => {
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
     return (
         <>
             <div className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t">
                 <div
-                    className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center ${coustomXL ? "px-0" : "px-8"}`}
+                    className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center lapxl:px-0 px-8`}
                 >
                     {/* Upper  */}
                     <div className="w-full flex-col gap-y-8 md:gap-y-0 md:flex-row flex justify-between">
@@ -31,28 +33,34 @@ const Footer = () => {
 
                             <div className="flex gap-x-4">
                                 <div className="w-12 h-12 cursor-pointer rounded-full hover:bg-[#2563eb] flex justify-center items-center group ">
-                                    <Icon
-                                        icon={"line-md:github"}
-                                        className={
-                                            "text-black dark:text-white group-hover:text-white"
-                                        }
-                                    />
+                                    <Link href={github} target="_blank" >
+                                        <Icon
+                                            icon={"line-md:github"}
+                                            className={
+                                                "text-black dark:text-white group-hover:text-white"
+                                            }
+                                        />
+                                    </Link>
                                 </div>
                                 <div className="w-12 h-12 cursor-pointer rounded-full hover:bg-[#2563eb] flex justify-center items-center group ">
-                                    <Icon
-                                        icon={"meteor-icons:linkedin"}
-                                        className={
-                                            "text-black dark:text-white group-hover:text-white"
-                                        }
-                                    />
+                                    <Link href={linkedin} target="_blank" >
+                                        <Icon
+                                            icon={"meteor-icons:linkedin"}
+                                            className={
+                                                "text-black dark:text-white group-hover:text-white"
+                                            }
+                                        />
+                                    </Link>
                                 </div>
                                 <div className="w-12 h-12 cursor-pointer rounded-full hover:bg-[#2563eb] flex justify-center items-center group ">
-                                    <Icon
-                                        icon={"material-symbols:mail-outline"}
-                                        className={
-                                            "text-black dark:text-white group-hover:text-white"
-                                        }
-                                    />
+                                    <Link href={`mailto:${email}`} target="_blank" >
+                                        <Icon
+                                            icon={"material-symbols:mail-outline"}
+                                            className={
+                                                "text-black dark:text-white group-hover:text-white"
+                                            }
+                                        />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

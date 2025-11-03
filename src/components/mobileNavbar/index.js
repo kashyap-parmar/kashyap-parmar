@@ -16,7 +16,7 @@ const MobileNavbar = () => {
     return (
         <>
             {/* Sticky Mobile Navbar */}
-            <div className="sticky top-[30px] z-[10000] left-0 right-0 mx-6 backdrop-blur-xl bg-[#FDFEFF] dark:bg-[#030919] card-glow flex items-center px-6 py-4 justify-between lg:hidden rounded-full">
+            <div className="left-0 right-0 mx-6 backdrop-blur-xl bg-[#FDFEFF] dark:bg-[#030919] card-glow flex items-center px-6 py-4 justify-between lg:hidden rounded-full">
                 <div>
                     <p className="cursor-pointer text-2xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                         Mern <span className="dark:text-white text-black" > Developer </span>

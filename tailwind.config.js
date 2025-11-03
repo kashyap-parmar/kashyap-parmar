@@ -11,6 +11,9 @@ module.exports = {
     extend: {
       colors: {
         primary: "#2563eb"
+      },
+      screens: {
+        "lapxl": "1364px"
       }
     },
   },

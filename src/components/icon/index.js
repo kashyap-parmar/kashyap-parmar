@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon as Ic } from "@iconify/react"
 // -----------------------------------------
 
-const Icon = ({ className, height, width, rotate, color, style, icon, onClick, ...props }) => {
+const Icon = ({ className, height, width, rotate, color, iconClass, style, icon, onClick, ...props }) => {
     return (
         <span
             className={className}
@@ -16,7 +16,7 @@ const Icon = ({ className, height, width, rotate, color, style, icon, onClick, .
                 width={width}
                 rotate={rotate}
                 color={color}
-                className={`h-auto ${color}`}
+                className={`h-auto ${color, iconClass}`}
                 style={style}
             />
         </span >

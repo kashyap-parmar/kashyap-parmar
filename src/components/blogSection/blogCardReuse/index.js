@@ -1,14 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
-import Icon from "../../icon"
-import Link from 'next/link'
-import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery'
+import { Icon } from "@/components"
 
-// -------------------------------------------
+// --------------------------------------------------------------------------
 
 const BlogCardReuse = ({ ele }) => {
-
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
 
     const truncateDesc = (text = "", limit = 85) => {
         if (!text) return "";
@@ -26,7 +23,7 @@ const BlogCardReuse = ({ ele }) => {
                 className={`w-full h-[600px] group 
                                     hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)]
                                     dark:hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)]
-                                    hover:-translate-y-4 transition-all duration-300 ease-in-out   dark:border-[#1e293b] rounded-xl border-[#e2e8f0] border-[1px] [ sm:h-[400px] ] [ md:w-[340px] md:h-[500px] ] [ lg:w-[300px] lg:h-[600px] ] [ xl:w-[385px] xl:h-[530px] ] [ ${coustomXL && "!w-[415px] !h-[600px]"} ] `}
+                                    hover:-translate-y-4 transition-all duration-300 ease-in-out   dark:border-[#1e293b] rounded-xl border-[#e2e8f0] border-[1px] [ sm:h-[400px] ] [ md:w-[340px] md:h-[500px] ] [ lg:w-[300px] lg:h-[600px] ] [ xl:w-[385px] xl:h-[530px] ] [ lapxl:!w-[415px] lapxl:!h-[600px] ] `}
             >
                 {/* Image  */}
                 <div className="w-full h-[40%] overflow-hidden rounded-t-xl relative xl:h-[50%]">

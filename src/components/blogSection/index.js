@@ -1,22 +1,17 @@
 "use client";
-import React from "react";
-import Icon from "../icon";
-import { SampleBlogData } from "@/mock/data";
-import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
 import Link from "next/link";
-import BlogCardReuse from "./blogCardReuse";
+import React from "react";
+import { Icon, BlogCardReuse } from "@/components";
+import { SampleBlogData } from "@/mock/data";
 
-// ----------------------------------------
+// ----------------------------------------------------------------------
 
 const BlogSection = () => {
-
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
     return (
         <>
             <div id="blog" className=" py-28 w-full flex justify-center dark:bg-[#040B1C] section-bg items-center">
                 <div
-                    className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center ${coustomXL ? "px-0" : "px-8"}`}
+                    className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center lapxl:px-0 px-8`}
                 >
                     <div className="w-full flex flex-col justify-center items-center gap-y-12">
                         <div className="w-full flex gap-y-6 justify-center items-center flex-col">

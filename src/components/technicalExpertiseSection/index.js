@@ -2,20 +2,17 @@
 import React from "react";
 import Icon from "../icon";
 import { FeaturedSkillsData } from "@/mock/data";
-import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
-import TechSkillsCardReuse from "./techSkillsCardReuse";
+import { TechSkillsCardReuse } from "@/components";
 
 // -------------------------------------------
 
 const TechnicalExpertiseSection = () => {
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
 
     return (
         <>
-            <div id="skills" className="py-28 w-full flex justify-center items-center dark:bg-[#020817] bg-white">
+            <div id="skills" className="w-full flex justify-center items-center dark:bg-[#020817] bg-white">
                 <div
-                    className={`max-w-[1300px] w-full flex flex-col gap-y-16 justify-center items-center ${coustomXL ? "px-0" : "px-8"
-                        }`}
+                    className={`max-w-[1300px] w-full flex flex-col gap-y-16 justify-center items-center lapxl:px-0 px-8`}
                 >
                     {/* Upper Section */}
                     <div className="w-full flex flex-col justify-center items-center gap-y-12">

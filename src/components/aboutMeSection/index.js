@@ -6,19 +6,16 @@ import {
     aboutMeBigCard,
     aboutMeSmallCard
 } from '@/mock/data';
-import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery';
 import { Element } from 'react-scroll';
 
 // ----------------------------------------------
 
 const AboutMeSection = () => {
 
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
     return (
         <Element name='about'>
-            <div id='about' className='py-28 w-full flex justify-center dark:bg-[#040B1C] section-bg items-center'>
-                <div className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center ${coustomXL ? "px-0" : "px-8"}`}>
+            <div id='about' className='w-full flex justify-center dark:bg-[#040B1C] section-bg items-center'>
+                <div className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center lapxl:px-0 px-4 sm:px-8`}>
 
                     <div className='w-full flex flex-col justify-center items-center gap-y-12'>
 
@@ -46,7 +43,7 @@ const AboutMeSection = () => {
                         </div>
 
 
-                        <div className={`flex w-full flex-wrap justify-center ${coustomXL && "!gap-8"} gap-6 md:gap-8`}>
+                        <div className={`flex w-full flex-wrap justify-center lapxl:!gap-8 gap-6 md:gap-8`}>
                             {
                                 aboutMeBigCard.map((ele, index) => {
                                     return (
@@ -60,7 +57,7 @@ const AboutMeSection = () => {
 
                     <div className='w-full flex flex-col lg:flex-row items-center gap-y-12 lg:justify-between'>
 
-                        <div className='w-full lg:w-[48%] gap-y-6 flex flex-col'>
+                        <div className='w-full lg:w-[48%] gap-y-6 flex flex-col px-4'>
                             <p className='text-2xl font-bold'>
                                 Building Digital Excellence
                             </p>

@@ -1,8 +1,5 @@
-"use client"
-import React, { useEffect, useRef, useState } from 'react';
 import {
 	AboutMeSection,
-	BlogSection,
 	HeroSection,
 	RecentProjectSection,
 	TechnicalExpertiseSection,
@@ -15,7 +12,7 @@ import {
 
 const Home = () => {
 	return (
-		<div>
+		<div className='w-full flex flex-col gap-28' >
 			<HeroSection />
 			<AboutMeSection />
 			<TechnicalExpertiseSection />

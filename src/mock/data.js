@@ -4,6 +4,16 @@ import mxmnews from "../../public/images/mxm-news.png"
 import moustachescapes from "../../public/images/moustachescapes.png"
 import slafs from "../../public/images/slafs.png"
 
+// -----------------------------------------------------------------------------------
+
+export const email = process.env.NEXT_PUBLIC_EMAIL;
+export const name = process.env.NEXT_PUBLIC_NAME;
+export const phone = process.env.NEXT_PUBLIC_PHONE;
+export const city = process.env.NEXT_PUBLIC_CITY;
+export const country = process.env.NEXT_PUBLIC_COUNTRY;
+export const github = process.env.NEXT_PUBLIC_GITHUB;
+export const linkedin = process.env.NEXT_PUBLIC_LINKEDIN;
+
 export const navbarData = [
     {
         title: "Home",
@@ -317,21 +327,23 @@ export const SampleProjectsData = [
         title: "Dental Sem CRM",
         company: "Hupp Technologies Pvt Ltd",
         companyUrl: "https://hupp.tech/",
-        description: `The Dental SEM CRM is an advanced Customer Relationship Management platform built to streamline dental clinic operations and enhance patient engagement. As a Frontend Developer, I was responsible for designing and developing an intuitive and responsive user interface using React.js, ensuring a seamless user experience across all devices.
+        role: "Frontend Developer (React JS)",
+        description: `<p>The Dental SEM CRM is an advanced Customer Relationship Management platform built to streamline dental clinic operations and enhance patient engagement. As a Frontend Developer, I was responsible for designing and developing an intuitive and responsive user interface using React.js, ensuring a seamless user experience across all devices.</p>
 
-The CRM enables clinics to efficiently manage their daily workflow — from treatment tracking and appointment booking to lead management and payment handling. It includes a structured, step-by-step follow-up system, allowing users to monitor the progress of each lead through various stages (such as inquiry, consultation, treatment, and follow-up). This feature helps dental professionals track patient journeys and ensure timely engagement.
+<p>The CRM enables clinics to efficiently manage their daily workflow — from treatment tracking and appointment booking to lead management and payment handling. It includes a structured, step-by-step follow-up system, allowing users to monitor the progress of each lead through various stages (such as inquiry, consultation, treatment, and follow-up). This feature helps dental professionals track patient journeys and ensure timely engagement.</p>
 
-A robust reporting and analytics module was also integrated to provide insights into lead conversions, treatment statistics, and revenue performance. The payment section supports secure handling of transactions, ensuring transparency and accuracy in clinic finances.
+<p>A robust reporting and analytics module was also integrated to provide insights into lead conversions, treatment statistics, and revenue performance. The payment section supports secure handling of transactions, ensuring transparency and accuracy in clinic finances.</p>
 
-Security and role management were key focuses of this project. The entire system was built on a Role-Based Access Control (RBAC) architecture, ensuring that each user — whether an admin, doctor, or staff member — had specific permissions aligned with their responsibilities.
+<p>Security and role management were key focuses of this project. The entire system was built on a Role-Based Access Control (RBAC) architecture, ensuring that each user — whether an admin, doctor, or staff member — had specific permissions aligned with their responsibilities.</p>
 
-Overall, the Dental SEM CRM successfully improved clinic efficiency, patient follow-up consistency, and data-driven decision-making, offering a complete solution for modern dental practices.`,
+<p>Overall, the Dental SEM CRM successfully improved clinic efficiency, patient follow-up consistency, and data-driven decision-making, offering a complete solution for modern dental practices.</p>`,
         image: DentalSemCRMImg,
-        alt: "CRM",
+        alt: "Dental SEM CRM",
         tech: ["React JS", "Redux", "REST APIs", "JavaScript", "CSS3", "HTML5"],
         github: null,
         live: "https://www.dental-sem.co.uk/",
         category: "Frontend",
+        projectCategory: "CRM software",
         featured: true,
         keyFeatures: [
             "User Authentication & Authorization",
@@ -375,19 +387,21 @@ Overall, the Dental SEM CRM successfully improved clinic efficiency, patient fol
         title: "SBA Loans",
         company: "Jain Bhavesh Solution",
         companyUrl: "https://www.jbsolutions.in/",
-        description: `The SBA Loans CRM is a comprehensive banking loan management platform designed to automate and streamline the entire loan approval lifecycle for financial institutions. This system is primarily used by bank managers and account executives to process, verify, and approve loan requests with complete transparency and efficiency.
+        role: "Full Stack Developer (Next.js)",
+        description: `<p>The SBA Loans CRM is a comprehensive banking loan management platform designed to automate and streamline the entire loan approval lifecycle for financial institutions. This system is primarily used by bank managers and account executives to process, verify, and approve loan requests with complete transparency and efficiency.</p>
 
-Developed entirely with Next.js, this project includes both frontend and backend functionalities, offering a secure and seamless experience. The CRM manages everything from initial loan requests to final approval, with multiple verification stages such as document upload, pre-qualification, eligibility check, and approval or rejection. Each loan request moves through a defined workflow that ensures compliance and accountability at every stage.
+<p>Developed entirely with Next.js, this project includes both frontend and backend functionalities, offering a secure and seamless experience. The CRM manages everything from initial loan requests to final approval, with multiple verification stages such as document upload, pre-qualification, eligibility check, and approval or rejection. Each loan request moves through a defined workflow that ensures compliance and accountability at every stage.</p>
 
-I integrated Google Drive API to handle document uploads and storage securely, allowing the bank staff to access and verify borrower documents directly through the system without manual file handling. The backend APIs were built to support authentication, data validation, and stage transitions, ensuring smooth communication between users and system logic.
+<p>I integrated Google Drive API to handle document uploads and storage securely, allowing the bank staff to access and verify borrower documents directly through the system without manual file handling. The backend APIs were built to support authentication, data validation, and stage transitions, ensuring smooth communication between users and system logic.</p>
 
-With a focus on automation and data integrity, the SBA Loans CRM enhances operational speed, minimizes manual intervention, and provides a transparent overview of every loan request. It serves as a powerful solution for banking professionals to handle loan processing efficiently and securely.`,
+<p>With a focus on automation and data integrity, the SBA Loans CRM enhances operational speed, minimizes manual intervention, and provides a transparent overview of every loan request. It serves as a powerful solution for banking professionals to handle loan processing efficiently and securely.</p>`,
         image: ProjectImg,
-        alt: "Banking CRM",
+        alt: "SBA Loans, CRM",
         tech: ["Next.js", "Node.js", "Express JS", "MongoDB", "REST APIs", "Google Drive API", "CSS3", "HTML5"],
         github: null,
         live: null,
-        category: "Fullstack",
+        category: "Full Stack",
+        projectCategory: "CRM software",
         featured: true,
         confidential: true,
         keyFeatures: [
@@ -428,19 +442,23 @@ With a focus on automation and data integrity, the SBA Loans CRM enhances operat
     {
         id: 3,
         title: "MXM News",
-        description: `MXM News is a modern news aggregation platform built with Next.js that curates and displays trending articles from multiple reliable sources and publishers. The platform delivers real-time news updates in a visually engaging card layout, categorized into various sections like Entertainment, Sports, Technology, and Business.
+        company: "Jain Bhavesh Solution",
+        companyUrl: "https://www.jbsolutions.in/",
+        role: "Full Stack Developer (Next.js)",
+        description: `<p>MXM News is a modern news aggregation platform built with Next.js that curates and displays trending articles from multiple reliable sources and publishers. The platform delivers real-time news updates in a visually engaging card layout, categorized into various sections like Entertainment, Sports, Technology, and Business.</p>
 
-Users can sign up and personalize their news experience by selecting preferred categories, saving articles, and receiving personalized recommendations based on their reading interests. I implemented secure user authentication and state management to maintain user sessions and preferences efficiently.
+<p>Users can sign up and personalize their news experience by selecting preferred categories, saving articles, and receiving personalized recommendations based on their reading interests. I implemented secure user authentication and state management to maintain user sessions and preferences efficiently.</p>
 
-A custom push notification system was also integrated to keep users informed of breaking news or updates in their chosen categories. The project features a responsive design with smooth navigation and optimized API handling to ensure fast loading and performance.
+<p>A custom push notification system was also integrated to keep users informed of breaking news or updates in their chosen categories. The project features a responsive design with smooth navigation and optimized API handling to ensure fast loading and performance.</p>
 
-Overall, MXM News provides a dynamic and personalized news-reading experience, merging real-time data aggregation with intelligent user preference tracking for a smarter and more engaging platform.`,
+<p>Overall, MXM News provides a dynamic and personalized news-reading experience, merging real-time data aggregation with intelligent user preference tracking for a smarter and more engaging platform.</p>`,
         image: mxmnews,
-        alt: "News Aggregator App",
+        alt: "MXM news Aggregator App",
         tech: ["Next.js", "Node.js", "MongoDB", "REST APIs", "CSS3", "Firebase Cloud Messaging"],
         github: null,
         live: "https://mxmnews.com/",
-        category: "Fullstack",
+        category: "Full Stack",
+        projectCategory: "News Aggregation Platform",
         featured: false,
         keyFeatures: [
             "Real-Time News Aggregation",
@@ -480,19 +498,23 @@ Overall, MXM News provides a dynamic and personalized news-reading experience, m
     {
         id: 4,
         title: "Moustachescapes – Hotel Booking Platform",
-        description: `Moustachescapes is a fully responsive and SEO-optimized hotel booking platform developed using Next.js and Tailwind CSS. The platform allows users to explore and book luxury stays across India's most popular travel destinations including Udaipur, Manali, Jaipur, Goa, Kashmir, ETC. 
+        company: "Exceleur Services Pvt Ltd",
+        companyUrl: "https://exceleur.in/",
+        role: "Frontend Developer (Next JS)",
+        description: `<p>Moustachescapes is a fully responsive and SEO-optimized hotel booking platform developed using Next.js and Tailwind CSS. The platform allows users to explore and book luxury stays across India's most popular travel destinations including Udaipur, Manali, Jaipur, Goa, Kashmir, ETC.</p> 
 
-The website provides an immersive experience with detailed hotel pages featuring room types, amenities, photo galleries, nearby attractions, and food inclusions/exclusions. I was responsible for building a smooth, responsive user interface and implementing Server-Side Rendering (SSR) for improved SEO and faster page loads.
+<p>The website provides an immersive experience with detailed hotel pages featuring room types, amenities, photo galleries, nearby attractions, and food inclusions/exclusions. I was responsible for building a smooth, responsive user interface and implementing Server-Side Rendering (SSR) for improved SEO and faster page loads.</p>
 
-A secure payment gateway was integrated using Airpay, ensuring smooth and safe online transactions for customers. The platform also includes a dedicated blog section to share travel insights and destination guides, enhancing content-driven marketing for organic reach.
+<p>A secure payment gateway was integrated using Airpay, ensuring smooth and safe online transactions for customers. The platform also includes a dedicated blog section to share travel insights and destination guides, enhancing content-driven marketing for organic reach.</p>
 
-With its visually appealing design, optimized performance, and user-centric structure, Moustachescapes helps travelers find, compare, and book the best luxury accommodations directly from the official website.`,
+<p>With its visually appealing design, optimized performance, and user-centric structure, Moustachescapes helps travelers find, compare, and book the best luxury accommodations directly from the official website.</p>`,
         image: moustachescapes,
-        alt: "Hotel Booking Website",
+        alt: "Moustachescapes - Hotel Booking Website",
         tech: ["Next.js", "Tailwind CSS", "Airpay Payment Gateway", "REST APIs", "JavaScript", "SEO Optimization", "HTML5"],
         github: null,
         live: "https://moustachescapes.com/",
         category: "Frontend",
+        projectCategory: "Hotel Booking Platform",
         featured: true,
         keyFeatures: [
             "Hotel Search & Booking System",
@@ -532,17 +554,21 @@ With its visually appealing design, optimized performance, and user-centric stru
     {
         id: 5,
         title: "SLA-FS – Financial Services Website",
-        description: `SLA-FS is a finance company website built to showcase their services and help clients make informed investment decisions. The platform highlights various financial solutions, including personalized budgeting, wealth creation and management, children's education planning, retirement planning, emergency fund management, and risk mitigation strategies. It also focuses on empowering women to achieve financial independence.
+        company: "Exceleur Services Pvt Ltd",
+        companyUrl: "https://exceleur.in/",
+        role: "Frontend Developer (Next JS)",
+        description: `<p>SLA-FS is a finance company website built to showcase their services and help clients make informed investment decisions. The platform highlights various financial solutions, including personalized budgeting, wealth creation and management, children's education planning, retirement planning, emergency fund management, and risk mitigation strategies. It also focuses on empowering women to achieve financial independence.</p>
 
-Developed using Next.js with SCSS, the website emphasizes a smooth and engaging user experience through animated interactions. To address performance issues caused by the animation library, I implemented lazy loading and Server-Side Rendering (SSR), significantly improving page load speed and responsiveness.
+<p>Developed using Next.js with SCSS, the website emphasizes a smooth and engaging user experience through animated interactions. To address performance issues caused by the animation library, I implemented lazy loading and Server-Side Rendering (SSR), significantly improving page load speed and responsiveness.</p>
 
-Although the website primarily serves as a portfolio and service showcase, it effectively communicates SLA-FS's expertise and builds trust with potential clients. The combination of modern UI/UX, optimized performance, and informative content ensures a professional and engaging digital presence for the company.`,
+<p>Although the website primarily serves as a portfolio and service showcase, it effectively communicates SLA-FS's expertise and builds trust with potential clients. The combination of modern UI/UX, optimized performance, and informative content ensures a professional and engaging digital presence for the company.</p>`,
         image: slafs,
         alt: "Financial Services Website",
         tech: ["Next.js", "SCSS", "JavaScript", "Animations Library", "SSR Optimization", "Lazy Loading"],
         github: null,
         live: "https://slafs.in/",
         category: "Frontend",
+        projectCategory: "Financial Services Website",
         featured: false,
         keyFeatures: [
             "Showcase of Financial Services",
@@ -582,17 +608,21 @@ Although the website primarily serves as a portfolio and service showcase, it ef
     {
         id: 6,
         title: "Gamerji Fantasy Sport",
-        description: `Gamerji Fantasy Sport is a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities. I specifically worked on the Picker (Picker) Game module, where users can create their own teams and compete according to Picker (Picker) Game rules in either public or private matches.
+        company: "Exceleur Services Pvt Ltd",
+        companyUrl: "https://exceleur.in/",
+        role: "Full stack Developer (MERN Stack)",
+        description: `<p>Gamerji Fantasy Sport is a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities. I specifically worked on the Picker (Picker) Game module, where users can create their own teams and compete according to Picker (Picker) Game rules in either public or private matches.</p>
 
-As a dedicated MERN stack developer, I built both the frontend and backend for managing private and public Picker (Picker) flows, including database management, admin panel functionalities, and real-time game updates. Socket.IO was integrated to handle real-time data transfer, ensuring smooth gameplay and instant updates. The platform also included payment gateway integration for managing deposits and winnings.
+<p>As a dedicated MERN stack developer, I built both the frontend and backend for managing private and public Picker (Picker) flows, including database management, admin panel functionalities, and real-time game updates. Socket.IO was integrated to handle real-time data transfer, ensuring smooth gameplay and instant updates. The platform also included payment gateway integration for managing deposits and winnings.</p>
 
-This project allowed users to enjoy interactive fantasy gaming experiences with secure, real-time operations and a fully managed administrative workflow.`,
+<p>This project allowed users to enjoy interactive fantasy gaming experiences with secure, real-time operations and a fully managed administrative workflow.</p>`,
         image: ProjectImg,
         alt: "Fantasy Sports Platform",
         tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.IO", "CSS", "REST APIs", "Payment Gateway Integration"],
         github: null,
         live: null,
-        category: "Fullstack",
+        category: "Full Stack",
+        projectCategory: "SAAS-based Fantasy Sports Platform",
         featured: true,
         underDevelopment: true,
         keyFeatures: [
@@ -633,19 +663,23 @@ This project allowed users to enjoy interactive fantasy gaming experiences with 
     {
         id: 7,
         title: "PROAITS-CRM",
-        description: `PROAITS is a CRM platform designed to automate and optimize the hiring process for multiple companies through a microservices-based backend architecture. It enables companies to manage recruitment workflows including company profiles, contacts, jobs, and candidates efficiently.
+        company: "Exceleur Services Pvt Ltd",
+        companyUrl: "https://exceleur.in/",
+        role: "Backend Developer (PostgreSQL)",
+        description: `<p>PROAITS is a CRM platform designed to automate and optimize the hiring process for multiple companies through a microservices-based backend architecture. It enables companies to manage recruitment workflows including company profiles, contacts, jobs, and candidates efficiently.</p>
 
-Each module — Company, Company Contacts, Jobs, and Candidates — features complete CRUD operations with Role-Based Access Control (RBAC). The system includes advanced capabilities such as audit logging, analytics and reporting, backend-driven filtering and pagination, push notifications, and global plus Boolean search functionality. Additionally, it supports AI-powered resume parsing using Python and integrates Outlook email for seamless communication across modules.
+<p>Each module — Company, Company Contacts, Jobs, and Candidates — features complete CRUD operations with Role-Based Access Control (RBAC). The system includes advanced capabilities such as audit logging, analytics and reporting, backend-driven filtering and pagination, push notifications, and global plus Boolean search functionality. Additionally, it supports AI-powered resume parsing using Python and integrates Outlook email for seamless communication across modules.</p>
 
-We are expanding the platform with AI-driven features like automated screening, candidate communication, and performance-based filtering.
+<p>We are expanding the platform with AI-driven features like automated screening, candidate communication, and performance-based filtering.</p>
 
-As a backend developer, I worked on architecting and developing the microservices using Node.js with TypeScript, Express.js, and PostgreSQL with Prisma ORM. I also implemented Docker for containerization and set up CI/CD pipelines for automated deployment and scalability.`,
+<p>As a backend developer, I worked on architecting and developing the microservices using Node.js with TypeScript, Express.js, and PostgreSQL with Prisma ORM. I also implemented Docker for containerization and set up CI/CD pipelines for automated deployment and scalability.</p>`,
         image: ProjectImg,
         alt: "Hiring CRM System",
         tech: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Docker", "CI/CD", "Microservices", "Outlook Integration", "Python (AI Resume Parsing)"],
         github: null,
         live: null,
         category: "Backend",
+        projectCategory: "CRM software - Hiring management",
         featured: true,
         underDevelopment: true,
         keyFeatures: [
@@ -697,6 +731,7 @@ export const workExpSection = [
         startYear: "2024",
         endYear: "2025",
         companyName: "Exceleur services Pvt Ltd",
+        companyUrl: "https://exceleur.in/",
         desc: "Worked as a Senior Full Stack Developer, leading projects and mentoring junior developers to enhance team productivity and collaboration. Managed microservices architecture and CI/CD pipelines with Docker for seamless deployments. Gained experience with relational databases (PostgreSQL) using Prisma ORM, managing cross-service database structures efficiently. Handled AWS deployments with logging and monitoring, ensuring high availability and reliability. Worked on multiple client projects simultaneously as a dedicated developer, converting client requirements into technical solutions to achieve their goals. Implemented Outlook email integration and improved overall project architecture while strengthening client communication and project management skills.",
         keyAchievements: [
             "Led projects and mentored junior developers, improving team efficiency.",
@@ -716,6 +751,7 @@ export const workExpSection = [
         startYear: "2023",
         endYear: "2024",
         companyName: "Exceleur services Pvt Ltd",
+        companyUrl: "https://exceleur.in/",
         desc: "Worked as the solo full stack developer managing projects from scratch to deployment, handling both frontend and backend. Built SEO-friendly, high-performance web applications using Next.js (SSR & SSG) for optimal visibility. Developed backend APIs with Node.js, Express, MongoDB, and TypeScript, ensuring scalable and maintainable architecture. Designed interactive, user-friendly interfaces with Tailwind CSS, including smooth animations and responsive layouts to enhance overall UX. Managed project timelines, integrated APIs independently, and provided technical solutions to meet business requirements.",
         keyAchievements: [
             "Built full stack web applications using Next.js, Tailwind CSS, Node.js, Express, MongoDB, and TypeScript.",
@@ -735,6 +771,7 @@ export const workExpSection = [
         startYear: "2022",
         endYear: "2023",
         companyName: "Hupp Technology Pvt Ltd",
+        companyUrl: "https://hupp.tech/",
         desc: "I worked extensively with React.js, where I learned the fundamentals of building scalable and maintainable frontend applications. This experience helped me understand industry standards, clean code practices, and project management workflows. I gained hands-on experience in collaborating with teams, organizing code structure efficiently, and delivering user-friendly interfaces in a professional development environment.",
         keyAchievements: [
             "Built responsive and reusable UI components using React.js",

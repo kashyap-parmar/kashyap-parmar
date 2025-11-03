@@ -1,21 +1,17 @@
 "use client"
-import Icon from '../icon'
-import React from 'react'
-import { motion } from "framer-motion";
-import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery';
-import { techIconsHeroSection } from '@/mock/data';
 import Link from 'next/link';
+import React from 'react';
+import { motion } from "framer-motion";
+import { Icon } from '@/components';
+import { techIconsHeroSection } from '@/mock/data';
 
 // ------------------------------------------------------
 
 const HeroSection = () => {
-
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
     return (
         <>
-            <div id='hero' className='pb-20 flex items-center justify-center w-full hero-bg pt-20 lg:pt-26'>
-                <div className={`max-w-[1300px] lg:flex-row flex-col ${coustomXL ? "px-0" : "px-8"}  w-full h-full flex items-start xl:flex-row justify-between`}>
+            <div id='hero' className='py-20 flex items-center justify-center w-full hero-bg lg:pt-26'>
+                <div className={`max-w-[1300px] lg:flex-row flex-col lapxl:px-0 px-8 w-full h-full flex items-start xl:flex-row justify-between`}>
 
                     {/* ----------------- LEFT SECTION ----------------- */}
                     <div className="w-full lg:w-[50%] flex flex-col h-full">
@@ -56,7 +52,7 @@ const HeroSection = () => {
                                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
                             </button>
                             <Link href={"/#projects"}>
-                                <button className='py-4 dark:hover:bg-[#1e293b] dark:bg-[#020817] hover:bg-[#f1f5f9] dark:outline-[#1f2a3d] outline outline-[#e2e8f0] shadow-sm outline-1 px-8 rounded-full font-semibold text-sm h-fit flex bg-white justify-center items-center gap-x-4'>
+                                <button className='w-full py-4 dark:hover:bg-[#1e293b] dark:bg-[#020817] hover:bg-[#f1f5f9] dark:outline-[#1f2a3d] outline outline-[#e2e8f0] shadow-sm outline-1 px-8 rounded-full font-semibold text-sm h-fit flex bg-white justify-center items-center gap-x-4'>
                                     <Icon height={20} width={20} icon={"ep:video-play"} />
                                     View My Work
                                 </button>

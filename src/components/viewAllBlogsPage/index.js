@@ -1,17 +1,12 @@
 "use client";
 import React from "react";
 import Icon from "../icon";
-import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
 import { SampleBlogData } from "@/mock/data";
-import CustomNavbar from "../coustomNavbar";
-import BlogFullCardReuse from "./blogFullCardReuse";
-import BlogCardReuse from "../blogSection/blogCardReuse";
+import { CustomNavbar, BlogFullCardReuse, BlogCardReuse } from "@/components";
 
 // ----------------------------------------
 
 const AllBlogPageComponent = () => {
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
     return (
         <>
             <div className="w-full dark:bg-[#020817]">
@@ -20,7 +15,7 @@ const AllBlogPageComponent = () => {
 
                 <div className="w-fill flex justify-center items-center pt-12">
                     <div
-                        className={`max-w-[1300px] h-full flex-col w-full gap-x-4 flex justify-center items-start  ${coustomXL ? "px-0" : "px-8"}`}
+                        className={`max-w-[1300px] h-full flex-col w-full gap-x-4 flex justify-center items-start lapxl:px-0 px-8`}
                     >
                         {/* Heading  */}
                         <div className="w-full flex-col gap-y-6 flex justify-center items-center text-center pb-16">

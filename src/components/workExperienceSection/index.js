@@ -1,20 +1,17 @@
 "use client";
 import React from "react";
-import Icon from "../icon";
 import { workExpSection } from "@/mock/data";
-import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
-import WorkExpCardReuse from "./workExpCardReuse";
+import { WorkExpCardReuse, Icon } from "@/components";
 
 // -----------------------------------------------
 
 const WorkExpSection = () => {
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
 
     return (
         <>
-            <div id="experience" className=" py-28 w-full flex justify-center items-center dark:bg-[#020817] bg-white">
+            <div id="experience" className=" w-full flex justify-center items-center dark:bg-[#020817] bg-white">
                 <div
-                    className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center ${coustomXL ? "px-0" : "px-8"}`}
+                    className={`max-w-[1300px] w-full flex-col gap-y-16 flex justify-center items-center lapxl:px-0 px-8`}
                 >
                     {/* Upper section  */}
                     <div className="w-full flex flex-col justify-center items-center gap-y-12">

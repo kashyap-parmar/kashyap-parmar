@@ -7,11 +7,15 @@ import {
 } from '@/components';
 import "./globals.css";
 
+// ------------------------------------------------------------------
+
 const poppins = Poppins({
 	subsets: ['latin'],
 	weight: ['300', '400', '500', '600', '700', '800'],
 	display: 'swap',
 });
+
+// ------------------------------------------------------------------
 
 export const metadata = {
 	title: "Kashyap Parmar | Full Stack Web Developer",
@@ -21,10 +25,12 @@ export const metadata = {
 	},
 };
 
+// ------------------------------------------------------------------
+
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={`${poppins.className} antialiased`}>
+			<body className={`${poppins.className} antialiased w-full`}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="light"

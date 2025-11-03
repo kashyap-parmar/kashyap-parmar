@@ -1,5 +1,4 @@
 import { ViewAllProjectComponent } from '@/components'
-import React from 'react'
 
 // ----------------------------------------
 

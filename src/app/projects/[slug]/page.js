@@ -1,4 +1,4 @@
-import { CustomNavbarBlog, Navbar, SpecificProjectPageComponent } from '@/components';
+import { CustomNavbarBlog, SpecificProjectPageComponent } from '@/components';
 import { SampleProjectsData } from '@/mock/data';
 import React from 'react'
 
@@ -16,7 +16,8 @@ const SpecificProjectPage = async ({ params }) => {
                 <CustomNavbarBlog
                     subTitleBtn={"Projects"}
                     path={"/projects"}
-                    isBlog={false} />
+                    isBlog={false}
+                />
                 <div className="text-center min-h-screen flex flex-col justify-center items-center py-10">
                     <div className="flex flex-col cursor-pointer text-2xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                         <p className='text-[100px] leading-[120px]' >404</p>
@@ -28,7 +29,7 @@ const SpecificProjectPage = async ({ params }) => {
     }
 
     return (
-        <SpecificProjectPageComponent project={project} />
+        <SpecificProjectPageComponent project={project} slug={slug} />
     )
 }
 

@@ -1,13 +1,10 @@
-"use client"
-import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery';
+"use client";
 import React from 'react'
 import Icon from "../../icon"
 
 // ------------------------------------
 
 const AboutMeBigCardReuse = ({ ele }) => {
-
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
 
     return (
         <>
@@ -17,8 +14,8 @@ const AboutMeBigCardReuse = ({ ele }) => {
               flex flex-col justify-center items-center rounded-xl p-8
               shadow transition-all duration-300 ease-in-out
               hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02]
-              w-[130px] h-[240px] sm:h-[215px] sm:w-[270px] md:w-[300px] lg:w-[210px] xl:w-[280px]
-              ${coustomXL ? "!w-[300px] !h-[215px]" : ""}`}
+              w-[250px] h-[250px] sm:h-[215px] sm:w-[270px] md:w-[300px] lg:w-[210px] xl:w-[280px]
+              lapxl:!w-[300px] lapxl:!h-[215px]`}
             >
 
                 <div className='w-[64px] flex justify-center items-center h-[64px]'>

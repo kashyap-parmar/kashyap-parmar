@@ -12,16 +12,15 @@ import { MobileNavbar, Icon } from "@/components";
 const Navbar = ({ show }) => {
     const { theme, setTheme } = useTheme();
     const pathname = usePathname();
+    const notShowingTrue = (pathname.includes("project") || pathname.includes("blog"))
     const regex = /^\/(#\w+)?$/;
-
-    console.log("pathname:", regex.test(pathname));
 
     return (
         <div
-            className={`${(pathname.includes("project") || pathname.includes("blog")) && !show ? "hidden" : "block"} sticky top-[30px] z-[10000] `}
+            className={`${notShowingTrue && !show ? "hidden" : "block"} w-full bg-transparent sticky top-[30px] z-[10000]`}
         >
             {/* Desktop Navbar */}
-            <nav className={`lg:flex items-center justify-center hidden w-full bg-transparent `}>
+            <div className="hidden lg:flex items-center justify-center w-full bg-transparent">
                 <div className="flex px-8 card-glow items-center py-4 max-w-[860px] justify-between w-full backdrop-blur-xl rounded-full bg-[#FDFEFF] dark:bg-[#030919] transition-colors duration-300">
                     <Link to="contact">
                         <p className="cursor-pointer text-2xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
@@ -37,7 +36,6 @@ const Navbar = ({ show }) => {
                                 smooth={true}
                                 duration={300}
                                 offset={-30}
-                                onSetActive={(name) => console.log("Active section:", name)}
                                 className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
                                 activeClass="!text-primary"
                             >
@@ -64,11 +62,11 @@ const Navbar = ({ show }) => {
                     </button>
 
                 </div>
-            </nav>
+            </div >
 
             {/* Mobile Navbar */}
             <MobileNavbar />
-        </div>
+        </div >
     );
 };
 

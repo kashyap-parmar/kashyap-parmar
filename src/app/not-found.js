@@ -1,3 +1,7 @@
+"use client";
+
+// ----------------------------------------------------
+
 const NotfoundPage = () => {
     return (
         <div className="text-center min-h-screen flex flex-col justify-center items-center py-10">

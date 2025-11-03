@@ -1,47 +1,54 @@
 "use client";
 import Image from 'next/image';
-import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery';
-import { CustomNavbarBlog, Icon, ProjectSectionCard } from '@/components';
+import Link from 'next/link';
 import { SampleProjectsData } from '@/mock/data';
+import {
+    CustomNavbar,
+    Icon,
+    ProjectSectionCard
+} from '@/components';
 
 // --------------------------------------------
 
-const SpecificProjectPageComponent = ({ project }) => {
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
+const SpecificProjectPageComponent = ({ project, slug }) => {
     return (
         <div className='w-full h-full dark:bg-[#020817]'>
             {/* Navbar  */}
-            <CustomNavbarBlog
-                subTitleBtn={"Projects"}
+            <CustomNavbar
                 path={"/projects"}
-                isBlog={false} />
+                subTitleBtn={"projects"}
+                title={project?.title}
+            />
 
             <div className='w-full flex justify-center items-center py-10'>
-                <div className={`max-w-[1300px] gap-y-12 flex-col ${coustomXL ? "px-0" : "px-8"}  w-full h-full flex items-start justify-between`}>
+                <div className={`max-w-[1300px] gap-y-12 flex-col lapxl:px-0 px-8 w-full h-full flex items-start justify-between`}>
 
                     {/* Main Upper Section  */}
                     <div className='relative flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 justify-between items-start w-full'>
                         {/* Left Part */}
-                        <div className='flex flex-col gap-y-8 w-full lg:w-[68%]'>
+                        <div className='flex flex-col gap-y-8 w-full lg:w-[68%] max-w-[900px]'>
 
                             {/* Images Section */}
-                            <div className="w-full h-[400px] flex justify-center items-center">
+                            <div className="w-full max-w-[900px] flex justify-center items-center">
                                 <Image
                                     alt='...'
-                                    width={300}
-                                    height={300}
+                                    width={900}
+                                    height={0}
                                     src={project?.image}
-                                    className='w-full h-full rounded-lg object-cover'
+                                    className='w-full !h-auto rounded-lg'
                                 />
                             </div>
 
                             {/* About Project Section  */}
                             <div className='flex flex-col gap-y-4'>
                                 <p className='text-2xl font-semibold mb-4'>
-                                    About This Project
+                                    {project?.title}
                                 </p>
-                                <p className='text-[#64748b] leading-relaxed'>
+                                <div
+                                    className='text-[#64748b] leading-relaxed text-justify flex flex-col gap-y-4'
+                                    dangerouslySetInnerHTML={{ __html: project?.description }}
+                                />
+                                {/* <p className='text-[#64748b] leading-relaxed'>
                                     This e-commerce platform represents a complete solution for modern online retail businesses. Built from the ground up using the MERN stack, it demonstrates proficiency in full-stack development, database design, and user experience optimization.
                                 </p>
                                 <p className='text-[#64748b] leading-relaxed'>
@@ -55,7 +62,7 @@ const SpecificProjectPageComponent = ({ project }) => {
                                 </p>
                                 <p className='text-[#64748b] leading-relaxed'>
                                     Payment processing is handled through Stripe integration, providing secure and reliable transaction processing with support for multiple payment methods and currencies.
-                                </p>
+                                </p> */}
                             </div>
 
                             {/* Key Features */}
@@ -111,45 +118,63 @@ const SpecificProjectPageComponent = ({ project }) => {
                             {/* Project Details  */}
                             <div className='p-6 flex flex-col dark:border-[#1e293b] items-start gap-y-4 rounded-lg border-[#e2e8f0] border-[1px]'>
                                 <p className='text-lg font-semibold'>
-                                    Project Details
+                                    Must Knows
                                 </p>
                                 <div className='flex flex-col justify-center items-start gap-y-6'>
-                                    <div className='flex justify-center items-center gap-x-4'>
+                                    <div className='flex justify-center items-start gap-x-4'>
                                         <Icon
-                                            icon={"iconoir:calendar"}
-                                            className={"text-[#64748b]"} />
+                                            icon={"prime:building"}
+                                            className={"text-[#64748b]"}
+                                            height={20}
+                                            width={20}
+                                        />
                                         <div className='flex flex-col gap-y-1'>
                                             <p className='text-sm font-medium'>
-                                                Completed
+                                                Company Name
                                             </p>
-                                            <p className='text-sm text-[#64748b]'>
-                                                December 2024
-                                            </p>
+                                            <Link
+                                                href={project?.companyUrl || ""}
+                                                className='text-sm text-primary flex gap-1 items-center'
+                                                target='_blank'
+                                            >
+                                                {project?.company || ""}
+                                                <Icon
+                                                    icon={"lucide:external-link"}
+                                                    height={16}
+                                                    width={16}
+                                                />
+                                            </Link>
                                         </div>
                                     </div>
-                                    <div className='flex justify-center items-center gap-x-4'>
+                                    <div className='flex justify-center items-start gap-x-4'>
                                         <Icon
                                             icon={"ep:user"}
-                                            className={"text-[#64748b]"} />
+                                            className={"text-[#64748b]"}
+                                            height={18}
+                                            width={18}
+                                        />
                                         <div className='flex flex-col gap-y-1'>
                                             <p className='text-sm font-medium'>
-                                                Client
+                                                Role
                                             </p>
                                             <p className='text-sm text-[#64748b]'>
-                                                TechCorp Solutions
+                                                {project?.role || ""}
                                             </p>
                                         </div>
                                     </div>
-                                    <div className='flex justify-center items-center gap-x-4'>
+                                    <div className='flex justify-center items-start gap-x-4'>
                                         <Icon
                                             icon={"tabler:tag"}
-                                            className={"text-[#64748b]"} />
+                                            className={"text-[#64748b]"}
+                                            height={18}
+                                            width={18}
+                                        />
                                         <div className='flex flex-col gap-y-1'>
                                             <p className='text-sm font-medium'>
                                                 Category
                                             </p>
                                             <p className='text-sm text-[#64748b]'>
-                                                Full  Stack
+                                                {project.projectCategory || ""}
                                             </p>
                                         </div>
                                     </div>
@@ -159,7 +184,7 @@ const SpecificProjectPageComponent = ({ project }) => {
                             {/* Technologies Used */}
                             <div className='p-6 w-full dark:border-[#1e293b] flex flex-col items-start gap-y-4 rounded-lg border-[#e2e8f0] border-[1px]'>
                                 <p className='text-lg font-semibold'>
-                                    Technologies Used
+                                    Technologies
                                 </p>
                                 <div className='flex flex-wrap gap-4'>
                                     {
@@ -176,20 +201,15 @@ const SpecificProjectPageComponent = ({ project }) => {
                             </div>
 
                             {/* Github and Live  */}
-                            <div className='w-full flex flex-col gap-y-4'>
-                                <button className='w-full font-medium border-[1px] border-primary text-white bg-primary hover:bg-[#2563ebe6] rounded-lg flex justify-center items-center gap-x-4 py-2'>
+                            {project?.live && <div className='w-full flex flex-col gap-y-4'>
+                                <Link href={project?.live || ""} className='w-full font-medium border-[1px] border-primary text-white bg-primary hover:bg-[#2563ebe6] rounded-lg flex justify-center items-center gap-x-4 py-2'>
                                     <Icon
                                         icon={"mage:external-link"}
-                                        className={"text-white"} />
+                                        className={"text-white"}
+                                    />
                                     View Live Project
-                                </button>
-                                <button className='w-full dark:bg-[#020817] dark:hover:bg-[#1e293b] dark:border-[#1e293b] dark:text-white hover:bg-[#f1f5f9] font-medium text-black bg-white rounded-lg flex justify-center items-center gap-x-4 py-2 shadow-sm border-[#e2e8f0] border-[1px]'>
-                                    <Icon
-                                        icon={"mingcute:github-line"}
-                                        className={"text-black dark:text-white"} />
-                                    View Source Code
-                                </button>
-                            </div>
+                                </Link>
+                            </div>}
 
                             {/* Interest  */}
                             <div className='w-full dark:border-[#1e293b] border-[1px] shadow-sm border-[#e2e8f0] rounded-lg flex-col gap-y-4 flex justify-center items-center p-4'>
@@ -199,9 +219,9 @@ const SpecificProjectPageComponent = ({ project }) => {
                                 <p className='text-sm  text-center text-[#64748b] mb-4'>
                                     Let&apos;s discuss your project and create something amazing together.
                                 </p>
-                                <button className='shadow-sm  dark:bg-[#020817] dark:hover:bg-[#1e293b] dark:border-[#1e293b] dark:text-white hover:bg-[#f1f5f9] font-medium text-xs px-3 py-2 border-[1px] rounded-lg border-[#e2e8f0]'>
+                                <Link href={"/#contact"} className='shadow-sm  dark:bg-[#020817] dark:hover:bg-[#1e293b] dark:border-[#1e293b] dark:text-white hover:bg-[#f1f5f9] font-medium text-xs px-3 py-2 border-[1px] rounded-lg border-[#e2e8f0]'>
                                     Get in touch
-                                </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -213,7 +233,7 @@ const SpecificProjectPageComponent = ({ project }) => {
                             More Projects
                         </p>
                         <div className="w-full gap-6 flex flex-wrap items-center justify-center">
-                            {SampleProjectsData.map((ele, index) => {
+                            {SampleProjectsData.filter((el) => String(el?.id) !== slug).map((ele, index) => {
                                 return (
                                     <ProjectSectionCard ele={ele} key={index} />
                                 );

@@ -1,6 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import { useSafeMediaQuery } from "@/hooks/useSafeMediaQuery";
+import { useEffect, useState } from "react";
 import { SampleProjectsData } from "@/mock/data";
 import { CustomNavbar, ProjectSectionCard, Icon } from "@/components";
 
@@ -8,7 +7,41 @@ import { CustomNavbar, ProjectSectionCard, Icon } from "@/components";
 
 const ViewAllProjectComponent = () => {
     const [selectedFilter, setSelectedFilter] = useState("All");
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
+    const [searchQuery, setSearchQuery] = useState("");
+    const [featuredProjects, setFeaturedProjects] = useState([]);
+    const [allProjects, setAllProjects] = useState([]);
+
+    const handleFilterChange = () => {
+        const query = searchQuery.toLowerCase().trim().replace(/\s+/g, " ");
+
+        const filteredProjects = SampleProjectsData.filter((el) => {
+
+            if (el?.title.toLowerCase().includes() ||
+                el?.company.toLowerCase().includes(query) ||
+                el?.description.toLowerCase().includes(query) ||
+                el?.category.toLowerCase().includes(query) ||
+                el?.company.toLowerCase().includes(query) ||
+                el?.tech.filter((t) => t?.toLowerCase().includes(query)).length > 0
+            ) {
+                if (selectedFilter === "All") {
+                    return true;
+                } else {
+                    return el?.category === selectedFilter;
+                }
+            }
+        });
+        setFeaturedProjects(filteredProjects.filter((el) => el.featured));
+        setAllProjects(filteredProjects);
+    }
+
+    useEffect(() => {
+        setFeaturedProjects(SampleProjectsData.filter((el) => el.featured));
+        setAllProjects(SampleProjectsData);
+    }, [])
+
+    useEffect(() => {
+        handleFilterChange();
+    }, [searchQuery, selectedFilter]);
 
     return (
         <>
@@ -16,9 +49,9 @@ const ViewAllProjectComponent = () => {
                 {/* Navbar  */}
                 <CustomNavbar path={"/"} title="Works That Speak" subTitleBtn="Home" />
 
-                <div className="w-fill flex justify-center items-center pt-12">
+                <div className="w-fill flex justify-center items-center pt-8 lg:pt-12">
                     <div
-                        className={`max-w-[1300px] h-full flex-col w-full gap-x-4 flex justify-center items-start  ${coustomXL ? "px-0" : "px-8"}`}
+                        className={`max-w-[1300px] h-full flex-col w-full gap-x-4 flex justify-center items-start lapxl:px-0 px-8`}
                     >
                         {/* search and filter  */}
                         <div className="w-full items-start gap-y-4 lg:gap-y-0 flex-col lg:flex-row flex justify-between lg:items-center">
@@ -26,6 +59,8 @@ const ViewAllProjectComponent = () => {
                                 <Icon className="text-[#64748b]" icon="iconoir:search" />
                                 <input
                                     type="text"
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    value={searchQuery}
                                     className="w-full md:text-sm focus:outline-none border-none bg-transparent"
                                     placeholder="Search Projects..."
                                 />
@@ -34,8 +69,14 @@ const ViewAllProjectComponent = () => {
                                 <button
                                     onClick={() => setSelectedFilter("All")}
                                     className={`
-                                ${selectedFilter === "All" ? "text-white bg-primary" : "text-black bg-white"} 
-                                shadow font-medium text-xs hover:bg-[#2563ebe6]  px-2 lg:px-3 py-2 rounded-md`
+                                        shadow font-medium text-xs  px-4 py-2 rounded-md border-[#e2e8f0]
+                                        ${selectedFilter === "All" ?
+                                            "text-white bg-primary border-primary"
+                                            : `[ text-black dark:text-white ] 
+                                                [ bg-white dark:bg-[#020817] ] 
+                                                [ dark:hover:bg-[#1e293b] hover:bg-[#f1f5f9] ]
+                                                [ dark:hover:text-[#f8fafc] dark:border-[#1e293b] ] border-[1px]`
+                                        }`
                                     }>
                                     All
                                 </button>
@@ -43,11 +84,14 @@ const ViewAllProjectComponent = () => {
                                 <button
                                     onClick={() => setSelectedFilter("Full Stack")}
                                     className={`
-                                ${selectedFilter === "Full Stack" ?
-                                            "text-white bg-primary"
-                                            : "text-black bg-white dark:hover:bg-[#1e293b]"
-                                        } 
-                                shadow font-medium text-xs hover:bg-[#f1f5f9] px-2 lg:px-3 py-2 rounded-md  dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]`
+                                        shadow font-medium text-xs  px-2 lg:px-3 py-2 rounded-md border-[#e2e8f0]
+                                        ${selectedFilter === "Full Stack" ?
+                                            "text-white bg-primary border-primary"
+                                            : `[ text-black dark:text-white ] 
+                                            [ bg-white dark:bg-[#020817] ] 
+                                            [ dark:hover:bg-[#1e293b] hover:bg-[#f1f5f9] ]
+                                            [ dark:hover:text-[#f8fafc] dark:border-[#1e293b] ] border-[1px]`
+                                        }`
                                     }>
                                     Full Stack
                                 </button>
@@ -55,29 +99,41 @@ const ViewAllProjectComponent = () => {
                                 <button
                                     onClick={() => setSelectedFilter("Frontend")}
                                     className={`
-                                ${selectedFilter === "Frontend" ? "text-white bg-primary" : "text-black bg-white"} 
-                                shadow font-medium text-xs hover:bg-[#f1f5f9]  px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]`
+                                        shadow font-medium text-xs px-2 lg:px-3 py-2 rounded-md border-[#e2e8f0]
+                                        ${selectedFilter === "Frontend" ?
+                                            "text-white bg-primary border-primary"
+                                            : `[ text-black dark:text-white ] 
+                                            [ bg-white dark:bg-[#020817] ] 
+                                            [ dark:hover:bg-[#1e293b] hover:bg-[#f1f5f9] ]
+                                            [ dark:hover:text-[#f8fafc] dark:border-[#1e293b] ] border-[1px]`
+                                        }`
                                     }>
                                     Frontend
                                 </button>
                                 <button
                                     onClick={() => setSelectedFilter("Backend")}
                                     className={`
-                                ${selectedFilter === "Backend" ? "text-white bg-primary" : "text-black bg-white"} 
-                                shadow font-medium text-xs hover:bg-[#f1f5f9]  px-2 lg:px-3 py-2 rounded-md dark:hover:bg-[#1e293b] dark:hover:text-[#f8fafc] dark:text-white dark:border-[#1e293b] dark:bg-[#020817] border-[#e2e8f0] border-[1px]`
+                                        shadow font-medium text-xs  px-2 lg:px-3 py-2 rounded-md border-[#e2e8f0]
+                                        ${selectedFilter === "Backend" ?
+                                            "text-white bg-primary border-primary"
+                                            : `[ text-black dark:text-white ] 
+                                            [ bg-white dark:bg-[#020817] ] 
+                                            [ dark:hover:bg-[#1e293b] hover:bg-[#f1f5f9] ]
+                                            [ dark:hover:text-[#f8fafc] dark:border-[#1e293b] ] border-[1px]`
+                                        }`
                                     }>
                                     Backend
                                 </button>
                             </div>
                         </div>
 
-                        <p className="pt-8 text-[#64748b]">Showing 9 of 9 projects</p>
+                        <p className="pt-8 text-[#64748b]">Showing {allProjects?.length || 7} of all projects</p>
 
                         {/* Featured Project  */}
                         <div className="w-full flex flex-col pt-10 gap-y-4">
                             <p className="text-2xl font-semibold">Featured Projects</p>
                             <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center">
-                                {SampleProjectsData?.filter((el) => el?.featured).map((ele, index) => {
+                                {featuredProjects?.map((ele, index) => {
                                     return (
                                         <ProjectSectionCard ele={ele} key={index} />
                                     );
@@ -88,8 +144,8 @@ const ViewAllProjectComponent = () => {
                         {/* All Project  */}
                         <div className="w-full flex flex-col pt-10 gap-y-4">
                             <p className="text-2xl font-semibold">All Projects</p>
-                            <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center">
-                                {SampleProjectsData.map((ele, index) => {
+                            <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center overflow-hidden">
+                                {allProjects?.map((ele, index) => {
                                     return (
                                         <ProjectSectionCard ele={ele} key={index} />
                                     );

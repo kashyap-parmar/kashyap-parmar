@@ -1,19 +1,12 @@
 "use client"
 import React from 'react'
-import CustomNavbarBlog from '../customNavbarBlog'
-import Icon from '../icon'
-import Image from 'next/image'
-import { useSafeMediaQuery } from '@/hooks/useSafeMediaQuery'
-import { SampleBlogData } from '@/mock/data'
-import BlogFullCardReuse from '../viewAllBlogsPage/blogFullCardReuse'
-// import BlogSmallCardReuse from '../viewAllBlogsPage/blogSmallCardResue'
+import Image from 'next/image';
+import { CustomNavbarBlog, Icon, BlogFullCardReuse } from '@/components';
+import { SampleBlogData } from '@/mock/data';
 
 // --------------------------------------------
 
 const SpecificBlogPageComponent = ({ blog }) => {
-
-    const coustomXL = useSafeMediaQuery("(min-width:1364px)");
-
     return (
         <>
             <div className='w-full h-full dark:bg-[#020817]'>
@@ -158,7 +151,7 @@ const SpecificBlogPageComponent = ({ blog }) => {
                     {/* Related Blogs */}
                     <div className='py-10'>
                         <div
-                            className={`max-w-[1300px] h-full flex-col w-full gap-x-4 flex justify-center items-start  ${coustomXL ? "px-0" : "px-8"}`}
+                            className={`max-w-[1300px] h-full flex-col w-full gap-x-4 flex justify-center items-start lapxl:px-0 px-8`}
                         >
                             <div className="w-full flex flex-col pt-10 gap-y-8">
                                 <p className="text-2xl font-semibold">Related Blogs</p>
