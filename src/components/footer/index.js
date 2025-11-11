@@ -1,5 +1,5 @@
 "use client";
-import Error from 'next/error'
+import { usePathname } from "next/navigation";
 import React from "react";
 import Link from "next/link";
 import { Icon } from "@/components";
@@ -13,6 +13,8 @@ import {
 // -----------------------------------------------------------
 
 const Footer = () => {
+    const pathname = usePathname();
+
     return (
         <div className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t">
             <div
@@ -85,23 +87,23 @@ const Footer = () => {
                         </div>
                         <div className="flex flex-col gap-y-6">
                             <p className="font-bold text-lg">Services</p>
-                            <div className="flex [&>p]:text-[#64748b] [&>p]:cursor-pointer flex-col gap-y-4">
-                                <p className="hover:text-primary transition-colors">
+                            <div className="flex [&>p]:text-[#64748b] flex-col gap-y-4">
+                                <p className="transition-colors">
                                     Web Development
                                 </p>
-                                <p className="hover:text-primary transition-colors">
+                                <p className="transition-colors">
                                     Frontend Development
                                 </p>
-                                <p className="hover:text-primary transition-colors">
+                                <p className="transition-colors">
                                     Figma to React / Next js
                                 </p>
-                                <p className="hover:text-primary transition-colors">
+                                <p className="transition-colors">
                                     Backend / API Development
                                 </p>
-                                <p className="hover:text-primary transition-colors">
+                                <p className="transition-colors">
                                     Freelancing
                                 </p>
-                                <p className="hover:text-primary transition-colors">
+                                <p className="transition-colors">
                                     Remote Work
                                 </p>
                             </div>
@@ -116,13 +118,13 @@ const Footer = () => {
                     <div className="flex gap-x-6">
                         <Link
                             href={"/privacy-policies"}
-                            className="text-[#64748b] cursor-pointer text-sm hover:text-primary"
+                            className={`text-[#64748b] cursor-pointer text-sm hover:text-primary ${pathname === "/privacy-policies" && "pointer-events-none text-primary"}`}
                         >
                             Privacy Policy
                         </Link>
                         <Link
-                            href={"/term-conditions"}
-                            className="text-[#64748b] cursor-pointer text-sm hover:text-primary"
+                            href={"/terms-conditions"}
+                            className={`text-[#64748b] cursor-pointer text-sm hover:text-primary  ${pathname === "/terms-conditions" && "pointer-events-none text-primary"}`}
                         >
                             Terms of Service
                         </Link>

@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import NextLink from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from 'react-scroll';
 import { Icon } from "@/components";
@@ -10,6 +12,23 @@ import { navbarData } from "@/mock/data";
 const MobileNavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { theme, setTheme } = useTheme();
+    const pathname = usePathname();
+    const regex = /^\/(#\w+)?$/;
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const hash = window.location.hash;
+            if (hash) {
+                const el = document.querySelector(hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth" });
+                    }, 100); // small delay so DOM is ready
+                }
+            }
+            setIsMenuOpen(false)
+        }
+    }, [pathname]); // run when route changes
 
     return (
         <div className="w-full bg-transparent sticky top-0 z-[10000]">
@@ -56,7 +75,7 @@ const MobileNavbar = () => {
             {/* Dropdown menu stays under sticky bar */}
             {isMenuOpen && (
                 <div className="fixed top-[110px] z-[10000] left-0 right-0 mx-6 bg-white dark:bg-[#030919] card-glow flex items-center p-9 px-6 justify-between lg:hidden rounded-2xl">
-                    <div className="flex flex-col gap-6">
+                    <div className={`${regex.test(pathname) ? "flex" : "hidden"} flex-col gap-6`}>
                         {navbarData?.length > 0 && navbarData?.map((ele, index) => {
                             return (
                                 <Link
@@ -65,7 +84,7 @@ const MobileNavbar = () => {
                                     spy={true}
                                     smooth={true}
                                     duration={300}
-                                    // onClick={() => setIsMenuOpen(false)}
+                                    onClick={() => setIsMenuOpen(false)}
                                     activeClass="text-primary"
                                     className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
                                 >
@@ -73,6 +92,17 @@ const MobileNavbar = () => {
                                 </Link>
                             );
                         })}
+                    </div>
+                    <div className={`${regex.test(pathname) ? "hidden" : "flex"}  flex-col gap-6`}>
+                        {navbarData.map((ele, index) => (
+                            <NextLink
+                                key={index}
+                                href={`/#${ele?.url}`}
+                                className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
+                            >
+                                {ele.title}
+                            </NextLink>
+                        ))}
                     </div>
                 </div>
             )}

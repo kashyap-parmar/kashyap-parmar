@@ -8,7 +8,7 @@ const SpecificProjectPage = async ({ params }) => {
 
     const { slug } = await params;
 
-    const project = SampleProjectsData.find((item) => item.id.toString() === slug);
+    const project = SampleProjectsData.find((item) => item?.slug?.toString() === slug);
 
     if (!project) {
         return (

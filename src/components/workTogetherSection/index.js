@@ -79,34 +79,38 @@ const WorkTogetherSection = () => {
                             <p className="text-2xl font-bold">Lets Connect</p>
                         </div>
                         <div className="flex w-full flex-col gap-y-8">
-                            <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                <div className="w-14 h-14 flex justify-center items-center">
-                                    <Icon
-                                        width={24}
-                                        height={24}
-                                        className={"text-blue-500"}
-                                        icon={"material-symbols:mail-outline-rounded"}
-                                    />
+                            {<Link href={`mailto:${email}`} >
+                                <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
+                                    <div className="w-14 h-14 flex justify-center items-center">
+                                        <Icon
+                                            width={24}
+                                            height={24}
+                                            className={"text-blue-500"}
+                                            icon={"material-symbols:mail-outline-rounded"}
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <p className="font-semibold text-lg">Email</p>
+                                        <p className="text-[#64748b]">{email || ""}</p>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col">
-                                    <p className="font-semibold text-lg">Email</p>
-                                    <p className="text-[#64748b]">{email || ""}</p>
+                            </Link>}
+                            {<Link href={`tel:${phone}`} >
+                                <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
+                                    <div className="w-14 h-14 flex justify-center items-center">
+                                        <Icon
+                                            width={24}
+                                            height={24}
+                                            className={"text-green-500"}
+                                            icon={"mdi-light:phone"}
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <p className="font-semibold text-lg">Phone</p>
+                                        <p className="text-[#64748b]">{phone || ""}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                <div className="w-14 h-14 flex justify-center items-center">
-                                    <Icon
-                                        width={24}
-                                        height={24}
-                                        className={"text-green-500"}
-                                        icon={"mdi-light:phone"}
-                                    />
-                                </div>
-                                <div className="flex flex-col">
-                                    <p className="font-semibold text-lg">Phone</p>
-                                    <p className="text-[#64748b]">{phone || ""}</p>
-                                </div>
-                            </div>
+                            </Link>}
                             <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
                                 <div className="w-14 h-14 flex justify-center items-center">
                                     <Icon
@@ -205,7 +209,7 @@ const WorkTogetherSection = () => {
                                     <textarea
                                         {...register("message")}
                                         rows={5}
-                                        placeholder="describe your project..."
+                                        placeholder="describe your requirements..."
                                         type="text"
                                         name="message"
                                         id=""

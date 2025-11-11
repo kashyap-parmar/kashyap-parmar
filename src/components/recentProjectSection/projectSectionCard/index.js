@@ -143,7 +143,7 @@ const ProjectSectionCard = ({ ele }) => {
 						)}
 					</div>
 
-					<Link href={`/projects/${ele?.id}`}>
+					<Link href={`/projects/${ele?.slug}`}>
 						<button className="w-full text-sm group-hover:bg-[#2563eb] group-hover:text-white transition-all duration-300 ease-in-out cursor-pointer rounded-full py-2 px-4 bg-white border-[1px] border-[#e2e8f0] flex justify-center items-center gap-x-4 dark:bg-[#020817] dark:border-[#1e293b] dark:text-white dark:hover:bg-[#1e293b]">
 							View Details
 							<Icon

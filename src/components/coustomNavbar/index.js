@@ -13,7 +13,7 @@ const CustomNavbar = ({ path, title, subTitleBtn }) => {
             <div className="w-full sticky top-0 z-[10000] flex justify-center items-center h-[70px] border-b-[1px] dark:border-[#1e293b] border-[#e2e8f0] backdrop-blur-md px-8">
                 <div className="w-full max-w-[1300px] flex justify-between" >
                     <div
-                        className={`h-full w-4/5 flex justify-start items-center gap-2 lapxl:px-0`}
+                        className={`h-full w-4/5 flex justify-start items-center gap-8 lapxl:px-0`}
                     >
                         <Link
                             href={path}
@@ -24,7 +24,7 @@ const CustomNavbar = ({ path, title, subTitleBtn }) => {
                                 width={18}
                                 height={18}
                             />
-                            Back to {subTitleBtn}
+                            {subTitleBtn}
                         </Link>
                         {/* <span className="h-[40%] w-[2px] bg-[#e2e8f0]"></span> */}
                         <p className="text-lg sm:text-2xl font-bold">{title}</p>

@@ -16,7 +16,7 @@ const SpecificProjectPageComponent = ({ project, slug }) => {
             {/* Navbar  */}
             <CustomNavbar
                 path={"/projects"}
-                subTitleBtn={"projects"}
+                subTitleBtn={"Projects"}
                 title={project?.title}
             />
 
@@ -48,21 +48,16 @@ const SpecificProjectPageComponent = ({ project, slug }) => {
                                     className='text-[#64748b] leading-relaxed text-justify flex flex-col gap-y-4'
                                     dangerouslySetInnerHTML={{ __html: project?.description }}
                                 />
-                                {/* <p className='text-[#64748b] leading-relaxed'>
-                                    This e-commerce platform represents a complete solution for modern online retail businesses. Built from the ground up using the MERN stack, it demonstrates proficiency in full-stack development, database design, and user experience optimization.
-                                </p>
-                                <p className='text-[#64748b] leading-relaxed'>
-                                    The application features a sophisticated user authentication system with JWT tokens, secure password hashing, and role-based access control. The frontend provides an intuitive shopping experience with advanced filtering, search functionality, and a streamlined checkout process.
-                                </p>
-                                <p className='text-[#64748b] leading-relaxed'>
-                                    The application features a sophisticated user authentication system with JWT tokens, secure password hashing, and role-based access control. The frontend provides an intuitive shopping experience with advanced filtering, search functionality, and a streamlined checkout process.
-                                </p>
-                                <p className='text-[#64748b] leading-relaxed'>
-                                    The admin dashboard offers comprehensive tools for inventory management, order processing, customer management, and sales analytics. Real-time updates ensure that inventory levels are always accurate across all user sessions.
-                                </p>
-                                <p className='text-[#64748b] leading-relaxed'>
-                                    Payment processing is handled through Stripe integration, providing secure and reliable transaction processing with support for multiple payment methods and currencies.
-                                </p> */}
+                                {project?.note &&
+                                    <div className='gap-x-2 text-[#64748b]'>
+                                        <p className='leading-relaxed text-nowrap font-semibold' >
+                                            NOTE :
+                                        </p>
+                                        <span className='text-[#64748b]' >
+                                            {project?.note}
+                                        </span>
+                                    </div>
+                                }
                             </div>
 
                             {/* Key Features */}
@@ -118,7 +113,7 @@ const SpecificProjectPageComponent = ({ project, slug }) => {
                             {/* Project Details  */}
                             <div className='p-6 flex flex-col dark:border-[#1e293b] items-start gap-y-4 rounded-lg border-[#e2e8f0] border-[1px]'>
                                 <p className='text-lg font-semibold'>
-                                    Must Knows
+                                    My contribution to :
                                 </p>
                                 <div className='flex flex-col justify-center items-start gap-y-6'>
                                     <div className='flex justify-center items-start gap-x-4'>

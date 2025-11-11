@@ -16,7 +16,7 @@ const CustomNavbarBlog = ({ path, subTitleBtn, isBlog, github, liveDemo }) => {
                     <Link className="w-fit" href={path}>
                         <button className="flex dark:hover:bg-[#1e293b] dark:text-[#f8fafc] gap-x-4 rounded-md text-xs px-3 py-2 font-medium hover:text-[#020817] hover:bg-[#f1f5f9] justify-center items-center">
                             <Icon icon={"solar:arrow-left-outline"} />
-                            Back to {subTitleBtn}
+                            {subTitleBtn}
                         </button>
                     </Link>
                     <div className='flex gap-x-4 justify-center items-start'>

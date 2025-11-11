@@ -329,6 +329,7 @@ export const SampleProjectsData = [
     {
         id: 1,
         title: "Dental Sem CRM",
+        slug: "dental-sem-crm",
         company: "Hupp Technologies Pvt Ltd",
         companyUrl: "https://hupp.tech/",
         role: "Frontend Developer (React JS)",
@@ -349,6 +350,7 @@ export const SampleProjectsData = [
         category: "Frontend",
         projectCategory: "CRM software",
         featured: true,
+        note: "This project was developed during my employment at Hupp Technologies Pvt Ltd. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "User Authentication & Authorization",
             "Lead & Appointment Management",
@@ -389,6 +391,7 @@ export const SampleProjectsData = [
     {
         id: 2,
         title: "SBA Loans",
+        slug: "sba-loans-crm",
         company: "Jain Bhavesh Solution",
         companyUrl: "https://www.jbsolutions.in/",
         role: "Full Stack Developer (Next.js)",
@@ -408,6 +411,7 @@ export const SampleProjectsData = [
         projectCategory: "CRM software",
         featured: true,
         confidential: true,
+        note: "This project was developed during my employment at Jain Bhavesh Solution. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "Loan Request & Tracking System",
             "Multi-Stage Loan Approval Workflow",
@@ -446,6 +450,7 @@ export const SampleProjectsData = [
     {
         id: 3,
         title: "MXM News",
+        slug: "mxm-news-aggregator",
         company: "Jain Bhavesh Solution",
         companyUrl: "https://www.jbsolutions.in/",
         role: "Full Stack Developer (Next.js)",
@@ -464,6 +469,7 @@ export const SampleProjectsData = [
         category: "Full Stack",
         projectCategory: "News Aggregation Platform",
         featured: false,
+        note: "This project was developed during my employment at Jain Bhavesh Solution. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "Real-Time News Aggregation",
             "Category-Based News Filtering",
@@ -502,6 +508,7 @@ export const SampleProjectsData = [
     {
         id: 4,
         title: "Moustachescapes – Hotel Booking Platform",
+        slug: "moustachescapes-hotel-booking",
         company: "Exceleur Services Pvt Ltd",
         companyUrl: "https://exceleur.in/",
         role: "Frontend Developer (Next JS)",
@@ -520,6 +527,7 @@ export const SampleProjectsData = [
         category: "Frontend",
         projectCategory: "Hotel Booking Platform",
         featured: true,
+        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "Hotel Search & Booking System",
             "Location-Based Hotel Listing",
@@ -558,6 +566,7 @@ export const SampleProjectsData = [
     {
         id: 5,
         title: "SLA-FS – Financial Services Website",
+        slug: "sla-fs-financial-services",
         company: "Exceleur Services Pvt Ltd",
         companyUrl: "https://exceleur.in/",
         role: "Frontend Developer (Next JS)",
@@ -574,6 +583,7 @@ export const SampleProjectsData = [
         category: "Frontend",
         projectCategory: "Financial Services Website",
         featured: false,
+        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "Showcase of Financial Services",
             "Custom Budgeting & Lifestyle Planning",
@@ -612,6 +622,7 @@ export const SampleProjectsData = [
     {
         id: 6,
         title: "Gamerji Fantasy Sport",
+        slug: "gamerji-fantasy-sport",
         company: "Exceleur Services Pvt Ltd",
         companyUrl: "https://exceleur.in/",
         role: "Full stack Developer (MERN Stack)",
@@ -629,6 +640,7 @@ export const SampleProjectsData = [
         projectCategory: "SAAS-based Fantasy Sports Platform",
         featured: true,
         underDevelopment: true,
+        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "Fantasy Cricket & Gambling Platform",
             "Picker Game: Public & Private Matches",
@@ -667,6 +679,7 @@ export const SampleProjectsData = [
     {
         id: 7,
         title: "PROAITS-CRM",
+        slug: "proaits-crm",
         company: "Exceleur Services Pvt Ltd",
         companyUrl: "https://exceleur.in/",
         role: "Backend Developer (PostgreSQL)",
@@ -686,6 +699,7 @@ export const SampleProjectsData = [
         projectCategory: "CRM software - Hiring management",
         featured: true,
         underDevelopment: true,
+        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
         keyFeatures: [
             "Microservices-Based Backend Architecture",
             "Role-Based Access Control (RBAC)",
