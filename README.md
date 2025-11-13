@@ -54,7 +54,7 @@ Git | GitHub | Gitlab | JIRA | Trello | SEO Optimization | API Integration
 ## 🤝 Let’s Connect  
 
 💌 **Email:** contact@kashyapparmar.com  
-🌐 **Portfolio:** https://kashyapparmar.com
+🌐 **Portfolio:** https://kashyapparmar.com 
 💼 **LinkedIn:** [https://www.linkedin.com/in/kashyap-parmar-872040242/](#)  
 🐙 **GitHub:** [https://github.com/kashyap-parmar](#)  
 
