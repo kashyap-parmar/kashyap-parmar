@@ -197,7 +197,11 @@ const SpecificProjectPageComponent = ({ project, slug }) => {
 
                             {/* Github and Live  */}
                             {project?.live && <div className='w-full flex flex-col gap-y-4'>
-                                <Link href={project?.live || ""} className='w-full font-medium border-[1px] border-primary text-white bg-primary hover:bg-[#2563ebe6] rounded-lg flex justify-center items-center gap-x-4 py-2'>
+                                <Link
+                                    href={project?.live || ""}
+                                    target='_blank'
+                                    className='w-full font-medium border-[1px] border-primary text-white bg-primary hover:bg-[#2563ebe6] rounded-lg flex justify-center items-center gap-x-4 py-2'
+                                >
                                     <Icon
                                         icon={"mage:external-link"}
                                         className={"text-white"}
@@ -228,7 +232,7 @@ const SpecificProjectPageComponent = ({ project, slug }) => {
                             More Projects
                         </p>
                         <div className="w-full gap-6 flex flex-wrap items-center justify-center">
-                            {SampleProjectsData.filter((el) => String(el?.id) !== slug).map((ele, index) => {
+                            {SampleProjectsData.filter((el) => String(el?.slug) !== slug).map((ele, index) => {
                                 return (
                                     <ProjectSectionCard ele={ele} key={index} />
                                 );

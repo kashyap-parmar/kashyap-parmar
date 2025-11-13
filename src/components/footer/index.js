@@ -113,7 +113,7 @@ const Footer = () => {
 
                 <div className="w-full border-t-[1px] gap-y-4 md:gap-y-0 dark:border-[#1e293b] border-[#e2e8f0] pt-8 flex flex-col md:flex-row justify-between items-center md:items-end">
                     <p className="text-[#64748b] text-sm md:text-base">
-                        © 2025 - {new Date().getFullYear()} Kashyap Parmar - MERN developer all rights reserved.
+                        © 2025 - Present, Kashyap Parmar - MERN developer all rights reserved.
                     </p>
                     <div className="flex gap-x-6">
                         <Link

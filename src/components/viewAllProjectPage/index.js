@@ -37,10 +37,12 @@ const ViewAllProjectComponent = () => {
     useEffect(() => {
         setFeaturedProjects(SampleProjectsData.filter((el) => el.featured));
         setAllProjects(SampleProjectsData);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
         handleFilterChange();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchQuery, selectedFilter]);
 
     return (
