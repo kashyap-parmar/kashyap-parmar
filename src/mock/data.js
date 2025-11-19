@@ -350,7 +350,7 @@ export const SampleProjectsData = [
         category: "Frontend",
         projectCategory: "CRM software",
         featured: true,
-        note: "This project was developed during my employment at Hupp Technologies Pvt Ltd. All rights and ownership belong to the respective company.",
+        note: "This project was developed during my employment at Hupp Technologies Pvt Ltd. All rights and ownership belong to the respective company/owners.",
         keyFeatures: [
             "User Authentication & Authorization",
             "Lead & Appointment Management",
