@@ -37,7 +37,6 @@ const ViewAllProjectComponent = () => {
     useEffect(() => {
         setFeaturedProjects(SampleProjectsData.filter((el) => el.featured));
         setAllProjects(SampleProjectsData);
-        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {

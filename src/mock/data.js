@@ -24,6 +24,10 @@ export const navbarData = [
         url: 'hero'
     },
     {
+        title: "3D Model",
+        url: '/3d-model'
+    },
+    {
         title: "About",
         url: 'about'
     },
@@ -369,7 +373,7 @@ export const SampleProjectsData = [
                 title: "Dynamic Lead Tracking & Stage Management",
                 desc: "Developed a flexible lead tracking interface that updates in real-time as users move leads between different stages (Inquiry → Consultation → Treatment → Follow-up). Implemented efficient state management using Redux to maintain smooth UI updates without performance lag."
             },
-            {
+            {   
                 title: "Role-Based Access Control (RBAC) Implementation",
                 desc: "Configured a scalable RBAC structure that restricted feature visibility and actions based on user roles such as Admin, Doctor, and Staff. This ensured secure data handling and a clear workflow separation within the CRM."
             },

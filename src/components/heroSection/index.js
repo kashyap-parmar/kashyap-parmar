@@ -1,6 +1,5 @@
 "use client"
 import Link from 'next/link';
-import React from 'react';
 import { motion } from "framer-motion";
 import { Icon } from '@/components';
 import { techIconsHeroSection } from '@/mock/data';
@@ -16,47 +15,50 @@ const HeroSection = () => {
             <div className={`max-w-[1300px] lg:flex-row flex-col lapxl:px-0 px-8 w-full h-full flex items-start xl:flex-row justify-between`}>
 
                 {/* ----------------- LEFT SECTION ----------------- */}
-                <div className="w-full lg:w-[50%] flex flex-col h-full">
+                <div className="w-full lg:w-[50%] flex flex-col justify-center h-full">
                     <div className='text-primary py-2 px-4 w-fit rounded-full bg-primary/10 border border-primary/20 text-sm font-medium flex gap-2 items-center'>
                         <Icon icon={"solar:star-line-duotone"} />
-                        <p>Available for Projects</p>
+                        <p>Fast MVP launch</p>
                     </div>
 
-                    <div className='w-full gap-y-4 pt-8 flex flex-col'>
-                        <p className='text-5xl lg:text-7xl font-bold leading-tight'>
-                            Hi, I&apos;m{" "}
-                            <span className='text-gradient'>
-                                Kashyap
-                            </span>
-                        </p>
-                        <p className='text-xl lg:text-2xl text-[#64748b] dark:text-[#94a3b8] font-medium'>
-                            Code is not just logic —
-                            <span className='text-black ml-2 dark:text-white'>
-                                it’s creativity that solves real problems
-                            </span>
-                        </p>
-                    </div>
+                    <div className='w-full gap-y-2 pt-8 flex flex-col'>
 
-                    <div className='pt-8'>
-                        <p className='text-lg text-justify text-[#64748b] dark:text-[#94a3b8] leading-relaxed'>
-                            A passionate <strong>MERN Stack Developer</strong> and <strong>Next.js specialist</strong>. I transform ideas into high-performing, user-friendly web applications using modern technologies like React, Node.js, Express, and MongoDB. From designing intuitive front-end interfaces to developing scalable back-end systems, I focus on building fast, secure, and SEO-optimized digital experiences that help businesses grow online.
+                        <div className='flex gap-2 items-end text-5xl lg:text-2xl' >
+                            <p className=' font-bold leading-tight'>
+                                Hi, I&apos;m{" "}
+                                <span className='text-gradient'>
+                                    Kashyap,
+                                </span>
+                            </p>
+                            {/* <span className='font-bold' ></span> */}
+                        </div>
+                        <div className="">
+                            <span className="text-4xl lg:text-7xl leading-[76px] text-primary font-extrabold mr-2 uppercase">10x Faster</span>
+                        </div>
+                        <p className="text-base lg:text-xl font-semibold">
+                            Introducing 3D Model — Design, Development, and Deployment.
+                        </p>
+                        <p className='text-lg lg:text-lg text-justify text-[#64748b] dark:text-[#94a3b8]'>
+                            This model outperforms traditional development by integrates AI automation to remove repetitive and time-consuming tasks from the workflow.
+                            The result is a smoother development experience with fewer bottlenecks and faster output.
+                            Your product reaches market faster, stronger, and with greater reliability than the usual approach.
                         </p>
                     </div>
 
                     <div className='w-full pt-12 flex gap-y-6 md:gap-y-0 flex-col md:flex-row md:gap-x-8'>
-                        <button className="relative overflow-hidden bg-primary text-white font-semibold text-sm py-4 h-fit flex justify-center gap-x-4 items-center px-8 rounded-full group">
-                            <Link href={"/#contact"}>
+                        <Link href={"/3d-model"}>
+                            <button data-testid="home-hero-explore-3d-model-btn" className="relative overflow-hidden bg-primary text-white font-semibold text-sm py-4 h-fit flex justify-center gap-x-4 items-center px-8 rounded-full group">
                                 <span className="relative z-10 flex items-center gap-x-4">
-                                    Let&apos;s Work Together
+                                    Explore 10x Faster 3D Model
                                     <Icon height={20} width={20} icon={"mingcute:arrow-right-line"} />
                                 </span>
-                            </Link>
-                            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
-                        </button>
-                        <Link href={"/#projects"}>
-                            <button className='w-full py-4 dark:hover:bg-[#1e293b] dark:bg-[#020817] hover:bg-[#f1f5f9] dark:outline-[#1f2a3d] outline outline-[#e2e8f0] shadow-sm outline-1 px-8 rounded-full font-semibold text-sm h-fit flex bg-white justify-center items-center gap-x-4'>
+                                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
+                            </button>
+                        </Link>
+                        <Link href={"/#contact"}>
+                            <button data-testid="home-hero-work-together-btn" className='w-full py-4 dark:hover:bg-[#1e293b] dark:bg-[#020817] hover:bg-[#f1f5f9] dark:outline-[#1f2a3d] outline outline-[#e2e8f0] shadow-sm outline-1 px-8 rounded-full font-semibold text-sm h-fit flex bg-white justify-center items-center gap-x-4'>
                                 <Icon height={20} width={20} icon={"ep:video-play"} />
-                                View My Work
+                                Let&apos;s Work Together
                             </button>
                         </Link>
                     </div>
@@ -123,13 +125,13 @@ const HeroSection = () => {
                                 </div>
                                 <pre className="text-[13px] leading-relaxed font-mono">
                                     <span className="text-[#60a5fa]">import React from &apos;react&apos;</span>{'\n\n'}
-                                    <span className="text-[#4ade80]">const App = () =&gt; {'{'}</span>{'\n'}
+                                    <span className="text-[#4ade80]">const App = () =&gt; {'{'} </span>{'\n'}
                                     <span className="text-[#facc15]">  return (</span>{'\n'}
                                     <span className="text-[#c084fc]">    &lt;div className=&apos;hero&apos;&gt;</span>{'\n'}
                                     <span className="text-[#22d3ee]">      &lt;h1&gt;Web Developer&lt;/h1&gt;</span>{'\n'}
                                     <span className="text-[#c084fc]">    &lt;/div&gt;</span>{'\n'}
                                     <span className="text-[#facc15]">  )</span>{'\n'}
-                                    <span className="text-[#60a5fa]">{'}'}</span>
+                                    <span className="text-[#60a5fa]">{'}}'}</span>
                                 </pre>
                             </div>
                         </div>

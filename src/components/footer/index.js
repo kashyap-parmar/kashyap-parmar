@@ -1,7 +1,7 @@
 "use client";
-import { usePathname } from "next/navigation";
-import React from "react";
 import Link from "next/link";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Icon } from "@/components";
 import {
     email,
@@ -14,6 +14,20 @@ import {
 
 const Footer = () => {
     const pathname = usePathname();
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const hash = window.location.hash;
+            if (hash) {
+                const el = document.querySelector(hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth" });
+                    }, 100); // small delay so DOM is ready
+                }
+            }
+        }
+    }, [pathname]); // run when route changes
 
     return (
         <div className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t">
@@ -76,7 +90,7 @@ const Footer = () => {
                                         return (
                                             <Link
                                                 key={index}
-                                                href={`/#${ele?.url}`}
+                                                href={ele?.url === '/3d-model' ? ele?.url : `/#${ele?.url}`}
                                                 className="cursor-pointer hover:text-primary text-[#64748b] transition-colors">
                                                 {ele?.title}
                                             </Link>
