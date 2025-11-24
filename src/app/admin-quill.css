@@ -1,0 +1,49 @@
+/* React Quill Dark Mode Support */
+.dark .ql-toolbar {
+  background: rgba(2, 8, 23, 0.7);
+  border-color: rgb(55, 65, 81);
+}
+
+.dark .ql-container {
+  background: rgba(2, 8, 23, 0.7);
+  border-color: rgb(55, 65, 81);
+}
+
+.dark .ql-editor {
+  color: rgb(243, 244, 246);
+}
+
+.dark .ql-stroke {
+  stroke: rgb(156, 163, 175);
+}
+
+.dark .ql-fill {
+  fill: rgb(156, 163, 175);
+}
+
+.dark .ql-picker-label {
+  color: rgb(156, 163, 175);
+}
+
+.dark .ql-toolbar button:hover .ql-stroke,
+.dark .ql-toolbar button.ql-active .ql-stroke {
+  stroke: #2563eb;
+}
+
+.dark .ql-toolbar button:hover .ql-fill,
+.dark .ql-toolbar button.ql-active .ql-fill {
+  fill: #2563eb;
+}
+
+.dark .ql-picker-options {
+  background: rgb(31, 41, 55);
+  border-color: rgb(55, 65, 81);
+}
+
+.dark .ql-picker-item {
+  color: rgb(243, 244, 246);
+}
+
+.dark .ql-picker-item:hover {
+  background: rgb(55, 65, 81);
+}
