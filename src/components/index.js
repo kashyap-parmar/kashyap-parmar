@@ -23,3 +23,22 @@ export { default as CustomNavbarBlog } from "./customNavbarBlog";
 export { default as SpecificProjectPageComponent } from "./specificProjectPageComponent";
 export { default as ScrollToTop } from "./scrollToTop";
 export { default as BlogCardReuse } from "./blogSection/blogCardReuse";
+
+// Admin Components
+export { default as AdminButton } from "./admin/Button";
+export { default as AdminInput } from "./admin/Input";
+export { default as AdminTextarea } from "./admin/Textarea";
+export { default as AdminSelect } from "./admin/Select";
+export { default as AdminCard } from "./admin/Card";
+export { default as AdminModal } from "./admin/Modal";
+export { default as AdminTable } from "./admin/Table";
+export { default as AdminPagination } from "./admin/Pagination";
+export { default as AdminBadge } from "./admin/Badge";
+export { default as AdminAlert } from "./admin/Alert";
+export { default as AdminBreadcrumb } from "./admin/Breadcrumb";
+export { default as AdminStatCard } from "./admin/StatCard";
+export { default as AdminSidebar } from "./admin/Sidebar";
+export { default as AdminHeader } from "./admin/Header";
+export { default as AdminImageUploader } from "./admin/ImageUploader";
+export { default as AdminRichTextEditor } from "./admin/RichTextEditor";
+export { default as AdminEmptyState } from "./admin/EmptyState";
