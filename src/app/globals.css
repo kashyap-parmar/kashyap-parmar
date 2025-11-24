@@ -1,8 +1,8 @@
+@import './admin-quill.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './admin-quill.css';
 
 @layer base {
 
