@@ -32,6 +32,92 @@ import {
 import AdminLayout from '@/components/admin/AdminLayout';
 import { projects, modules, subtasks, statusConfig, priorityConfig } from '@/mock/clientProjectData';
 
+// Sortable Subtask Card Component
+const SortableSubtaskCard = ({ subtask, onClick, priorityColors }) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: subtask.id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.5 : 1,
+  };
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+      className="bg-white dark:bg-[#020817]/70 border border-gray-200 dark:border-gray-700 rounded-lg p-4 cursor-grab active:cursor-grabbing hover:shadow-md transition-all"
+      data-testid={`subtask-card-${subtask.id}`}
+    >
+      {/* Subtask Header */}
+      <div className="flex items-start justify-between mb-2">
+        <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
+          {subtask.ref_id}
+        </span>
+        {subtask.priority && (
+          <AdminBadge
+            variant={priorityColors[subtask.priority]}
+            size="sm"
+          >
+            {subtask.priority}
+          </AdminBadge>
+        )}
+      </div>
+
+      {/* Title */}
+      <h4 
+        className="font-medium text-gray-900 dark:text-white mb-2 line-clamp-2 cursor-pointer"
+        onClick={(e) => {
+          e.stopPropagation();
+          onClick(subtask);
+        }}
+      >
+        {subtask.title}
+      </h4>
+
+      {/* Description */}
+      {subtask.description && (
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
+          {subtask.description}
+        </p>
+      )}
+
+      {/* Footer */}
+      <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+        <div className="flex items-center gap-3">
+          {subtask.estimatedTime && (
+            <span className="flex items-center gap-1">
+              <Icon icon="mdi:clock-outline" className="w-3 h-3" />
+              {subtask.estimatedTime}
+            </span>
+          )}
+          {subtask.comments > 0 && (
+            <span className="flex items-center gap-1">
+              <Icon icon="mdi:comment-outline" className="w-3 h-3" />
+              {subtask.comments}
+            </span>
+          )}
+        </div>
+        {subtask.assignee && (
+          <div className="flex items-center gap-1">
+            <Icon icon="mdi:account" className="w-3 h-3" />
+            <span className="truncate max-w-[100px]">{subtask.assignee}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const KanbanBoard = () => {
   const params = useParams();
   const router = useRouter();
@@ -48,6 +134,7 @@ const KanbanBoard = () => {
   const [createModal, setCreateModal] = useState(false);
   const [editModal, setEditModal] = useState(null);
   const [success, setSuccess] = useState(false);
+  const [activeId, setActiveId] = useState(null);
 
   const [formData, setFormData] = useState({
     title: '',
@@ -57,6 +144,16 @@ const KanbanBoard = () => {
     priority: '',
     status: 'todo',
   });
+
+  // Drag and drop sensors
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8,
+      },
+    }),
+    useSensor(KeyboardSensor)
+  );
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
