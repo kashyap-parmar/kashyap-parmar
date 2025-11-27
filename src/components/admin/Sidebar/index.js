@@ -15,6 +15,11 @@ const Sidebar = ({ isOpen, onClose }) => {
       href: '/admin/dashboard',
     },
     {
+      title: 'Clients',
+      icon: 'mdi:account-multiple',
+      href: '/admin/clients',
+    },
+    {
       title: 'Projects',
       icon: 'mdi:folder-multiple',
       submenu: [
