@@ -329,6 +329,8 @@ const KanbanBoard = () => {
     // Update subtask status if dropped on a different column
     if (kanbanColumns.some((col) => col.status === overColumn)) {
       if (activeSubtask && activeSubtask.status !== overColumn) {
+        const newStatus = kanbanColumns.find((col) => col.status === overColumn);
+        
         setModuleSubtasks((tasks) =>
           tasks.map((task) =>
             task.id === active.id
@@ -337,9 +339,9 @@ const KanbanBoard = () => {
           )
         );
         
-        // Show success message
-        setSuccess(true);
-        setTimeout(() => setSuccess(false), 2000);
+        // Show success message with status change
+        setSuccess(`Task "${activeSubtask.title}" moved to ${newStatus.label}`);
+        setTimeout(() => setSuccess(false), 3000);
       }
     }
   };
