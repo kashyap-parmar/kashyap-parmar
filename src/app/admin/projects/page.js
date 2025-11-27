@@ -35,8 +35,15 @@ const AdminProjects = () => {
     { value: 'draft', label: 'Draft' },
   ];
 
+  const getClientNames = (clientIds) => {
+    return clients
+      .filter((c) => clientIds.includes(c.id))
+      .map((c) => `${c.firstname} ${c.lastname}`)
+      .join(', ');
+  };
+
   const handleDelete = () => {
-    setProjects(projects.filter((p) => p.id !== deleteModal.project.id));
+    setProjectList(projectList.filter((p) => p.id !== deleteModal.project.id));
     setDeleteModal({ isOpen: false, project: null });
   };
 
