@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   AdminButton,
   AdminCard,
@@ -16,7 +15,7 @@ import {
   AdminEmptyState,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
-import { adminProjects } from '@/mock/adminData';
+import { projects, clients } from '@/mock/clientProjectData';
 
 const AdminProjects = () => {
   const [projects, setProjects] = useState(adminProjects);
