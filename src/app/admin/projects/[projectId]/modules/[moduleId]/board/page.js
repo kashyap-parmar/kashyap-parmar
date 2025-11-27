@@ -235,7 +235,7 @@ const KanbanBoard = () => {
 
   const handleCreateSubtask = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    setSuccess('Subtask created successfully');
     setCreateModal(false);
     setFormData({
       title: '',
@@ -250,7 +250,7 @@ const KanbanBoard = () => {
 
   const handleEditSubtask = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    setSuccess('Subtask updated successfully');
     setEditModal(null);
     setTimeout(() => setSuccess(false), 3000);
   };
