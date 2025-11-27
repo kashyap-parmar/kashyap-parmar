@@ -52,14 +52,6 @@ const CreateProject = () => {
 
   const handleChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
-    // Auto-generate slug from title
-    if (field === 'title') {
-      const slug = value
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
-      setFormData({ ...formData, title: value, slug });
-    }
   };
 
   return (
