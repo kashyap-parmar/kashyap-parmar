@@ -52,14 +52,28 @@ const AdminProjects = () => {
       header: 'Project',
       accessor: 'title',
       render: (row) => (
-        <div className="flex items-center gap-3">
-          <div className="relative w-12 h-12 rounded-lg overflow-hidden">
-            <Image src={row.thumbnail} alt={row.title} fill className="object-cover" />
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-xs font-mono text-gray-500 dark:text-gray-400">{row.ref_id}</span>
+            <Link
+              href={`/admin/projects/${row.id}`}
+              className="font-medium text-primary hover:text-blue-700 transition-colors"
+            >
+              {row.title}
+            </Link>
           </div>
-          <div>
-            <p className="font-medium text-gray-900 dark:text-white">{row.title}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">{row.slug}</p>
-          </div>
+          <p className="text-sm text-gray-500 dark:text-gray-400 truncate max-w-xs">
+            {row.description}
+          </p>
+        </div>
+      ),
+    },
+    {
+      header: 'Assigned Clients',
+      accessor: 'clientIds',
+      render: (row) => (
+        <div className="text-sm text-gray-900 dark:text-white">
+          {getClientNames(row.clientIds)}
         </div>
       ),
     },
