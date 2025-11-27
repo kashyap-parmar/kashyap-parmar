@@ -10,23 +10,19 @@ import {
   AdminSelect,
   AdminBreadcrumb,
   AdminAlert,
-  AdminImageUploader,
-  AdminRichTextEditor,
+  AdminMultiSelect,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
+import { clients, statusConfig } from '@/mock/clientProjectData';
 
 const CreateProject = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: '',
-    slug: '',
-    category: '',
-    status: 'draft',
-    featured: false,
     description: '',
-    tech: '',
-    liveUrl: '',
-    githubUrl: '',
+    clientIds: [],
+    estimatedTime: '',
+    status: 'todo',
   });
   const [thumbnail, setThumbnail] = useState(null);
   const [content, setContent] = useState('');
