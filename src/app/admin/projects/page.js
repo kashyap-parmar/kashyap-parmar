@@ -180,9 +180,9 @@ const AdminProjects = () => {
 
         {/* Projects Table */}
         <AdminCard padding={false}>
-          {projects.length > 0 ? (
+          {projectList.length > 0 ? (
             <>
-              <AdminTable columns={columns} data={projects} />
+              <AdminTable columns={columns} data={projectList} />
               <div className="p-4 border-t border-gray-200 dark:border-gray-700">
                 <AdminPagination
                   currentPage={currentPage}
