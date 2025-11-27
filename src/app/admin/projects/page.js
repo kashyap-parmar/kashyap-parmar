@@ -18,7 +18,7 @@ import AdminLayout from '@/components/admin/AdminLayout';
 import { projects, clients } from '@/mock/clientProjectData';
 
 const AdminProjects = () => {
-  const [projects, setProjects] = useState(adminProjects);
+  const [projectList, setProjectList] = useState(projects);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStatus, setFilterStatus] = useState('');
