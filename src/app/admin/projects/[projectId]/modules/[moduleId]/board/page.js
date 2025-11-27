@@ -379,101 +379,52 @@ const KanbanBoard = () => {
         </AdminCard>
 
         {/* Kanban Board */}
-        <div className="overflow-x-auto pb-4">
-          <div className="inline-flex gap-4 min-w-full">
-            {kanbanColumns.map((column) => {
-              const columnSubtasks = getSubtasksByStatus(column.status);
-              
-              return (
-                <div
-                  key={column.status}
-                  className="w-80 flex-shrink-0"
-                >
-                  {/* Column Header */}
-                  <div className="bg-gray-100 dark:bg-gray-800 rounded-t-lg px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-semibold text-gray-900 dark:text-white">
-                        {column.label}
-                      </h3>
-                      <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium px-2 py-1 rounded-full">
-                        {columnSubtasks.length}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Column Content */}
-                  <div className="bg-gray-50 dark:bg-gray-900/30 rounded-b-lg p-4 min-h-[500px] space-y-3">
-                    {columnSubtasks.map((subtask) => (
-                      <div
-                        key={subtask.id}
-                        onClick={() => setPreviewSubtask(subtask)}
-                        className="bg-white dark:bg-[#020817]/70 border border-gray-200 dark:border-gray-700 rounded-lg p-4 cursor-pointer hover:shadow-md transition-all"
-                        data-testid={`subtask-card-${subtask.id}`}
-                      >
-                        {/* Subtask Header */}
-                        <div className="flex items-start justify-between mb-2">
-                          <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
-                            {subtask.ref_id}
-                          </span>
-                          {subtask.priority && (
-                            <AdminBadge
-                              variant={priorityColors[subtask.priority]}
-                              size="sm"
-                            >
-                              {subtask.priority}
-                            </AdminBadge>
-                          )}
-                        </div>
-
-                        {/* Title */}
-                        <h4 className="font-medium text-gray-900 dark:text-white mb-2 line-clamp-2">
-                          {subtask.title}
-                        </h4>
-
-                        {/* Description */}
-                        {subtask.description && (
-                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
-                            {subtask.description}
-                          </p>
-                        )}
-
-                        {/* Footer */}
-                        <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-                          <div className="flex items-center gap-3">
-                            {subtask.estimatedTime && (
-                              <span className="flex items-center gap-1">
-                                <Icon icon="mdi:clock-outline" className="w-3 h-3" />
-                                {subtask.estimatedTime}
-                              </span>
-                            )}
-                            {subtask.comments > 0 && (
-                              <span className="flex items-center gap-1">
-                                <Icon icon="mdi:comment-outline" className="w-3 h-3" />
-                                {subtask.comments}
-                              </span>
-                            )}
-                          </div>
-                          {subtask.assignee && (
-                            <div className="flex items-center gap-1">
-                              <Icon icon="mdi:account" className="w-3 h-3" />
-                              <span className="truncate max-w-[100px]">{subtask.assignee}</span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                    
-                    {columnSubtasks.length === 0 && (
-                      <div className="text-center py-8 text-gray-400 dark:text-gray-600 text-sm">
-                        No tasks
-                      </div>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCorners}
+          onDragStart={handleDragStart}
+          onDragOver={handleDragOver}
+          onDragEnd={handleDragEnd}
+        >
+          <div className="overflow-x-auto pb-4">
+            <div className="inline-flex gap-4 min-w-full">
+              {kanbanColumns.map((column) => {
+                const columnSubtasks = getSubtasksByStatus(column.status);
+                
+                return (
+                  <DroppableColumn
+                    key={column.status}
+                    column={column}
+                    subtasks={columnSubtasks}
+                    onSubtaskClick={setPreviewSubtask}
+                    priorityColors={priorityColors}
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
+
+          {/* Drag Overlay */}
+          <DragOverlay>
+            {activeSubtask ? (
+              <div className="bg-white dark:bg-[#020817]/70 border-2 border-primary rounded-lg p-4 shadow-xl opacity-90 w-80">
+                <div className="flex items-start justify-between mb-2">
+                  <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
+                    {activeSubtask.ref_id}
+                  </span>
+                  {activeSubtask.priority && (
+                    <AdminBadge variant={priorityColors[activeSubtask.priority]} size="sm">
+                      {activeSubtask.priority}
+                    </AdminBadge>
+                  )}
+                </div>
+                <h4 className="font-medium text-gray-900 dark:text-white mb-2 line-clamp-2">
+                  {activeSubtask.title}
+                </h4>
+              </div>
+            ) : null}
+          </DragOverlay>
+        </DndContext>
 
         {/* Subtask Preview Modal */}
         <AdminModal
