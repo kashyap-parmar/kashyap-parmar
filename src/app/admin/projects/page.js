@@ -80,35 +80,27 @@ const AdminProjects = () => {
     {
       header: 'Status',
       accessor: 'status',
-      render: (row) => (
-        <AdminBadge
-          variant={row.status === 'published' ? 'success' : 'warning'}
-          className="capitalize"
-        >
-          {row.status}
-        </AdminBadge>
-      ),
+      render: (row) => {
+        const statusColors = {
+          todo: 'default',
+          inprogress: 'primary',
+          completed: 'success',
+          draft: 'warning',
+        };
+        return (
+          <AdminBadge variant={statusColors[row.status]} className="capitalize">
+            {row.status.replace('_', ' ')}
+          </AdminBadge>
+        );
+      },
     },
     {
-      header: 'Category',
-      accessor: 'category',
+      header: 'Total Time',
+      accessor: 'estimatedTime',
     },
     {
-      header: 'Featured',
-      accessor: 'featured',
-      render: (row) => (
-        <span>
-          {row.featured ? (
-            <Icon icon="mdi:star" className="w-5 h-5 text-yellow-500" />
-          ) : (
-            <Icon icon="mdi:star-outline" className="w-5 h-5 text-gray-400" />
-          )}
-        </span>
-      ),
-    },
-    {
-      header: 'Updated',
-      accessor: 'updatedAt',
+      header: 'Created On',
+      accessor: 'createdAt',
     },
     {
       header: 'Actions',
