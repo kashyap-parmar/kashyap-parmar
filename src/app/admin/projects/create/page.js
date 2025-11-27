@@ -83,12 +83,12 @@ const CreateProject = () => {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Basic Information */}
+          {/* Project Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Basic Information
+              Project Information
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-6">
               <AdminInput
                 label="Project Title"
                 placeholder="Enter project title"
@@ -97,90 +97,49 @@ const CreateProject = () => {
                 required
                 data-testid="project-title-input"
               />
-              <AdminInput
-                label="Slug"
-                placeholder="project-slug"
-                value={formData.slug}
-                onChange={(e) => handleChange('slug', e.target.value)}
-                helperText="Auto-generated from title"
-                required
-                data-testid="project-slug-input"
-              />
-              <AdminSelect
-                label="Category"
-                options={categoryOptions}
-                value={formData.category}
-                onChange={(e) => handleChange('category', e.target.value)}
-                required
-                data-testid="project-category-select"
-              />
-              <AdminSelect
-                label="Status"
-                options={statusOptions}
-                value={formData.status}
-                onChange={(e) => handleChange('status', e.target.value)}
-                required
-                data-testid="project-status-select"
-              />
-            </div>
-
-            <div className="mt-6">
               <AdminTextarea
-                label="Short Description"
-                placeholder="Brief description of the project"
+                label="Description"
+                placeholder="Brief description of the project (optional)"
                 value={formData.description}
                 onChange={(e) => handleChange('description', e.target.value)}
-                rows={3}
-                required
+                rows={4}
                 data-testid="project-description-textarea"
               />
-            </div>
-
-            <div className="mt-6">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  checked={formData.featured}
-                  onChange={(e) => handleChange('featured', e.target.checked)}
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
-                  data-testid="project-featured-checkbox"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <AdminInput
+                  label="Estimated Time"
+                  placeholder="e.g., 120h (optional)"
+                  value={formData.estimatedTime}
+                  onChange={(e) => handleChange('estimatedTime', e.target.value)}
+                  data-testid="project-time-input"
                 />
-                <span className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-                  Mark as featured project
-                </span>
-              </label>
+                <AdminSelect
+                  label="Status"
+                  options={statusOptions}
+                  value={formData.status}
+                  onChange={(e) => handleChange('status', e.target.value)}
+                  required
+                  data-testid="project-status-select"
+                />
+              </div>
             </div>
           </AdminCard>
 
-          {/* Project Details */}
+          {/* Client Assignment */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Project Details
+              Client Assignment
             </h3>
-            <div className="space-y-6">
-              <AdminInput
-                label="Technologies Used"
-                placeholder="React, Node.js, MongoDB (comma separated)"
-                value={formData.tech}
-                onChange={(e) => handleChange('tech', e.target.value)}
-                helperText="Separate multiple technologies with commas"
-                data-testid="project-tech-input"
-              />
-              <AdminInput
-                label="Live URL"
-                placeholder="https://project-demo.com"
-                value={formData.liveUrl}
-                onChange={(e) => handleChange('liveUrl', e.target.value)}
-                data-testid="project-live-url-input"
-              />
-              <AdminInput
-                label="GitHub URL"
-                placeholder="https://github.com/username/repo"
-                value={formData.githubUrl}
-                onChange={(e) => handleChange('githubUrl', e.target.value)}
-                data-testid="project-github-url-input"
-              />
-            </div>
+            <AdminMultiSelect
+              label="Select Clients"
+              options={clientOptions}
+              value={formData.clientIds}
+              onChange={(value) => handleChange('clientIds', value)}
+              placeholder="Select one or more clients"
+              required
+              helperText="You must assign at least one client to this project"
+              data-testid="project-clients-select"
+            />
           </AdminCard>
 
           {/* Thumbnail */}
