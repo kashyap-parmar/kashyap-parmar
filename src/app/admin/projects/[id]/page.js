@@ -32,7 +32,7 @@ const ProjectDetail = () => {
   ];
 
   const getModuleProgress = (moduleId) => {
-    const moduleSub tasks = subtasks.filter((s) => s.moduleId === moduleId);
+    const moduleSubtasks = subtasks.filter((s) => s.moduleId === moduleId);
     const statusCounts = statusConfig.module.map((status) => ({
       status: status.value,
       label: status.label,
