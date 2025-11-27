@@ -32,6 +32,58 @@ import {
 import AdminLayout from '@/components/admin/AdminLayout';
 import { projects, modules, subtasks, statusConfig, priorityConfig } from '@/mock/clientProjectData';
 
+// Droppable Column Component
+const DroppableColumn = ({ column, subtasks, onSubtaskClick, priorityColors }) => {
+  const { setNodeRef } = useSortable({
+    id: column.status,
+    data: {
+      type: 'column',
+    },
+  });
+
+  return (
+    <div className="w-80 flex-shrink-0">
+      {/* Column Header */}
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-t-lg px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <h3 className="font-semibold text-gray-900 dark:text-white">
+            {column.label}
+          </h3>
+          <span className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium px-2 py-1 rounded-full">
+            {subtasks.length}
+          </span>
+        </div>
+      </div>
+
+      {/* Column Content - Droppable Area */}
+      <div
+        ref={setNodeRef}
+        className="bg-gray-50 dark:bg-gray-900/30 rounded-b-lg p-4 min-h-[500px] space-y-3"
+      >
+        <SortableContext
+          items={subtasks.map((s) => s.id)}
+          strategy={verticalListSortingStrategy}
+        >
+          {subtasks.map((subtask) => (
+            <SortableSubtaskCard
+              key={subtask.id}
+              subtask={subtask}
+              onClick={onSubtaskClick}
+              priorityColors={priorityColors}
+            />
+          ))}
+        </SortableContext>
+        
+        {subtasks.length === 0 && (
+          <div className="text-center py-8 text-gray-400 dark:text-gray-600 text-sm">
+            Drop tasks here
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 // Sortable Subtask Card Component
 const SortableSubtaskCard = ({ subtask, onClick, priorityColors }) => {
   const {
