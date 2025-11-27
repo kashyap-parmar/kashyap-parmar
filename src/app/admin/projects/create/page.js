@@ -142,31 +142,7 @@ const CreateProject = () => {
             />
           </AdminCard>
 
-          {/* Thumbnail */}
-          <AdminCard>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Project Thumbnail
-            </h3>
-            <AdminImageUploader
-              label="Upload Thumbnail"
-              value={thumbnail}
-              onChange={setThumbnail}
-              helperText="Recommended size: 1200x630px"
-            />
-          </AdminCard>
-
-          {/* Content */}
-          <AdminCard>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Project Content
-            </h3>
-            <AdminRichTextEditor
-              label="Full Description"
-              value={content}
-              onChange={setContent}
-              helperText="Write detailed information about the project"
-            />
-          </AdminCard>
+          {/* Additional sections can be added here in the future */}
 
           {/* Actions */}
           <div className="flex items-center justify-end gap-4">
