@@ -374,7 +374,7 @@ const KanbanBoard = () => {
           <AdminAlert
             type="success"
             title="Success!"
-            message="Subtask saved successfully"
+            message={typeof success === 'string' ? success : "Subtask saved successfully"}
             onClose={() => setSuccess(false)}
           />
         )}
