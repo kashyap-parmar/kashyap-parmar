@@ -237,6 +237,63 @@ const KanbanBoard = () => {
     low: 'success',
   };
 
+  // Drag and drop handlers
+  const handleDragStart = (event) => {
+    setActiveId(event.active.id);
+  };
+
+  const handleDragOver = (event) => {
+    const { active, over } = event;
+    
+    if (!over) return;
+
+    const activeSubtask = moduleSubtasks.find((s) => s.id === active.id);
+    const overColumn = over.id;
+
+    // Check if we're dragging over a column (status)
+    if (kanbanColumns.some((col) => col.status === overColumn)) {
+      if (activeSubtask && activeSubtask.status !== overColumn) {
+        setModuleSubtasks((tasks) =>
+          tasks.map((task) =>
+            task.id === active.id
+              ? { ...task, status: overColumn }
+              : task
+          )
+        );
+      }
+    }
+  };
+
+  const handleDragEnd = (event) => {
+    setActiveId(null);
+    
+    const { active, over } = event;
+    
+    if (!over) return;
+
+    const activeSubtask = moduleSubtasks.find((s) => s.id === active.id);
+    const overColumn = over.id;
+
+    // Update subtask status if dropped on a different column
+    if (kanbanColumns.some((col) => col.status === overColumn)) {
+      if (activeSubtask && activeSubtask.status !== overColumn) {
+        setModuleSubtasks((tasks) =>
+          tasks.map((task) =>
+            task.id === active.id
+              ? { ...task, status: overColumn }
+              : task
+          )
+        );
+        
+        // Show success message
+        setSuccess(true);
+        setTimeout(() => setSuccess(false), 2000);
+      }
+    }
+  };
+
+  const activeSubtask = activeId ? moduleSubtasks.find((s) => s.id === activeId) : null;
+
   if (!project || !module) {
     return (
       <AdminLayout>
