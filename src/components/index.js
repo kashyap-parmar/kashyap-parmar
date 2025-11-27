@@ -43,3 +43,5 @@ export { default as AdminImageUploader } from "./admin/ImageUploader";
 export { default as AdminRichTextEditor } from "./admin/RichTextEditor";
 export { default as AdminEmptyState } from "./admin/EmptyState";
 export { default as AdminLayout } from "./admin/AdminLayout";
+export { default as AdminMultiSelect } from "./admin/MultiSelect";
+export { default as AdminProgressBar } from "./admin/ProgressBar";
