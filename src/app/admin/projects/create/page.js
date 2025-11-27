@@ -24,8 +24,6 @@ const CreateProject = () => {
     estimatedTime: '',
     status: 'todo',
   });
-  const [thumbnail, setThumbnail] = useState(null);
-  const [content, setContent] = useState('');
   const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
@@ -34,17 +32,15 @@ const CreateProject = () => {
     { label: 'Create' },
   ];
 
-  const categoryOptions = [
-    { value: 'frontend', label: 'Frontend' },
-    { value: 'backend', label: 'Backend' },
-    { value: 'fullstack', label: 'Full Stack' },
-    { value: 'mobile', label: 'Mobile' },
-  ];
+  const clientOptions = clients.map((client) => ({
+    value: client.id,
+    label: `${client.firstname} ${client.lastname}`,
+  }));
 
-  const statusOptions = [
-    { value: 'draft', label: 'Draft' },
-    { value: 'published', label: 'Published' },
-  ];
+  const statusOptions = statusConfig.project.map((s) => ({
+    value: s.value,
+    label: s.label,
+  }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
