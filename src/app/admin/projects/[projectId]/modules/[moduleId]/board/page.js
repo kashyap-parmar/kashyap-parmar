@@ -367,6 +367,21 @@ const KanbanBoard = () => {
     setEditModal(subtask);
   };
 
+  const handleResetData = () => {
+    if (confirm('Are you sure you want to reset all subtasks to default data? This will clear all changes.')) {
+      // Clear localStorage
+      localStorage.removeItem(STORAGE_KEY);
+      
+      // Re-initialize with default data
+      const defaultSubtasks = subtasks.filter((s) => s.moduleId === moduleId);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(subtasks));
+      setModuleSubtasks(defaultSubtasks);
+      
+      setSuccess('Data reset to default successfully');
+      setTimeout(() => setSuccess(false), 3000);
+    }
+  };
+
   const getSubtasksByStatus = (status) => {
     return moduleSubtasks.filter((s) => s.status === status);
   };
