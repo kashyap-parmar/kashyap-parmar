@@ -353,9 +353,8 @@ const KanbanBoard = () => {
       status: formData.status,
     });
     
-    setSuccess('Subtask updated successfully');
+    showToast.success('Subtask updated successfully');
     setEditModal(null);
-    setTimeout(() => setSuccess(false), 3000);
   };
 
   const openCreateModal = () => {
