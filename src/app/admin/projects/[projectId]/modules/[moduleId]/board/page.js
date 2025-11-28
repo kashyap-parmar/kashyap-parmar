@@ -514,6 +514,16 @@ const KanbanBoard = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
+              <AdminButton
+                variant="ghost"
+                icon={<Icon icon="mdi:restore" />}
+                onClick={handleResetData}
+                size="sm"
+                data-testid="reset-data-btn"
+                title="Reset to default data"
+              >
+                Reset
+              </AdminButton>
               <Link href={`/admin/projects/${projectId}/modules/${moduleId}/edit`}>
                 <AdminButton variant="secondary" icon={<Icon icon="mdi:pencil" />}>
                   Edit Module
