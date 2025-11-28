@@ -9,11 +9,11 @@ import {
   AdminTextarea,
   AdminSelect,
   AdminBreadcrumb,
-  AdminAlert,
   AdminMultiSelect,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { clients, projects, statusConfig } from '@/mock/clientProjectData';
+import { showToast } from '@/utils/toast';
 
 const EditProject = () => {
   const router = useRouter();
@@ -29,7 +29,6 @@ const EditProject = () => {
     estimatedTime: project?.estimatedTime || '',
     status: project?.status || 'todo',
   });
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
@@ -49,10 +48,16 @@ const EditProject = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    
+    if (formData.clientIds.length === 0) {
+      showToast.error('Please select at least one client');
+      return;
+    }
+    
+    showToast.success('Project updated successfully');
     setTimeout(() => {
       router.push('/admin/projects');
-    }, 2000);
+    }, 1000);
   };
 
   const handleChange = (field, value) => {
@@ -79,10 +84,8 @@ const EditProject = () => {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        {/* Breadcrumb */}
         <AdminBreadcrumb items={breadcrumbItems} />
 
-        {/* Page Header */}
         <div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="edit-project-title">
             Edit Project
@@ -92,18 +95,7 @@ const EditProject = () => {
           </p>
         </div>
 
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Project updated successfully. Redirecting..."
-            onClose={() => setSuccess(false)}
-          />
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Project Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Project Information
@@ -145,7 +137,6 @@ const EditProject = () => {
             </div>
           </AdminCard>
 
-          {/* Client Assignment */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Client Assignment
@@ -162,7 +153,6 @@ const EditProject = () => {
             />
           </AdminCard>
 
-          {/* Actions */}
           <div className="flex items-center justify-end gap-4">
             <AdminButton
               type="button"

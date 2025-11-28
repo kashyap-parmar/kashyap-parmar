@@ -43,6 +43,13 @@ const CreateProject = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validate client selection
+    if (formData.clientIds.length === 0) {
+      showToast.error('Please select at least one client');
+      return;
+    }
+    
     showToast.success('Project created successfully');
     setTimeout(() => {
       router.push('/admin/projects');
@@ -56,10 +63,8 @@ const CreateProject = () => {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        {/* Breadcrumb */}
         <AdminBreadcrumb items={breadcrumbItems} />
 
-        {/* Page Header */}
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="create-project-title">
@@ -71,18 +76,7 @@ const CreateProject = () => {
           </div>
         </div>
 
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Project created successfully. Redirecting..."
-            onClose={() => setSuccess(false)}
-          />
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Project Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Project Information
@@ -124,7 +118,6 @@ const CreateProject = () => {
             </div>
           </AdminCard>
 
-          {/* Client Assignment */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Client Assignment
@@ -141,9 +134,6 @@ const CreateProject = () => {
             />
           </AdminCard>
 
-          {/* Additional sections can be added here in the future */}
-
-          {/* Actions */}
           <div className="flex items-center justify-end gap-4">
             <AdminButton
               type="button"
@@ -155,7 +145,7 @@ const CreateProject = () => {
             </AdminButton>
             <AdminButton type="submit" variant="primary" data-testid="save-project-btn">
               <Icon icon="mdi:content-save" className="mr-2" />
-              Save Project
+              Create Project
             </AdminButton>
           </div>
         </form>
