@@ -58,16 +58,6 @@ const CreateClient = () => {
           </p>
         </div>
 
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Client created successfully. Redirecting..."
-            onClose={() => setSuccess(false)}
-          />
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Basic Information */}
           <AdminCard>
