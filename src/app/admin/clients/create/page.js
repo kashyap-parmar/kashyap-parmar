@@ -33,10 +33,10 @@ const CreateClient = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    showToast.success('Client created successfully');
     setTimeout(() => {
       router.push('/admin/clients');
-    }, 2000);
+    }, 1000);
   };
 
   const handleChange = (field, value) => {
