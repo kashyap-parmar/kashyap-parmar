@@ -482,16 +482,6 @@ const KanbanBoard = () => {
         {/* Breadcrumb */}
         <AdminBreadcrumb items={breadcrumbItems} />
 
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message={typeof success === 'string' ? success : "Subtask saved successfully"}
-            onClose={() => setSuccess(false)}
-          />
-        )}
-
         {/* Module Header */}
         <AdminCard>
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
