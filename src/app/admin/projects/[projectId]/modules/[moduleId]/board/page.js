@@ -454,9 +454,8 @@ const KanbanBoard = () => {
         // Call updateSubtask() to update localStorage and re-render
         updateSubtask(active.id, { status: overColumn });
         
-        // Show success message with status change
-        setSuccess(`Task "${activeSubtask.title}" moved to ${newStatus.label}`);
-        setTimeout(() => setSuccess(false), 3000);
+        // Show success toast notification
+        showToast.success(`Task "${activeSubtask.title}" moved to ${newStatus.label}`);
       }
     }
   };
