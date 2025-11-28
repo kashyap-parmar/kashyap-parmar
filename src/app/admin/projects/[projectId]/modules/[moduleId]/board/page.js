@@ -287,6 +287,31 @@ const KanbanBoard = () => {
 
   const handleCreateSubtask = (e) => {
     e.preventDefault();
+    
+    // Create new subtask with generated ID
+    const newSubtask = {
+      id: Date.now(), // Generate unique ID
+      ref_id: `SUB-${String(Date.now()).slice(-3)}`,
+      moduleId: moduleId,
+      title: formData.title,
+      description: formData.description,
+      estimatedTime: formData.estimatedTime,
+      assignee: formData.assignee,
+      priority: formData.priority,
+      status: formData.status,
+      comments: 0,
+    };
+    
+    // Add to localStorage
+    const storedData = localStorage.getItem(STORAGE_KEY);
+    const allSubtasks = storedData ? JSON.parse(storedData) : [];
+    const updatedSubtasks = [...allSubtasks, newSubtask];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedSubtasks));
+    
+    // Re-fetch and re-render
+    const moduleUpdatedSubtasks = updatedSubtasks.filter((s) => s.moduleId === moduleId);
+    setModuleSubtasks(moduleUpdatedSubtasks);
+    
     setSuccess('Subtask created successfully');
     setCreateModal(false);
     setFormData({
@@ -302,6 +327,17 @@ const KanbanBoard = () => {
 
   const handleEditSubtask = (e) => {
     e.preventDefault();
+    
+    // Update subtask in localStorage
+    updateSubtask(editModal.id, {
+      title: formData.title,
+      description: formData.description,
+      estimatedTime: formData.estimatedTime,
+      assignee: formData.assignee,
+      priority: formData.priority,
+      status: formData.status,
+    });
+    
     setSuccess('Subtask updated successfully');
     setEditModal(null);
     setTimeout(() => setSuccess(false), 3000);
