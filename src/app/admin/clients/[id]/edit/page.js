@@ -11,6 +11,7 @@ import {
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { clients } from '@/mock/clientProjectData';
+import { showToast } from '@/utils/toast';
 
 const EditClient = () => {
   const router = useRouter();
@@ -40,7 +41,7 @@ const EditClient = () => {
     showToast.success('Client updated successfully');
     setTimeout(() => {
       router.push('/admin/clients');
-    }, 2000);
+    }, 1000);
   };
 
   const handleChange = (field, value) => {
@@ -67,10 +68,8 @@ const EditClient = () => {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        {/* Breadcrumb */}
         <AdminBreadcrumb items={breadcrumbItems} />
 
-        {/* Page Header */}
         <div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="edit-client-title">
             Edit Client
@@ -80,9 +79,7 @@ const EditClient = () => {
           </p>
         </div>
 
-
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Basic Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Basic Information
@@ -107,7 +104,6 @@ const EditClient = () => {
             </div>
           </AdminCard>
 
-          {/* Contact Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Contact Information
@@ -154,7 +150,6 @@ const EditClient = () => {
             </div>
           </AdminCard>
 
-          {/* Additional Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Additional Information
@@ -169,7 +164,6 @@ const EditClient = () => {
             />
           </AdminCard>
 
-          {/* Actions */}
           <div className="flex items-center justify-end gap-4">
             <AdminButton
               type="button"
