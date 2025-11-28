@@ -23,7 +23,6 @@ const CreateClient = () => {
     website: '',
     description: '',
   });
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
