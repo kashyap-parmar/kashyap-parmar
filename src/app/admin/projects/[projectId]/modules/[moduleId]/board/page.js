@@ -328,7 +328,7 @@ const KanbanBoard = () => {
     const moduleUpdatedSubtasks = updatedSubtasks.filter((s) => s.moduleId === moduleId);
     setModuleSubtasks(moduleUpdatedSubtasks);
     
-    setSuccess('Subtask created successfully');
+    showToast.success('Subtask created successfully');
     setCreateModal(false);
     setFormData({
       title: '',
@@ -338,7 +338,6 @@ const KanbanBoard = () => {
       priority: '',
       status: 'todo',
     });
-    setTimeout(() => setSuccess(false), 3000);
   };
 
   const handleEditSubtask = (e) => {
