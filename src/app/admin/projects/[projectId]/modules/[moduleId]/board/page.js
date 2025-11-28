@@ -242,12 +242,12 @@ const KanbanBoard = () => {
   };
 
   // Initialize data from localStorage on component mount
-  useState(() => {
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       const initialData = initializeLocalStorage();
       setModuleSubtasks(initialData);
     }
-  });
+  }, [moduleId]);
 
   // Drag and drop sensors
   const sensors = useSensors(
