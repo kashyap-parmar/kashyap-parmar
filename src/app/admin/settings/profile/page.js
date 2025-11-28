@@ -7,10 +7,10 @@ import {
   AdminInput,
   AdminTextarea,
   AdminBreadcrumb,
-  AdminAlert,
   AdminImageUploader,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
+import { showToast } from '@/utils/toast';
 
 const ProfileSettings = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,6 @@ const ProfileSettings = () => {
     website: 'https://kashyapparmar.dev',
   });
   const [avatar, setAvatar] = useState(null);
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
@@ -32,8 +31,7 @@ const ProfileSettings = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
-    setTimeout(() => setSuccess(false), 3000);
+    showToast.success('Profile updated successfully');
   };
 
   const handleChange = (field, value) => {
@@ -55,16 +53,6 @@ const ProfileSettings = () => {
             Manage your personal information and profile details
           </p>
         </div>
-
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Profile updated successfully"
-            onClose={() => setSuccess(false)}
-          />
-        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Profile Picture */}

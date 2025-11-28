@@ -6,9 +6,9 @@ import {
   AdminCard,
   AdminInput,
   AdminBreadcrumb,
-  AdminAlert,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
+import { showToast } from '@/utils/toast';
 
 const SocialSettings = () => {
   const [socialLinks, setSocialLinks] = useState({
@@ -19,7 +19,6 @@ const SocialSettings = () => {
     youtube: '',
     facebook: '',
   });
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
@@ -38,8 +37,7 @@ const SocialSettings = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
-    setTimeout(() => setSuccess(false), 3000);
+    showToast.success('Social links updated successfully');
   };
 
   const handleChange = (platform, value) => {
@@ -61,16 +59,6 @@ const SocialSettings = () => {
             Manage your social media profiles and links
           </p>
         </div>
-
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Social links updated successfully"
-            onClose={() => setSuccess(false)}
-          />
-        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Social Links */}
