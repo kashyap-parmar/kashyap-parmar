@@ -528,6 +528,10 @@ const KanbanBoard = () => {
                     {module.priority}
                   </AdminBadge>
                 )}
+                <span className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                  <Icon icon="mdi:database" className="w-3 h-3" />
+                  Data from localStorage
+                </span>
               </div>
             </div>
             <div className="flex items-center gap-3">
