@@ -357,6 +357,7 @@ const KanbanBoard = () => {
     // Check if we're dragging over a column (status)
     if (kanbanColumns.some((col) => col.status === overColumn)) {
       if (activeSubtask && activeSubtask.status !== overColumn) {
+        // Optimistic UI update (temporary)
         setModuleSubtasks((tasks) =>
           tasks.map((task) =>
             task.id === active.id
@@ -383,13 +384,8 @@ const KanbanBoard = () => {
       if (activeSubtask && activeSubtask.status !== overColumn) {
         const newStatus = kanbanColumns.find((col) => col.status === overColumn);
         
-        setModuleSubtasks((tasks) =>
-          tasks.map((task) =>
-            task.id === active.id
-              ? { ...task, status: overColumn }
-              : task
-          )
-        );
+        // Call updateSubtask() to update localStorage and re-render
+        updateSubtask(active.id, { status: overColumn });
         
         // Show success message with status change
         setSuccess(`Task "${activeSubtask.title}" moved to ${newStatus.label}`);
