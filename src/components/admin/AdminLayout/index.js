@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { Toaster } from 'react-hot-toast';
 import AdminSidebar from '../Sidebar';
 import AdminHeader from '../Header';
 import { useAuth } from '@/contexts/AuthContext';
