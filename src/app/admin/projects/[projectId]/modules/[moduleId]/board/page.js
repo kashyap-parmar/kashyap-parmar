@@ -200,7 +200,6 @@ const KanbanBoard = () => {
   const [previewSubtask, setPreviewSubtask] = useState(null);
   const [createModal, setCreateModal] = useState(false);
   const [editModal, setEditModal] = useState(null);
-  const [success, setSuccess] = useState(false);
   const [activeId, setActiveId] = useState(null);
 
   const [formData, setFormData] = useState({
