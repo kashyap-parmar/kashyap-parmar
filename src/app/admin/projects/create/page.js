@@ -46,7 +46,7 @@ const CreateProject = () => {
     showToast.success('Project created successfully');
     setTimeout(() => {
       router.push('/admin/projects');
-    }, 2000);
+    }, 1000);
   };
 
   const handleChange = (field, value) => {
