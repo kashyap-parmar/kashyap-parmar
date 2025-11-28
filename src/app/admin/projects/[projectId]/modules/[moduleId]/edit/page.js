@@ -9,10 +9,10 @@ import {
   AdminTextarea,
   AdminSelect,
   AdminBreadcrumb,
-  AdminAlert,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { projects, modules, statusConfig, priorityConfig } from '@/mock/clientProjectData';
+import { showToast } from '@/utils/toast';
 
 const EditModule = () => {
   const router = useRouter();
@@ -31,7 +31,6 @@ const EditModule = () => {
     priority: module?.priority || '',
     status: module?.status || 'todo',
   });
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
@@ -52,10 +51,10 @@ const EditModule = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    showToast.success('Module updated successfully');
     setTimeout(() => {
       router.push(`/admin/projects/${projectId}`);
-    }, 2000);
+    }, 1000);
   };
 
   const handleChange = (field, value) => {
@@ -82,10 +81,8 @@ const EditModule = () => {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        {/* Breadcrumb */}
         <AdminBreadcrumb items={breadcrumbItems} />
 
-        {/* Page Header */}
         <div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="edit-module-title">
             Edit Module
@@ -95,18 +92,7 @@ const EditModule = () => {
           </p>
         </div>
 
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Module updated successfully. Redirecting..."
-            onClose={() => setSuccess(false)}
-          />
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Module Information */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Module Information
@@ -146,7 +132,6 @@ const EditModule = () => {
             </div>
           </AdminCard>
 
-          {/* Module Details */}
           <AdminCard>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Module Details
@@ -186,7 +171,6 @@ const EditModule = () => {
             </div>
           </AdminCard>
 
-          {/* Actions */}
           <div className="flex items-center justify-end gap-4">
             <AdminButton
               type="button"
