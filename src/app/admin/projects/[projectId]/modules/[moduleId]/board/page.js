@@ -391,8 +391,7 @@ const KanbanBoard = () => {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(subtasks));
       setModuleSubtasks(defaultSubtasks);
       
-      setSuccess('Data reset to default successfully');
-      setTimeout(() => setSuccess(false), 3000);
+      showToast.success('Data reset to default successfully');
     }
   };
 
