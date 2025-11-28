@@ -62,15 +62,14 @@ const Sidebar = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 z-30 h-full w-64 bg-white dark:bg-[#020817]/90 border-r border-gray-200 dark:border-gray-700 transition-transform duration-300 lg:translate-x-0 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed top-0 left-0 z-30 h-full w-64 bg-white dark:bg-[#020817]/90 border-r border-gray-200 dark:border-gray-700 transition-transform duration-300 lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <div className="h-full flex flex-col">
           {/* Logo */}
           <div className="h-16 flex items-center justify-between px-6 border-b border-gray-200 dark:border-gray-700">
             <Link href="/admin/dashboard" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Admin</span>
+              <span className="text-2xl font-bold text-primary">Kashyap</span>
             </Link>
             <button
               onClick={onClose}
@@ -89,11 +88,10 @@ const Sidebar = ({ isOpen, onClose }) => {
                     <div>
                       <button
                         onClick={() => toggleSubmenu(index)}
-                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
-                          hasActiveChild(item.submenu)
-                            ? 'bg-primary/10 text-primary'
-                            : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                        }`}
+                        className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${hasActiveChild(item.submenu)
+                          ? 'bg-primary/10 text-primary'
+                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          }`}
                       >
                         <div className="flex items-center">
                           <Icon icon={item.icon} className="w-5 h-5 mr-3" />
@@ -101,9 +99,8 @@ const Sidebar = ({ isOpen, onClose }) => {
                         </div>
                         <Icon
                           icon="mdi:chevron-down"
-                          className={`w-5 h-5 transition-transform ${
-                            expandedMenu === index ? 'rotate-180' : ''
-                          }`}
+                          className={`w-5 h-5 transition-transform ${expandedMenu === index ? 'rotate-180' : ''
+                            }`}
                         />
                       </button>
                       {expandedMenu === index && (
@@ -112,11 +109,10 @@ const Sidebar = ({ isOpen, onClose }) => {
                             <li key={subIndex}>
                               <Link
                                 href={subItem.href}
-                                className={`block px-4 py-2 rounded-lg transition-colors ${
-                                  isActive(subItem.href)
-                                    ? 'bg-primary text-white'
-                                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
-                                }`}
+                                className={`block px-4 py-2 rounded-lg transition-colors ${isActive(subItem.href)
+                                  ? 'bg-primary text-white'
+                                  : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                                  }`}
                               >
                                 {subItem.title}
                               </Link>
@@ -128,11 +124,10 @@ const Sidebar = ({ isOpen, onClose }) => {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
-                        isActive(item.href)
-                          ? 'bg-primary text-white'
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                      }`}
+                      className={`flex items-center px-4 py-3 rounded-lg transition-colors ${isActive(item.href)
+                        ? 'bg-primary text-white'
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        }`}
                     >
                       <Icon icon={item.icon} className="w-5 h-5 mr-3" />
                       <span className="font-medium">{item.title}</span>

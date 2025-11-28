@@ -38,12 +38,12 @@ const ThemeSettings = () => {
       icon: 'mdi:moon-waning-crescent',
       description: 'Easy on the eyes in low light',
     },
-    {
-      value: 'system',
-      label: 'System',
-      icon: 'mdi:laptop',
-      description: 'Follows your system preference',
-    },
+    // {
+    //   value: 'system',
+    //   label: 'System',
+    //   icon: 'mdi:laptop',
+    //   description: 'Follows your system preference',
+    // },
   ];
 
   const handleThemeChange = (newTheme) => {
@@ -98,20 +98,18 @@ const ThemeSettings = () => {
               <button
                 key={themeOption.value}
                 onClick={() => handleThemeChange(themeOption.value)}
-                className={`relative p-6 rounded-lg border-2 transition-all ${
-                  theme === themeOption.value
+                className={`relative p-6 rounded-lg border-2 transition-all ${theme === themeOption.value
                     ? 'border-primary bg-primary/5'
                     : 'border-gray-200 dark:border-gray-700 hover:border-primary/50'
-                }`}
+                  }`}
                 data-testid={`theme-${themeOption.value}-btn`}
               >
                 <div className="flex flex-col items-center text-center">
                   <div
-                    className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
-                      theme === themeOption.value
+                    className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${theme === themeOption.value
                         ? 'bg-primary text-white'
                         : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
-                    }`}
+                      }`}
                   >
                     <Icon icon={themeOption.icon} className="w-8 h-8" />
                   </div>

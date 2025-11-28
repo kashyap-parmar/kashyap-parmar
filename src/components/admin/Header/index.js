@@ -22,7 +22,7 @@ const Header = ({ onMenuClick, onLogout }) => {
           >
             <Icon icon="mdi:menu" className="w-6 h-6" />
           </button>
-          <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Admin Panel</h1>
+          <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Hello, Kashyap</h1>
         </div>
 
         {/* Right Side */}

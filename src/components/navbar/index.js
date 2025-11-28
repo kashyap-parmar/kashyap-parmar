@@ -13,7 +13,7 @@ const Navbar = ({ show }) => {
     const { theme, setTheme } = useTheme();
     const pathname = usePathname();
     const router = useRouter();
-    const notShowingTrue = (pathname.includes("project") || pathname.includes("blog"))
+    const notShowingTrue = (pathname.includes("project") || pathname.includes("blog") || pathname.includes("admin"));
     const regex = /^\/(#\w+)?$/;
 
     const handleNavigate = (url) => {
