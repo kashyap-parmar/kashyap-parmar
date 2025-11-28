@@ -6,14 +6,13 @@ import {
   AdminButton,
   AdminCard,
   AdminBreadcrumb,
-  AdminAlert,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
+import { showToast } from '@/utils/toast';
 
 const ThemeSettings = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -48,8 +47,7 @@ const ThemeSettings = () => {
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
-    setSuccess(true);
-    setTimeout(() => setSuccess(false), 3000);
+    showToast.success(`Theme changed to ${newTheme}`);
   };
 
   if (!mounted) {
@@ -77,16 +75,6 @@ const ThemeSettings = () => {
             Customize the appearance of your admin panel
           </p>
         </div>
-
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Theme preference updated successfully"
-            onClose={() => setSuccess(false)}
-          />
-        )}
 
         {/* Theme Selection */}
         <AdminCard>
