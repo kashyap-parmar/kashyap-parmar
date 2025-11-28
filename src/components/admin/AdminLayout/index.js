@@ -39,6 +39,21 @@ const AdminLayout = ({ children }) => {
           {children}
         </div>
       </main>
+
+      {/* Toast Notifications */}
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        gutter={8}
+        toastOptions={{
+          duration: 3000,
+          style: {
+            borderRadius: '8px',
+            fontSize: '14px',
+            fontWeight: '500',
+          },
+        }}
+      />
     </div>
   );
 };
