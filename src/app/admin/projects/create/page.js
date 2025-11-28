@@ -9,7 +9,6 @@ import {
   AdminTextarea,
   AdminSelect,
   AdminBreadcrumb,
-  AdminAlert,
   AdminMultiSelect,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
@@ -24,7 +23,6 @@ const CreateProject = () => {
     estimatedTime: '',
     status: 'todo',
   });
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
@@ -44,7 +42,7 @@ const CreateProject = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    showToast.success('Project created successfully');
     setTimeout(() => {
       router.push('/admin/projects');
     }, 2000);

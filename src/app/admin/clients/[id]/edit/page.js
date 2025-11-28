@@ -8,7 +8,6 @@ import {
   AdminInput,
   AdminTextarea,
   AdminBreadcrumb,
-  AdminAlert,
 } from '@/components';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { clients } from '@/mock/clientProjectData';
@@ -29,7 +28,6 @@ const EditClient = () => {
     website: client?.website || '',
     description: client?.description || '',
   });
-  const [success, setSuccess] = useState(false);
 
   const breadcrumbItems = [
     { label: 'Admin', href: '/admin/dashboard', icon: 'mdi:home' },
@@ -39,7 +37,7 @@ const EditClient = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccess(true);
+    showToast.success('Client updated successfully');
     setTimeout(() => {
       router.push('/admin/clients');
     }, 2000);
@@ -82,15 +80,6 @@ const EditClient = () => {
           </p>
         </div>
 
-        {/* Success Alert */}
-        {success && (
-          <AdminAlert
-            type="success"
-            title="Success!"
-            message="Client updated successfully. Redirecting..."
-            onClose={() => setSuccess(false)}
-          />
-        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Basic Information */}
