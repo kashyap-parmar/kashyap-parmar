@@ -1,3 +1,20 @@
+/**
+ * Kanban Board with Drag & Drop and LocalStorage Integration
+ * 
+ * Data Flow:
+ * 1. First Load: Check localStorage, if empty → store default subtasks data
+ * 2. UI Render: Always fetch subtasks from localStorage (not hardcoded)
+ * 3. Drag & Drop: 
+ *    - User drags subtask to new column
+ *    - Call updateSubtask() with new status
+ *    - Update localStorage
+ *    - Re-fetch and re-render UI
+ * 4. Persistence: All changes persist across page reloads
+ * 5. Reset: Button to clear localStorage and restore default data
+ * 
+ * LocalStorage Key: 'kanban_subtasks'
+ * Format: Array of all subtasks with { id, moduleId, status, ... }
+ */
 'use client';
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
