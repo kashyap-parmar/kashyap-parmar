@@ -178,10 +178,8 @@ const KanbanBoard = () => {
   
   const project = projects.find((p) => p.id === projectId);
   const module = modules.find((m) => m.id === moduleId);
-  const [moduleSubtasks, setModuleSubtasks] = useState(
-    subtasks.filter((s) => s.moduleId === moduleId)
-  );
 
+  const [moduleSubtasks, setModuleSubtasks] = useState([]);
   const [previewSubtask, setPreviewSubtask] = useState(null);
   const [createModal, setCreateModal] = useState(false);
   const [editModal, setEditModal] = useState(null);
@@ -195,6 +193,60 @@ const KanbanBoard = () => {
     assignee: '',
     priority: '',
     status: 'todo',
+  });
+
+  // LocalStorage helper functions
+  const STORAGE_KEY = 'kanban_subtasks';
+
+  const initializeLocalStorage = () => {
+    const storedData = localStorage.getItem(STORAGE_KEY);
+    if (!storedData) {
+      // First load: Store default subtasks data
+      const defaultSubtasks = subtasks.filter((s) => s.moduleId === moduleId);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(subtasks));
+      return defaultSubtasks;
+    } else {
+      // Fetch from localStorage
+      const allSubtasks = JSON.parse(storedData);
+      return allSubtasks.filter((s) => s.moduleId === moduleId);
+    }
+  };
+
+  const fetchSubtasksFromStorage = () => {
+    const storedData = localStorage.getItem(STORAGE_KEY);
+    if (storedData) {
+      const allSubtasks = JSON.parse(storedData);
+      return allSubtasks.filter((s) => s.moduleId === moduleId);
+    }
+    return [];
+  };
+
+  const updateSubtask = (subtaskId, updates) => {
+    // Get all subtasks from localStorage
+    const storedData = localStorage.getItem(STORAGE_KEY);
+    const allSubtasks = storedData ? JSON.parse(storedData) : [];
+    
+    // Update the specific subtask
+    const updatedSubtasks = allSubtasks.map((task) =>
+      task.id === subtaskId ? { ...task, ...updates } : task
+    );
+    
+    // Save back to localStorage
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedSubtasks));
+    
+    // Re-fetch and re-render
+    const moduleUpdatedSubtasks = updatedSubtasks.filter((s) => s.moduleId === moduleId);
+    setModuleSubtasks(moduleUpdatedSubtasks);
+    
+    return moduleUpdatedSubtasks;
+  };
+
+  // Initialize data from localStorage on component mount
+  useState(() => {
+    if (typeof window !== 'undefined') {
+      const initialData = initializeLocalStorage();
+      setModuleSubtasks(initialData);
+    }
   });
 
   // Drag and drop sensors
