@@ -237,7 +237,7 @@ export default function AIServicePage() {
       {/* ========================================== */}
       {/* HERO SECTION */}
       {/* ========================================== */}
-      <Section className="relative pt-28 pb-20 hero-bg">
+      <Section className="relative pt-8 lg:pt-12 pb-20 hero-bg">
         {/* Background effects */}
         <div className="pointer-events-none absolute max-w-full w-full inset-0 -z-10 overflow-hidden">
           <div className="absolute inset-0 bg-grid-lines opacity-40 dark:opacity-20" />
