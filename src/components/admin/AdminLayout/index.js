@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Toaster } from 'react-hot-toast';
 import AdminSidebar from '../Sidebar';
 import AdminHeader from '../Header';
 import { useAuth } from '@/contexts/AuthContext';
@@ -40,20 +39,7 @@ const AdminLayout = ({ children }) => {
         </div>
       </main>
 
-      {/* Toast Notifications */}
-      <Toaster
-        position="top-right"
-        reverseOrder={false}
-        gutter={8}
-        toastOptions={{
-          duration: 3000,
-          style: {
-            borderRadius: '8px',
-            fontSize: '14px',
-            fontWeight: '500',
-          },
-        }}
-      />
+      {/* Toaster removed - now handled globally in /app/src/app/admin/layout.js */}
     </div>
   );
 };

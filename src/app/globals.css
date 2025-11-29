@@ -66,3 +66,73 @@ body {
 .text-gradient {
     @apply bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
+
+/* Animations for 3D Model Page */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(37, 99, 235, 0.5); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Grid background pattern */
+.bg-grid-lines {
+    background-image: 
+        linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Hover tilt effect */
+.hover-tilt {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-tilt:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Comparison card styling */
+.comparison-card-traditional {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(251, 146, 60, 0.05) 100%);
+}
+
+.comparison-card-ai {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(34, 197, 94, 0.05) 100%);
+}
+
+/* Step connector line */
+.step-line::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 48px;
+    bottom: -32px;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(37, 99, 235, 0.5), rgba(37, 99, 235, 0.1));
+}
+
+.step-line:last-child::before {
+    display: none;
+}
