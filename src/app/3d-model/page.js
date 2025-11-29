@@ -233,7 +233,7 @@ export default function AIServicePage() {
   ];
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col -mt-[30px]">
       {/* ========================================== */}
       {/* HERO SECTION */}
       {/* ========================================== */}
