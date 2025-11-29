@@ -66,7 +66,7 @@ const ProcessStep = ({ index, title, desc, icon, isLast = false }) => (
         <div className="flex-1 w-0.5 bg-gradient-to-b from-primary/50 to-primary/10 mt-4" />
       )}
     </div>
-    
+
     {/* Step content */}
     <div className="flex-1 pt-1">
       <div className="flex items-center gap-3 mb-2">
@@ -233,17 +233,16 @@ export default function AIServicePage() {
   ];
 
   return (
-    <div className="w-full flex flex-col -mt-[30px]">
+    <div className="w-full flex flex-col">
       {/* ========================================== */}
       {/* HERO SECTION */}
       {/* ========================================== */}
-      <Section className="relative pt-8 lg:pt-12 pb-20 hero-bg">
+      <Section className="relative pt-28 pb-20 hero-bg">
         {/* Background effects */}
-        <div className="pointer-events-none absolute max-w-full w-full inset-0 -z-10 overflow-hidden">
+        <div className="pointer-events-none absolute max-w-full w-full inset-0 -z-10">
           <div className="absolute inset-0 bg-grid-lines opacity-40 dark:opacity-20" />
           <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl animate-float" />
           <div className="absolute -bottom-24 -right-0 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl animate-float-slow" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -275,8 +274,8 @@ export default function AIServicePage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg lg:text-xl text-[#64748b] dark:text-[#94a3b8] max-w-2xl leading-relaxed"
             >
-              Skip the traditional development cycle. Get <strong>AI-assisted design</strong>, 
-              <strong> real-time prototypes</strong>, and <strong>production-ready code</strong> — 
+              Skip the traditional development cycle. Get <strong>AI-assisted design</strong>,
+              <strong> real-time prototypes</strong>, and <strong>production-ready code</strong> —
               delivered as a single streamlined service with a <strong>scalable, secure, and reliable</strong> stack.
             </motion.p>
 

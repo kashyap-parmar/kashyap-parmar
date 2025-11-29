@@ -40,7 +40,7 @@ const Navbar = ({ show }) => {
 
     return (
         <div
-            className={`${notShowingTrue && !show ? "hidden" : "block"} w-full bg-transparent sticky top-[30px] z-[10000]`}
+            className={`${notShowingTrue && !show ? "hidden" : "block"} w-full bg-transparent !sticky !top-[30px] z-[10000]`}
         >
             {/* Desktop Navbar */}
             <div className="hidden lg:flex items-center justify-center w-full bg-transparent">
