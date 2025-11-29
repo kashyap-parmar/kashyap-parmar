@@ -31,3 +31,31 @@ Verify notification system fixes across all CRUD pages:
 
 ## Test Results Log
 ---
+
+### Test Run: Nov 29, 2025 - Toast Notification System Fix
+
+**Issue:** Toast notifications were causing layout shifts on Settings pages (Theme, Profile, Social)
+
+**Root Cause:** 
+1. The `Toaster` component was placed inside `AdminLayout` component instead of at the root level
+2. Settings pages were still using inline `AdminAlert` components instead of the global toast
+
+**Fix Applied:**
+1. Moved `Toaster` to `/app/src/app/admin/layout.js` (root admin layout) with proper fixed positioning
+2. Added `containerStyle` with `position: fixed`, `zIndex: 99999` to ensure overlay behavior
+3. Removed duplicate `Toaster` from `/app/src/components/admin/AdminLayout/index.js`
+4. Updated all Settings pages (Theme, Profile, Social) to use `showToast` utility instead of `AdminAlert`
+
+**Files Modified:**
+- `/app/src/app/admin/layout.js` - Added global Toaster with fixed positioning
+- `/app/src/components/admin/AdminLayout/index.js` - Removed Toaster (now global)
+- `/app/src/app/admin/settings/theme/page.js` - Replaced AdminAlert with showToast
+- `/app/src/app/admin/settings/profile/page.js` - Replaced AdminAlert with showToast
+- `/app/src/app/admin/settings/social/page.js` - Replaced AdminAlert with showToast
+
+**Test Results:**
+✅ Theme Settings - Toast appears as floating overlay, no layout shift
+✅ Profile Settings - Toast appears as floating overlay, no layout shift
+✅ Social Links - Toast appears as floating overlay, no layout shift
+
+**Status:** PASSED
