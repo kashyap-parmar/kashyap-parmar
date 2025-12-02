@@ -15,7 +15,7 @@ const poppins = Poppins({
 	display: 'swap',
 });
 
-const LIVE_URL = process.env.NEXT_PUBLIC_LIVE_URL || "http://localhost:3000";
+const LIVE_URL = process.env.NEXT_PUBLIC_LIVE_URL || "http://kashyapparmar.com";
 
 // ------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ export const metadata = {
 		siteName: "Kashyap Parmar Portfolio",
 		images: [
 			{
-				url: "/images/og-image.png",
+				url: `${LIVE_URL}/images/og-image.png`,
 				width: 1200,
 				height: 630,
 				alt: "Kashyap Parmar Portfolio Preview",
@@ -56,11 +56,11 @@ export const metadata = {
 		title: "Kashyap Parmar | MERN Stack Developer & Freelancer",
 		description:
 			"Full Stack Developer specializing in React, Next.js, and Node.js — building modern, SEO-optimized web apps.",
-		creator: "@yourtwitterhandle", // optional
 		images: [`${LIVE_URL}/images/og-image.png`],
 	},
 	keywords: [
 		"MERN Stack Developer",
+		"AI automation for web development",
 		"Next js Developer",
 		"React js Developer",
 		"Node js Developer",
@@ -69,6 +69,17 @@ export const metadata = {
 		"Web Development Portfolio",
 		"SEO Optimized Websites",
 	],
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-snippet": -1,
+			"max-image-preview": "large",
+			"max-video-preview": -1,
+		},
+	},
 	metadataBase: new URL(LIVE_URL),
 	alternates: {
 		canonical: LIVE_URL,

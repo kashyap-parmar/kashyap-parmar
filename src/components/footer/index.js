@@ -14,12 +14,12 @@ import {
 
 const Footer = () => {
     const pathname = usePathname();
-    const notShowingTrue = (pathname.includes("project") || pathname.includes("blog") || pathname.includes("admin"));
+    const notShowingTrue = (pathname.includes("blog") || pathname.includes("admin"));
 
     useEffect(() => {
         if (typeof window !== "undefined") {
             const hash = window.location.hash;
-            if (hash) {
+            if (hash && !hash.includes("/")) {
                 const el = document.querySelector(hash);
                 if (el) {
                     setTimeout(() => {
@@ -43,8 +43,7 @@ const Footer = () => {
                                 Kashyap.
                             </p>
                             <p className="text-[#64748b] leading-relaxed">
-                                MERN stack developer passionate about creating exceptional
-                                digital experiences. Let&apos;s build something amazing together.
+                                AI-Powered MERN Stack Developer passionate about building exceptional digital experiences. Let&apos;s create something amazing together.
                             </p>
                         </div>
 

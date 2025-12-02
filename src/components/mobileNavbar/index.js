@@ -1,6 +1,6 @@
 "use client";
 import NextLink from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Link } from 'react-scroll';
@@ -12,21 +12,30 @@ import { navbarData } from "@/mock/data";
 const MobileNavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { theme, setTheme } = useTheme();
+    const router = useRouter();
     const pathname = usePathname();
     const regex = /^\/(#\w+)?$/;
+    const otherRoutes = /^\/\w.+$/;
+
+    const handleNavigate = (url) => {
+        setIsMenuOpen(false);
+        if (url === "/3d-model") {
+            router.push(url);
+        }
+        return
+    }
 
     useEffect(() => {
         if (typeof window !== "undefined") {
             const hash = window.location.hash;
             if (hash) {
-                const el = document.querySelector(hash);
+                const el = document?.querySelector(hash);
                 if (el) {
                     setTimeout(() => {
                         el.scrollIntoView({ behavior: "smooth" });
-                    }, 100); // small delay so DOM is ready
+                    }, 200);
                 }
             }
-            setIsMenuOpen(false)
         }
     }, [pathname]); // run when route changes
 
@@ -34,11 +43,11 @@ const MobileNavbar = () => {
         <div className="w-full bg-transparent sticky top-0 z-[10000]">
             {/* Sticky Mobile Navbar */}
             <div className="left-0 right-0 mx-6 backdrop-blur-xl bg-[#FDFEFF] dark:bg-[#030919] card-glow flex items-center px-6 py-4 justify-between lg:hidden rounded-full">
-                <div>
+                <NextLink href="/#contact">
                     <p className="cursor-pointer text-2xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                         Mern <span className="dark:text-white text-black" > Developer </span>
                     </p>
-                </div>
+                </NextLink>
                 <div className="flex items-center justify-center gap-x-2 ">
                     <button
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -84,7 +93,7 @@ const MobileNavbar = () => {
                                     spy={true}
                                     smooth={true}
                                     duration={300}
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={() => handleNavigate(ele?.url)}
                                     activeClass="text-primary"
                                     className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
                                 >
@@ -97,7 +106,8 @@ const MobileNavbar = () => {
                         {navbarData.map((ele, index) => (
                             <NextLink
                                 key={index}
-                                href={`/#${ele?.url}`}
+                                onClick={() => handleNavigate(ele?.url)}
+                                href={`${otherRoutes.test(ele?.url) ? ele?.url : `/#${ele?.url}`}`}
                                 className="dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400"
                             >
                                 {ele.title}

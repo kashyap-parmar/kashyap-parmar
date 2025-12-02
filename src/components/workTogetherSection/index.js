@@ -38,8 +38,8 @@ const WorkTogetherSection = () => {
     });
 
     const onSubmit = (data) => {
-        const whatsappNumber = phone;
-        const text = `New Contact Form Submission:%0AName: ${data.name}%0AEmail: ${data.email}%0ASubject: ${data.subject}%0AMessage: ${data.message}`;
+        const whatsappNumber = 9725321401;
+        const text = `New Project requirements for :%0AName: ${data.name}%0AEmail: ${data.email}%0ASubject: ${data.subject}%0AMessage: ${data.message}`;
         window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
         reset();
     };
@@ -95,7 +95,7 @@ const WorkTogetherSection = () => {
                                     </div>
                                 </div>
                             </Link>}
-                            {<Link href={`tel:${phone}`} >
+                            {<Link href={`tel:+91 ${phone}`} >
                                 <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
                                     <div className="w-14 h-14 flex justify-center items-center">
                                         <Icon
@@ -107,7 +107,7 @@ const WorkTogetherSection = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <p className="font-semibold text-lg">Phone</p>
-                                        <p className="text-[#64748b]">{phone || ""}</p>
+                                        <p className="text-[#64748b]">+91 {phone || ""}</p>
                                     </div>
                                 </div>
                             </Link>}

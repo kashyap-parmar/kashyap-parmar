@@ -1,5 +1,4 @@
 import {
-    blogImg,
     dentalSemCrm,
     moustachescapes,
     mxmNews,
@@ -230,7 +229,7 @@ export const FeaturedSkillsData = [
                 type: "Framework"
             },
             {
-                icon: "jam:world",
+                icon: "streamline-plump:web",
                 heading: "REST APIs",
                 level: "Expert",
                 type: "API"
@@ -288,7 +287,7 @@ export const FeaturedSkillsData = [
         title: "Tools & DevOps",
         data: [
             {
-                icon: "iconoir:git-fork",
+                icon: "iconoir:github",
                 heading: "GitHub",
                 level: "Advanced",
                 type: "Version control"
@@ -302,6 +301,12 @@ export const FeaturedSkillsData = [
             {
                 icon: "material-symbols:cloud-outline",
                 heading: "AWS",
+                level: "Intermediate",
+                type: "Cloud Platform"
+            },
+            {
+                icon: "ri:vercel-line",
+                heading: "Vercel",
                 level: "Intermediate",
                 type: "Cloud Platform"
             },
@@ -373,7 +378,7 @@ export const SampleProjectsData = [
                 title: "Dynamic Lead Tracking & Stage Management",
                 desc: "Developed a flexible lead tracking interface that updates in real-time as users move leads between different stages (Inquiry → Consultation → Treatment → Follow-up). Implemented efficient state management using Redux to maintain smooth UI updates without performance lag."
             },
-            {   
+            {
                 title: "Role-Based Access Control (RBAC) Implementation",
                 desc: "Configured a scalable RBAC structure that restricted feature visibility and actions based on user roles such as Admin, Doctor, and Staff. This ensured secure data handling and a clear workflow separation within the CRM."
             },
@@ -809,56 +814,151 @@ export const workExpSection = [
     }
 ]
 
-// ---------------------------------------------------
-
-export const SampleBlogData = [
+export const whatClientGet = [
     {
-        id: 1,
-        img: blogImg,
-        alt: "blogImg",
-        uploadDate: "December 15, 2024",
-        readTime: "8 min",
-        title: "Building Scalable MERN Applications: Best Practices",
-        desc: "Learn the essential patterns and practices for creating maintainable and scalable MERN stack applications.",
-        category: "MERN",
-        view: "4",
-        like: "5",
-        BlogAuthor: "Kashyap Parmar",
-        tags: ["React", "Express", "Portfolio", "Learning", "Finance", "AI"],
-        language: ["React", "Node", "Express", "Mongo", "Strapi"]
+        icon: "ic:baseline-speed",
+        title: "10× Faster Delivery",
+        description: "AI-powered automation builds your project in days instead of weeks or months."
     },
     {
-        id: 2,
-        img: blogImg,
-        alt: "blogImg",
-        uploadDate: "December 15, 2024",
-        readTime: "8 min",
-        title: "Modern React Development: Hooks and Performance",
-        desc: "Learn the essential patterns and practices for creating maintainable and scalable MERN stack applications.",
-        category: "Frontend",
-        view: "4",
-        like: "5",
-        BlogAuthor: "Kashyap Parmar",
-        tags: ["React", "Express", "Portfolio", "Learning", "Finance", "AI"],
-        language: ["React", "Node", "Express", "Mongo", "Strapi"]
+        icon: "solar:dollar-outline",
+        title: "60–70% Lower Cost",
+        description: "Reduced manual work means you pay far less than traditional development."
     },
     {
-        id: 3,
-        img: blogImg,
-        alt: "blogImg",
-        uploadDate: "December 15, 2024",
-        readTime: "8 min",
-        title: "API Design Principles for Node.js Applications",
-        desc: "Learn the essential patterns and practices for creating maintainable and scalable MERN stack applications.",
-        category: "Backend",
-        view: "4",
-        like: "5",
-        BlogAuthor: "Kashyap Parmar",
-        tags: ["React", "Express", "Portfolio", "Learning", "Finance", "AI"],
-        language: ["React", "Node", "Express", "Mongo", "Strapi"]
+        icon: "solar:layers-outline",
+        title: "Working Design Prototypes",
+        description: "Get 2–3 live, clickable design versions instead of static Figma screens."
+    },
+    {
+        icon: "mage:message-check",
+        title: "Minimal Revisions & Miscommunication",
+        description: "Design-to-code automation removes confusion and prevents endless redesign loops."
+    },
+    {
+        icon: "majesticons:settings-cog-check-line",
+        title: "Production-Grade Code",
+        description: "Modern architecture, scalable APIs, and optimized performance built in."
+    },
+    {
+        icon: "octicon:shield-check-16",
+        title: "Automated Testing",
+        description: "AI runs tests on every feature, reducing bugs and post-launch issues."
+    },
+    {
+        icon: "mdi:cloud-upload-outline",
+        title: "Full DevOps Included",
+        description: "CI/CD, hosting, staging environments, and monitoring all set up for you."
+    },
+    {
+        icon: "icon-park-outline:upload-web",
+        title: "Professional UI Without a Designer",
+        description: "AI-generated components create clean, consistent, brand-aligned interfaces."
+    },
+    {
+        icon: "ic:twotone-trending-up",
+        title: "Faster Launch = Faster Revenue",
+        description: "Ship quickly, test with real users sooner, and start validating your idea."
+    },
+    {
+        icon: "ph:handshake",
+        title: "Founder-Friendly Process",
+        description: "Designed for non-technical founders with a simple, clear, guided workflow."
+    },
+    {
+        icon: "mdi:tag-outline",
+        title: "Transparent Fixed Pricing",
+        description: "No hourly billing or hidden costs — each tier has a clear fixed price."
+    },
+    {
+        icon: "hugeicons:workflow-circle-04",
+        title: "End-to-End Service",
+        description: "Strategy, design, development, QA, and deployment handled by one expert."
     }
 ]
 
-// ---------------------------------------------------
+// Process steps data
+export const processSteps = [
+    {
+        title: "Requirement Discovery",
+        desc: "Gather project goals, UI theme preferences, functionality requirements, integration needs, and define clear scope with success metrics. We understand your vision before writing a single line of code.",
+        icon: "solar:document-text-line-duotone"
+    },
+    {
+        title: "Instant Design Prototypes",
+        desc: "Generate 2-3 working UI designs (not static Figma mockups) so you can experience real user interactions and choose the direction that resonates best with your brand.",
+        icon: "solar:palette-line-duotone"
+    },
+    {
+        title: "AI-Automated Implementation",
+        desc: "Once design is finalized, AI automation builds frontend + backend simultaneously. We ensure scalability, reliability, security, and optimal performance from the start.",
+        icon: "solar:cpu-bolt-line-duotone"
+    },
+    {
+        title: "Automated Testing",
+        desc: "AI agents run comprehensive automated tests for every feature, catching bugs early and ensuring code quality before any deployment.",
+        icon: "solar:shield-check-line-duotone"
+    },
+    {
+        title: "Staging Deployment",
+        desc: "Deploy on a staging environment for internal testing and client review. Collect feedback, iterate on changes, and validate everything before production.",
+        icon: "solar:server-square-line-duotone"
+    },
+    {
+        title: "Production Deployment",
+        desc: "Use automated deployment agents to deploy on AWS, Vercel, or render with CI/CD pipelines, environment secrets, and preview links.",
+        icon: "solar:cloud-upload-line-duotone"
+    },
+    {
+        title: "Polish & Roadmap",
+        desc: "Fix edge cases, optimize final output, conduct performance audits, and outline post-launch improvements and MVP roadmap for continuous growth.",
+        icon: "solar:rocket-2-line-duotone"
+    }
+];
 
+// FAQ data
+export const faqs = [
+    {
+        q: "What does '10x faster' actually mean?",
+        a: "We leverage AI-powered code generation, automated scaffolding, and parallelized workflows to compress delivery from months to weeks. Traditional development requires manual coding at every step, while our AI-assisted approach generates production-ready code, components, and integrations simultaneously."
+    },
+    {
+        q: "How is this different from no-code or low-code platforms?",
+        a: "Unlike no-code tools with limitations, we build with production-grade technologies (Next.js, Node.js, TypeScript). You get full ownership of clean, maintainable code that can scale infinitely and integrate with any service."
+    },
+    {
+        q: "Can you work with my existing brand and backend?",
+        a: "Absolutely. We adapt to existing brand systems, design guidelines, and integrate with REST/GraphQL APIs, databases, or any third-party services. We can also build greenfield projects with best practices from day one."
+    },
+    {
+        q: "What happens after launch?",
+        a: "We provide a post-launch roadmap with recommended improvements, performance optimizations, and feature prioritization. We also offer ongoing support and iteration packages for continuous development."
+    },
+    {
+        q: "Do you include CI/CD and hosting setup?",
+        a: "Yes. We set up automated CI/CD pipelines, environment configurations, preview deployments, and production hosting on AWS, vercel, etc. provider with monitoring and analytics basics included."
+    }
+];
 
+// Traditional vs AI comparison data
+export const traditionalProblems = [
+    "Slow planning cycles with multiple revision rounds",
+    "Figma → feedback → revisions → delays",
+    "Manual coding of every UI component",
+    "Heavy debugging & testing phases",
+    "Higher costs and extended timelines",
+    "Clients see only static images until late stages",
+    "Multiple back-and-forth communication cycles"
+];
+
+export const aiAdvantages = [
+    "2-3 instant working design prototypes",
+    "No Figma needed → real UI from day one",
+    "AI-generated UI components & layouts",
+    "Automated backend & API scaffolding",
+    "Automated testing by AI agents",
+    "Faster iterations and delivery cycles",
+    "Lower cost, higher output speed",
+    "Scalable, secure, and reliable architecture",
+    "Real working demo before full development"
+];

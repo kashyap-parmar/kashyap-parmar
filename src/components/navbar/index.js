@@ -15,10 +15,10 @@ const Navbar = ({ show }) => {
     const router = useRouter();
     const notShowingTrue = (pathname.includes("project") || pathname.includes("blog") || pathname.includes("admin"));
     const regex = /^\/(#\w+)?$/;
+    const otherRoutes = /^\/\w.+$/;
 
     const handleNavigate = (url) => {
         if (url === "/3d-model") {
-            console.log(url)
             router.push(url);
         }
         return
@@ -27,12 +27,13 @@ const Navbar = ({ show }) => {
     useEffect(() => {
         if (typeof window !== "undefined") {
             const hash = window.location.hash;
-            if (hash) {
-                const el = document.querySelector(hash);
+            console.log("hash", hash);
+            if (hash && !hash.includes("/3d-model")) {
+                const el = document?.querySelector(hash);
                 if (el) {
                     setTimeout(() => {
                         el.scrollIntoView({ behavior: "smooth" });
-                    }, 100); // small delay so DOM is ready
+                    }, 200);
                 }
             }
         }
@@ -71,7 +72,8 @@ const Navbar = ({ show }) => {
                         {navbarData.map((ele, index) => (
                             <NextLink
                                 key={index}
-                                href={`/#${ele?.url}`}
+                                onClick={() => handleNavigate(ele?.url)}
+                                href={`${otherRoutes.test(ele?.url) ? ele?.url : `/#${ele?.url}`}`}
                                 className={`dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400`}
                             >
                                 {ele.title}
