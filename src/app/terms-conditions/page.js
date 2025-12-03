@@ -5,7 +5,7 @@ import React from 'react'
 const PrivacyPolicy = () => {
     return (
         <section className="flex justify-center">
-            <div className="pt-10 pb-20 px-8 xl:px-0 flex flex-col gap-y-8 max-w-[1200px] w-full">
+            <div className="py-20 px-8 xl:px-0 flex flex-col gap-y-8 max-w-[1200px] w-full">
                 <div className="flex flex-col gap-y-4">
                     <div className="flex gap-x-4 items-center">
                         <div>
@@ -285,20 +285,17 @@ const PrivacyPolicy = () => {
                     </div>
                     <div className="flex text-[#64748b] flex-col gap-y-4">
                         <p>
-                            To the maximum extent permitted by law,If you have any questions or concerns regarding these Terms, please contact me at:
-                        </p>
-                        <p>
-                            I am not liable for any direct, indirect, incidental, or consequential damages resulting from:
+                            To the maximum extent permitted by law, I am not liable for any direct, indirect, incidental, or consequential damages resulting from:
                         </p>
                         <ul className="list-disc list-inside pl-8">
                             <li>
                                 Use or inability to use this website or its services,
                             </li>
                             <li>
-                                Third-party payment or service errors,
+                                Errors caused by third-party services or payment processors,
                             </li>
                             <li>
-                                Unauthorized access or data breaches, or
+                                Unauthorized access, data breaches, or technical failures,
                             </li>
                             <li>
                                 Business losses, loss of data, or reputational damage.
@@ -325,7 +322,7 @@ const PrivacyPolicy = () => {
                             Any personal or payment-related data collected through this website is processed in accordance with my
                             <Link
                                 href={"/privacy-policies"}
-                                className='font-bold ml-1 text-primary'
+                                className='font-bold ml-2 text-primary'
                             >
                                 Privacy Policy.
                             </Link>

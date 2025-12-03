@@ -74,7 +74,7 @@ const Navbar = ({ show }) => {
                                 key={index}
                                 onClick={() => handleNavigate(ele?.url)}
                                 href={`${otherRoutes.test(ele?.url) ? ele?.url : `/#${ele?.url}`}`}
-                                className={`dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400`}
+                                className={`${(pathname === "/3d-model" && ele?.url === "/3d-model") && "text-primary"} dark:hover:text-primary cursor-pointer transition-all duration-300 hover:text-primary text-sm font-medium text-[#64748b] dark:text-gray-400`}
                             >
                                 {ele.title}
                             </NextLink>
