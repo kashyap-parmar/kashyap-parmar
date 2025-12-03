@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import Script from 'next/script';
 import { Poppins } from 'next/font/google';
 import { ThemeProvider } from "next-themes";
 import {
@@ -61,6 +63,7 @@ export const metadata = {
 	keywords: [
 		"MERN Stack Developer",
 		"AI automation for web development",
+		"Kashyap Parmar",
 		"Next js Developer",
 		"React js Developer",
 		"Node js Developer",
@@ -91,6 +94,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<Head>
+				<Script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							"@context": "https://schema.org",
+							"@type": "Person",
+							"name": "Kashyap Parmar",
+							"url": "https://kashyapparmar.com",
+							"jobTitle": "Full Stack Developer",
+							"description": "AI-accelerated Full Stack Developer specializing in MERN stack and Next.js, building rapid MVPs and scalable web applications for startups and businesses.",
+							"knowsAbout": [
+								"MERN Stack",
+								"AI Automation Development",
+								"Next.js",
+								"Node.js"
+							],
+							"sameAs": [
+								"https://github.com/kashyap-parmar",
+								"https://www.linkedin.com/in/kashyap-parmar-872040242/"
+							]
+						})
+					}}
+				/>
+			</Head>
 			<body className={`${poppins.className} antialiased w-full`}>
 				<ThemeProvider
 					attribute="class"
