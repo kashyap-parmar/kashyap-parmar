@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Script from 'next/script';
 import { Poppins } from 'next/font/google';
 import { ThemeProvider } from "next-themes";
 import {
@@ -95,7 +94,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<Head>
-				<Script
+				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify({
