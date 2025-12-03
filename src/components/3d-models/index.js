@@ -293,7 +293,7 @@ export default function Model3d() {
                             features={[
                                 "Multi-page MVP application",
                                 "3 working design prototypes",
-                                "Auth + payments integration",
+                                "Auth + Payments + Third party integration",
                                 "Automated testing suite",
                                 "QA + accessibility pass",
                                 "Staging + production deploy",
