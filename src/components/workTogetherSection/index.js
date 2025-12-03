@@ -97,7 +97,7 @@ const WorkTogetherSection = () => {
                             </Link>}
                             {<Link href={`tel:+91 ${phone}`} >
                                 <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                    <div className="w-14 h-14 flex justify-center items-center">
+                                    <div className="w-fit sm:w-14 h-14 flex justify-center items-center">
                                         <Icon
                                             width={24}
                                             height={24}
@@ -112,7 +112,7 @@ const WorkTogetherSection = () => {
                                 </div>
                             </Link>}
                             <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                <div className="w-14 h-14 flex justify-center items-center">
+                                <div className="w-fit sm:w-14 h-14 flex justify-center items-center">
                                     <Icon
                                         width={24}
                                         height={24}

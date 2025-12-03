@@ -22,19 +22,15 @@ const HeroSection = () => {
                     </div>
 
                     <div className='w-full gap-y-2 pt-8 flex flex-col'>
-
-                        <div className='flex gap-2 items-end text-5xl lg:text-2xl' >
-                            <p className=' font-bold leading-tight'>
+                        <div className='flex gap-2 items-end text-2xl' >
+                            <p className='font-bold leading-tight'>
                                 Hi, I&apos;m{" "}
                                 <span className='text-gradient'>
                                     Kashyap,
                                 </span>
                             </p>
-                            {/* <span className='font-bold' ></span> */}
                         </div>
-                        <div className="">
-                            <span className="text-4xl lg:text-7xl leading-[76px] text-primary font-extrabold mr-2 uppercase">10x Faster</span>
-                        </div>
+                        <span className="text-6xl lg:text-7xl mt-2 sm:leading-[76px] text-primary font-extrabold mr-2 uppercase">10x Faster</span>
                         <p className="text-base lg:text-xl font-semibold">
                             Introducing 3D Model — Design, Development, and Deployment.
                         </p>
@@ -45,9 +41,9 @@ const HeroSection = () => {
                         </p>
                     </div>
 
-                    <div className='w-full pt-12 flex gap-y-6 md:gap-y-0 flex-col md:flex-row md:gap-x-8'>
+                    <div className='w-full pt-12 flex gap-y-6 md:gap-y-0 flex-col sm:flex-row sm:gap-x-8'>
                         <Link href={"/3d-model"}>
-                            <button data-testid="home-hero-explore-3d-model-btn" className="relative overflow-hidden bg-primary text-white font-semibold text-sm py-4 h-fit flex justify-center gap-x-4 items-center px-8 rounded-full group">
+                            <button data-testid="home-hero-explore-3d-model-btn" className="w-full max-w-[300px] relative overflow-hidden bg-primary text-white font-semibold text-sm py-4 h-fit flex justify-center gap-x-4 items-center px-8 rounded-full group">
                                 <span className="relative z-10 flex items-center gap-x-4">
                                     Explore 10x Faster 3D Model
                                     <Icon height={20} width={20} icon={"mingcute:arrow-right-line"} />
@@ -56,7 +52,7 @@ const HeroSection = () => {
                             </button>
                         </Link>
                         <Link href={"/#contact"}>
-                            <button data-testid="home-hero-work-together-btn" className='w-full py-4 dark:hover:bg-[#1e293b] dark:bg-[#020817] hover:bg-[#f1f5f9] dark:outline-[#1f2a3d] outline outline-[#e2e8f0] shadow-sm outline-1 px-8 rounded-full font-semibold text-sm h-fit flex bg-white justify-center items-center gap-x-4'>
+                            <button data-testid="home-hero-work-together-btn" className='w-full max-w-[300px] py-4 dark:hover:bg-[#1e293b] dark:bg-[#020817] hover:bg-[#f1f5f9] dark:outline-[#1f2a3d] outline outline-[#e2e8f0] shadow-sm outline-1 px-8 rounded-full font-semibold text-sm h-fit flex bg-white justify-center items-center gap-x-4'>
                                 <Icon height={20} width={20} icon={"ep:video-play"} />
                                 Let&apos;s Work Together
                             </button>
