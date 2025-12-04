@@ -33,12 +33,12 @@ const Footer = () => {
     return (
         <div className={`${notShowingTrue ? "hidden" : "flex"} w-full  justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t`}>
             <div
-                className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center lapxl:px-0 px-8`}
+                className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center lapxl:px-0 pl-8 pr-0`}
             >
                 {/* Upper  */}
                 <div className="w-full flex-col gap-y-8 md:gap-y-0 md:flex-row flex justify-between">
                     <div className="w-full md:w-[40%] flex flex-col gap-y-8">
-                        <div className="flex flex-col gap-y-4">
+                        <div className="flex flex-col gap-y-4 pr-8">
                             <p className="text-3xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                                 Kashyap.
                             </p>
@@ -52,7 +52,7 @@ const Footer = () => {
                                 <Link href={github} target="_blank" >
                                     <Icon
                                         icon={"line-md:github"}
-                                        width={22}
+                                        width={24}
                                         height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
@@ -64,6 +64,8 @@ const Footer = () => {
                                 <Link href={linkedin} target="_blank" >
                                     <Icon
                                         icon={"meteor-icons:linkedin"}
+                                        width={24}
+                                        height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
                                         }
@@ -74,6 +76,8 @@ const Footer = () => {
                                 <Link href={`mailto:${email}`} target="_blank" >
                                     <Icon
                                         icon={"material-symbols:mail-outline"}
+                                        width={24}
+                                        height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
                                         }
@@ -83,7 +87,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="w-full md:w-[60%] flex gap-2 justify-between md:justify-evenly">
+                    <div className="w-full md:w-[60%] flex gap-2 sm:gap-8 justify-start md:justify-evenly">
                         <div className="flex flex-col gap-y-6 min-w-[105px]">
                             <p className="font-bold text-lg">Quick Links</p>
                             <div className="flex flex-col gap-y-4">
@@ -127,7 +131,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="w-full border-t-[1px] gap-y-4 md:gap-y-0 dark:border-[#1e293b] border-[#e2e8f0] pt-8 flex flex-col md:flex-row justify-between items-center md:items-end">
+                <div className="w-full pr-8 border-t-[1px] gap-y-4 md:gap-y-0 dark:border-[#1e293b] border-[#e2e8f0] pt-8 flex flex-col md:flex-row justify-between items-center md:items-end">
                     <p className="text-[#64748b] text-sm md:text-base text-center">
                         © 2025 - Present, Kashyap Parmar - MERN developer all rights reserved.
                     </p>
