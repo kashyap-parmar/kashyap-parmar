@@ -84,7 +84,7 @@ const Footer = () => {
                     </div>
 
                     <div className="w-full md:w-[60%] flex gap-2 justify-between md:justify-evenly">
-                        <div className="flex flex-col gap-y-6">
+                        <div className="flex flex-col gap-y-6 min-w-[105px]">
                             <p className="font-bold text-lg">Quick Links</p>
                             <div className="flex flex-col gap-y-4">
                                 {
