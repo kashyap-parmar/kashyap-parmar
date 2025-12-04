@@ -52,6 +52,8 @@ const Footer = () => {
                                 <Link href={github} target="_blank" >
                                     <Icon
                                         icon={"line-md:github"}
+                                        width={22}
+                                        height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
                                         }
@@ -81,7 +83,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="w-full md:w-[60%] flex justify-between md:justify-evenly">
+                    <div className="w-full md:w-[60%] flex gap-2 justify-between md:justify-evenly">
                         <div className="flex flex-col gap-y-6">
                             <p className="font-bold text-lg">Quick Links</p>
                             <div className="flex flex-col gap-y-4">
@@ -126,7 +128,7 @@ const Footer = () => {
                 </div>
 
                 <div className="w-full border-t-[1px] gap-y-4 md:gap-y-0 dark:border-[#1e293b] border-[#e2e8f0] pt-8 flex flex-col md:flex-row justify-between items-center md:items-end">
-                    <p className="text-[#64748b] text-sm md:text-base">
+                    <p className="text-[#64748b] text-sm md:text-base text-center">
                         © 2025 - Present, Kashyap Parmar - MERN developer all rights reserved.
                     </p>
                     <div className="flex gap-x-6">
