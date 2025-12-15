@@ -7,7 +7,8 @@ import {
     processSteps,
     faqs,
     traditionalProblems,
-    aiAdvantages
+    aiAdvantages,
+    pricingConfigs
 } from "@/mock/data";
 import {
     Icon,
@@ -269,22 +270,16 @@ export default function Model3d() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <Tier
-                            name="Starter"
-                            price="₹7k-₹15k"
-                            icon="solar:rocket-line-duotone"
-                            save={"75%"}
-                            features={[
-                                "Landing page + 1 core flow",
-                                "2 working design prototypes",
-                                "AI-generated UI components",
-                                "Basic analytics setup",
-                                "CI/CD + hosting setup",
-                                "1 round of revisions"
-                            ]}
-                            ctaTestId="tier-starter-cta"
-                        />
-                        <Tier
+                        {pricingConfigs?.map((pkg) => (
+                            <Tier
+                                name={pkg?.name || ""}
+                                price={pkg.price}
+                                icon={pkg?.icon}
+                                save={pkg?.save}
+                                features={pkg?.features || []}
+                                ctaTestId={pkg?.ctaTestId}
+                            />))}
+                        {/* <Tier
                             name="Growth"
                             price="₹25k–₹60k"
                             save={"70%"}
@@ -297,7 +292,7 @@ export default function Model3d() {
                                 "Automated testing suite",
                                 "QA + accessibility pass",
                                 "Staging + production deploy",
-                                "2 rounds of revisions"
+                                "Unlimited revisions"
                             ]}
                             ctaTestId="tier-growth-cta"
                         />
@@ -316,7 +311,7 @@ export default function Model3d() {
                                 "Post-launch roadmap"
                             ]}
                             ctaTestId="tier-scale-cta"
-                        />
+                        /> */}
                     </div>
                 </div>
             </Section3D>

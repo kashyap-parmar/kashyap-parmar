@@ -962,3 +962,64 @@ export const aiAdvantages = [
     "Scalable, secure, and reliable architecture",
     "Real working demo before full development"
 ];
+
+export const pricingConfigs = [
+    {
+        name: "Starter",
+        price: "₹7k-₹15k",
+        icon: "solar:rocket-line-duotone",
+        save: "75%",
+        ctaTestId: "tier-starter-cta",
+        features: [
+            "2 Design Prototypes + 1 Revisions",
+            "1 core feature",
+            "Faster delivering",
+            "Dynamic App + Mobile responsive",
+            "Reusable AI-Generated Components",
+            "Static + Dynamic Routing",
+            "Accessibility basics",
+            "Clean, maintainable folder structure",
+            "Basic Authentication (includes Google login)",
+            "Basic API Integration",
+            "Basic Database setup ( single DB )",
+            "Deployment ( vercel, render )"
+        ]
+    },
+    {
+        name: "Growth",
+        price: "₹25k–₹60k",
+        icon: "solar:chart-line-duotone",
+        save: "70%",
+        ctaTestId: "tier-growth-cta",
+        features: [
+            "Everything in Starter",
+            "3 Design Prototypes + 2 Revisions",
+            "3rd Party Integrations",
+            "SEO Optimization ( if required )",
+            "Performance Optimization",
+            "Basic Admin Dashboard",
+            "Authentication + Authorization",
+            "Database : Advanced Search + Aggregation Queries",
+            "CI/CD Pipeline",
+            "Multiple Environments (Staging + Production)",
+            "Access to Build Logs"
+        ]
+    },
+    {
+        name: "Scale",
+        price: "₹70k+",
+        icon: "solar:server-square-cloud-line-duotone",
+        save: "60%-70%",
+        ctaTestId: "tier-scale-cta",
+        features: [
+            "Everything in Growth",
+            "3 Design Prototypes + unlimited Revisions",
+            "Advance Admin Dashboard",
+            "Microservices + Multi-Database Architecture ( if required )",
+            "AWS Deployment + Auto-Scaling (Vertical/Horizontal)",
+            "Executive Analytics Dashboard",
+            "Priority Support",
+            "Post-Launch Roadmap"
+        ]
+    }
+]

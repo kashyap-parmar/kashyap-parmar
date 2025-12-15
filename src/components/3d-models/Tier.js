@@ -5,15 +5,15 @@ import { Icon } from "@/components";
 
 // --------------------------------------------------------
 
-const Tier = ({ name, price, highlight, features, ctaTestId, icon, save }) => (
+const Tier = ({ name, price, features, ctaTestId, icon, save }) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className={`relative hover-tilt rounded-2xl border ${highlight ? "border-primary shadow-lg shadow-primary/10" : "border-[#e2e8f0] dark:border-[#1e293b]"} bg-white/70 dark:bg-[#020817]/70 backdrop-blur p-6 flex flex-col gap-4`}
+        className={`relative hover-tilt rounded-2xl border ${name === "Growth" ? "border-primary shadow-lg shadow-primary/10" : "border-[#e2e8f0] dark:border-[#1e293b]"} bg-white/70 dark:bg-[#020817]/70 backdrop-blur p-6 flex flex-col gap-4`}
     >
-        {highlight && (
+        {name === "Growth" && (
             <div className="absolute -top-3 right-4 text-xs px-3 py-1 rounded-full bg-primary text-white shadow">Most Popular</div>
         )}
         <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary grid place-items-center text-xl mb-2">
@@ -31,14 +31,14 @@ const Tier = ({ name, price, highlight, features, ctaTestId, icon, save }) => (
         </div>
         <ul className="flex flex-col gap-3 mt-2 flex-1">
             {features.map((f, i) => (
-                <li key={i} className="flex items-start gap-2">
+                <li key={i} className={` ${(name !== "Starter" && i === 0) && "font-semibold text-primary "} flex items-start gap-2`}>
                     <Icon icon="solar:check-circle-line-duotone" className="text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-sm leading-relaxed">{f}</span>
                 </li>
             ))}
         </ul>
         <Link href="/#contact" className="mt-3">
-            <button data-testid={ctaTestId} className={`w-full relative overflow-hidden ${highlight ? "bg-primary text-white" : "bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a]"} font-semibold text-sm py-3 rounded-xl group`}>
+            <button data-testid={ctaTestId} className={`w-full relative overflow-hidden ${name === "Growth" ? "bg-primary text-white" : "bg-[#0f172a] text-white dark:bg-white dark:text-[#0f172a]"} font-semibold text-sm py-3 rounded-xl group`}>
                 <span className="relative z-10">Get Started</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
             </button>
