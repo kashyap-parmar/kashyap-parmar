@@ -30,7 +30,7 @@ const Footer = () => {
     }, [pathname]); // run when route changes
 
     return (
-        <div className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t">
+        <div className={`${pathname.includes("admin") ? "hidden" : "flex"} w-full justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t`}>
             <div
                 className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center lapxl:px-0 px-8`}
             >
