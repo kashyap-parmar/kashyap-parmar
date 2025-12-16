@@ -38,8 +38,8 @@ const WorkTogetherSection = () => {
     });
 
     const onSubmit = (data) => {
-        const whatsappNumber = phone;
-        const text = `New Contact Form Submission:%0AName: ${data.name}%0AEmail: ${data.email}%0ASubject: ${data.subject}%0AMessage: ${data.message}`;
+        const whatsappNumber = 9725321401;
+        const text = `New Project requirements for :%0AName: ${data.name}%0AEmail: ${data.email}%0ASubject: ${data.subject}%0AMessage: ${data.message}`;
         window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
         reset();
     };
@@ -78,10 +78,10 @@ const WorkTogetherSection = () => {
                         <div>
                             <p className="text-2xl font-bold">Lets Connect</p>
                         </div>
-                        <div className="flex w-full flex-col gap-y-8">
+                        <div className="flex w-full flex-col gap-y-2 sm:gap-y-8">
                             {<Link href={`mailto:${email}`} >
                                 <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                    <div className="w-14 h-14 flex justify-center items-center">
+                                    <div className="w-fit sm:w-14 h-14 flex justify-center items-center">
                                         <Icon
                                             width={24}
                                             height={24}
@@ -95,9 +95,9 @@ const WorkTogetherSection = () => {
                                     </div>
                                 </div>
                             </Link>}
-                            {<Link href={`tel:${phone}`} >
+                            {<Link href={`tel:+91 ${phone}`} >
                                 <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                    <div className="w-14 h-14 flex justify-center items-center">
+                                    <div className="w-fit sm:w-14 h-14 flex justify-center items-center">
                                         <Icon
                                             width={24}
                                             height={24}
@@ -107,12 +107,12 @@ const WorkTogetherSection = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <p className="font-semibold text-lg">Phone</p>
-                                        <p className="text-[#64748b]">{phone || ""}</p>
+                                        <p className="text-[#64748b]">+91 {phone || ""}</p>
                                     </div>
                                 </div>
                             </Link>}
                             <div className="w-full flex items-center gap-x-4 p-4 rounded-2xl hover:bg-[#f1f5f980]/50 dark:hover:bg-[#1e293b80] transition-colors">
-                                <div className="w-14 h-14 flex justify-center items-center">
+                                <div className="w-fit sm:w-14 h-14 flex justify-center items-center">
                                     <Icon
                                         width={24}
                                         height={24}
@@ -158,7 +158,7 @@ const WorkTogetherSection = () => {
                                     <div className="w-full" >
                                         <input
                                             {...register("name")}
-                                            placeholder="full name"
+                                            placeholder="Full name"
                                             type="text"
                                             name="name"
                                             className="w-full text-sm rounded-lg py-3 px-3 border-[0.5px] border-[#e2e8f0] bg-[#f1f5f980] dark:border-[#1e293b] dark:bg-[#1e293b80]"
@@ -191,7 +191,7 @@ const WorkTogetherSection = () => {
                                 <div className="w-full">
                                     <input
                                         {...register("subject")}
-                                        placeholder="project Name or subject"
+                                        placeholder="Project name or subject"
                                         type="text"
                                         name="subject"
                                         id=""
@@ -209,7 +209,7 @@ const WorkTogetherSection = () => {
                                     <textarea
                                         {...register("message")}
                                         rows={5}
-                                        placeholder="describe your requirements..."
+                                        placeholder="Describe your requirements..."
                                         type="text"
                                         name="message"
                                         id=""

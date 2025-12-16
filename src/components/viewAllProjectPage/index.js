@@ -37,7 +37,6 @@ const ViewAllProjectComponent = () => {
     useEffect(() => {
         setFeaturedProjects(SampleProjectsData.filter((el) => el.featured));
         setAllProjects(SampleProjectsData);
-        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
@@ -146,7 +145,7 @@ const ViewAllProjectComponent = () => {
                         {/* All Project  */}
                         <div className="w-full flex flex-col pt-10 gap-y-4">
                             <p className="text-2xl font-semibold">All Projects</p>
-                            <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center overflow-hidden">
+                            <div className="w-full pt-4 pb-8 gap-6 flex flex-wrap items-center justify-center">
                                 {allProjects?.map((ele, index) => {
                                     return (
                                         <ProjectSectionCard ele={ele} key={index} />

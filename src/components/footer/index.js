@@ -1,7 +1,7 @@
 "use client";
-import { usePathname } from "next/navigation";
-import React from "react";
 import Link from "next/link";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Icon } from "@/components";
 import {
     email,
@@ -14,22 +14,36 @@ import {
 
 const Footer = () => {
     const pathname = usePathname();
+    const notShowingTrue = (pathname.includes("blog") || pathname.includes("admin"));
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const hash = window.location.hash;
+            if (hash && !hash.includes("/")) {
+                const el = document.querySelector(hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth" });
+                    }, 100); // small delay so DOM is ready
+                }
+            }
+        }
+    }, [pathname]); // run when route changes
 
     return (
-        <div className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t">
+        <div className={`${notShowingTrue ? "hidden" : "flex"} w-full  justify-center items-center py-16 bg-gradient-to-br from-[#f1f5f980] to-[#ffffff] dark:from-[#09173c6c] dark:to-[#020817] dark:border-[#1e293b] border-t`}>
             <div
-                className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center lapxl:px-0 px-8`}
+                className={`max-w-[1300px] w-full flex-col gap-y-10 flex justify-center items-center lapxl:px-0 pl-8 pr-0`}
             >
                 {/* Upper  */}
                 <div className="w-full flex-col gap-y-8 md:gap-y-0 md:flex-row flex justify-between">
                     <div className="w-full md:w-[40%] flex flex-col gap-y-8">
-                        <div className="flex flex-col gap-y-4">
+                        <div className="flex flex-col gap-y-4 pr-8">
                             <p className="text-3xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                                 Kashyap.
                             </p>
                             <p className="text-[#64748b] leading-relaxed">
-                                MERN stack developer passionate about creating exceptional
-                                digital experiences. Let&apos;s build something amazing together.
+                                AI-Powered MERN Stack Developer passionate about building exceptional digital experiences. Let&apos;s create something amazing together.
                             </p>
                         </div>
 
@@ -38,6 +52,8 @@ const Footer = () => {
                                 <Link href={github} target="_blank" >
                                     <Icon
                                         icon={"line-md:github"}
+                                        width={24}
+                                        height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
                                         }
@@ -48,6 +64,8 @@ const Footer = () => {
                                 <Link href={linkedin} target="_blank" >
                                     <Icon
                                         icon={"meteor-icons:linkedin"}
+                                        width={24}
+                                        height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
                                         }
@@ -58,6 +76,8 @@ const Footer = () => {
                                 <Link href={`mailto:${email}`} target="_blank" >
                                     <Icon
                                         icon={"material-symbols:mail-outline"}
+                                        width={24}
+                                        height={24}
                                         className={
                                             "text-black dark:text-white group-hover:text-white"
                                         }
@@ -67,8 +87,8 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="w-full md:w-[60%] flex justify-between md:justify-evenly">
-                        <div className="flex flex-col gap-y-6">
+                    <div className="w-full md:w-[60%] flex gap-2 sm:gap-8 justify-start md:justify-evenly">
+                        <div className="flex flex-col gap-y-6 min-w-[105px]">
                             <p className="font-bold text-lg">Quick Links</p>
                             <div className="flex flex-col gap-y-4">
                                 {
@@ -76,7 +96,7 @@ const Footer = () => {
                                         return (
                                             <Link
                                                 key={index}
-                                                href={`/#${ele?.url}`}
+                                                href={ele?.url === '/3d-model' ? ele?.url : `/#${ele?.url}`}
                                                 className="cursor-pointer hover:text-primary text-[#64748b] transition-colors">
                                                 {ele?.title}
                                             </Link>
@@ -111,8 +131,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="w-full border-t-[1px] gap-y-4 md:gap-y-0 dark:border-[#1e293b] border-[#e2e8f0] pt-8 flex flex-col md:flex-row justify-between items-center md:items-end">
-                    <p className="text-[#64748b] text-sm md:text-base">
+                <div className="w-full pr-8 border-t-[1px] gap-y-4 md:gap-y-0 dark:border-[#1e293b] border-[#e2e8f0] pt-8 flex flex-col md:flex-row justify-between items-center md:items-end">
+                    <p className="text-[#64748b] text-sm md:text-base text-center">
                         © 2025 - Present, Kashyap Parmar - MERN developer all rights reserved.
                     </p>
                     <div className="flex gap-x-6">
