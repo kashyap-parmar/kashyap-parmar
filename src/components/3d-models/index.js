@@ -270,8 +270,9 @@ export default function Model3d() {
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {pricingConfigs?.map((pkg) => (
+                        {pricingConfigs?.map((pkg, ind) => (
                             <Tier
+                                key={ind}
                                 name={pkg?.name || ""}
                                 price={pkg.price}
                                 icon={pkg?.icon}
