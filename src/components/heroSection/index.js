@@ -22,12 +22,15 @@ const HeroSection = () => {
                     </div>
 
                     <div className='w-full gap-y-2 pt-8 flex flex-col'>
-                        <div className='flex gap-2 items-end text-2xl' >
-                            <p className='font-bold leading-tight'>
+                        <div className='w-full flex gap-2 items-end text-2xl' >
+                            <p className='font-bold leading-tight flex gap-1'>
                                 Hi, I&apos;m{" "}
                                 <span className='text-gradient'>
                                     Kashyap,
                                 </span>
+                            </p>
+                            <p className='text-xl' >
+                                Founder @ <span className='font-bold' >MERN Studio!</span>
                             </p>
                         </div>
                         <span className="text-6xl lg:text-7xl mt-2 sm:leading-[76px] text-primary font-extrabold mr-2 uppercase">10x Faster</span>
