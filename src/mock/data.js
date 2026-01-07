@@ -514,240 +514,240 @@ export const SampleProjectsData = [
             }
         ]
     },
-    {
-        id: 4,
-        title: "Moustachescapes – Hotel Booking Platform",
-        slug: "moustachescapes-hotel-booking",
-        company: "Exceleur Services Pvt Ltd",
-        companyUrl: "https://exceleur.in/",
-        role: "Frontend Developer (Next JS)",
-        description: `<p>Moustachescapes is a fully responsive and SEO-optimized hotel booking platform developed using Next.js and Tailwind CSS. The platform allows users to explore and book luxury stays across India's most popular travel destinations including Udaipur, Manali, Jaipur, Goa, Kashmir, ETC.</p> 
+//     {
+//         id: 4,
+//         title: "Moustachescapes – Hotel Booking Platform",
+//         slug: "moustachescapes-hotel-booking",
+//         company: "Exceleur Services Pvt Ltd",
+//         companyUrl: "https://exceleur.in/",
+//         role: "Frontend Developer (Next JS)",
+//         description: `<p>Moustachescapes is a fully responsive and SEO-optimized hotel booking platform developed using Next.js and Tailwind CSS. The platform allows users to explore and book luxury stays across India's most popular travel destinations including Udaipur, Manali, Jaipur, Goa, Kashmir, ETC.</p> 
 
-<p>The website provides an immersive experience with detailed hotel pages featuring room types, amenities, photo galleries, nearby attractions, and food inclusions/exclusions. I was responsible for building a smooth, responsive user interface and implementing Server-Side Rendering (SSR) for improved SEO and faster page loads.</p>
+// <p>The website provides an immersive experience with detailed hotel pages featuring room types, amenities, photo galleries, nearby attractions, and food inclusions/exclusions. I was responsible for building a smooth, responsive user interface and implementing Server-Side Rendering (SSR) for improved SEO and faster page loads.</p>
 
-<p>A secure payment gateway was integrated using Airpay, ensuring smooth and safe online transactions for customers. The platform also includes a dedicated blog section to share travel insights and destination guides, enhancing content-driven marketing for organic reach.</p>
+// <p>A secure payment gateway was integrated using Airpay, ensuring smooth and safe online transactions for customers. The platform also includes a dedicated blog section to share travel insights and destination guides, enhancing content-driven marketing for organic reach.</p>
 
-<p>With its visually appealing design, optimized performance, and user-centric structure, Moustachescapes helps travelers find, compare, and book the best luxury accommodations directly from the official website.</p>`,
-        image: moustachescapes,
-        alt: "Moustachescapes - Hotel Booking Website",
-        tech: ["Next.js", "Tailwind CSS", "Airpay Payment Gateway", "REST APIs", "JavaScript", "SEO Optimization", "HTML5"],
-        github: null,
-        live: "https://moustachescapes.com/",
-        category: "Frontend",
-        projectCategory: "Hotel Booking Platform",
-        featured: true,
-        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
-        keyFeatures: [
-            "Hotel Search & Booking System",
-            "Location-Based Hotel Listing",
-            "Detailed Hotel & Room Information",
-            "Amenities, Discounts & Offers Display",
-            "Integrated Airpay Payment Gateway",
-            "Responsive & Mobile-Friendly UI",
-            "SEO-Optimized Architecture with SSR",
-            "Blog Section for Travel Guides",
-            "High-Quality Image Gallery for Hotels",
-            "Attraction & Destination Highlights"
-        ],
-        challengeSolutions: [
-            {
-                title: "SEO Optimization with SSR",
-                desc: "Implemented Server-Side Rendering (SSR) in Next.js to improve website performance and SEO ranking, ensuring faster load times and better visibility on search engines."
-            },
-            {
-                title: "Dynamic Hotel & Location Management",
-                desc: "Built dynamic pages for multiple hotel destinations with reusable components, allowing the admin to easily add or modify hotels and attractions."
-            },
-            {
-                title: "Payment Integration with Airpay",
-                desc: "Integrated Airpay payment gateway to enable secure and reliable online transactions with proper error handling and transaction validation."
-            },
-            {
-                title: "Responsive UI/UX Development",
-                desc: "Designed and developed a fully responsive layout using Tailwind CSS to ensure seamless user experience across all devices and screen sizes."
-            },
-            {
-                title: "Image Gallery & Blog Implementation",
-                desc: "Added interactive image galleries for hotel rooms and integrated a content-driven blog section to improve user engagement and organic SEO reach."
-            }
-        ]
-    },
-    {
-        id: 5,
-        title: "SLA-FS – Financial Services Website",
-        slug: "sla-fs-financial-services",
-        company: "Exceleur Services Pvt Ltd",
-        companyUrl: "https://exceleur.in/",
-        role: "Frontend Developer (Next JS)",
-        description: `<p>SLA-FS is a finance company website built to showcase their services and help clients make informed investment decisions. The platform highlights various financial solutions, including personalized budgeting, wealth creation and management, children's education planning, retirement planning, emergency fund management, and risk mitigation strategies. It also focuses on empowering women to achieve financial independence.</p>
+// <p>With its visually appealing design, optimized performance, and user-centric structure, Moustachescapes helps travelers find, compare, and book the best luxury accommodations directly from the official website.</p>`,
+//         image: moustachescapes,
+//         alt: "Moustachescapes - Hotel Booking Website",
+//         tech: ["Next.js", "Tailwind CSS", "Airpay Payment Gateway", "REST APIs", "JavaScript", "SEO Optimization", "HTML5"],
+//         github: null,
+//         live: "https://moustachescapes.com/",
+//         category: "Frontend",
+//         projectCategory: "Hotel Booking Platform",
+//         featured: true,
+//         note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
+//         keyFeatures: [
+//             "Hotel Search & Booking System",
+//             "Location-Based Hotel Listing",
+//             "Detailed Hotel & Room Information",
+//             "Amenities, Discounts & Offers Display",
+//             "Integrated Airpay Payment Gateway",
+//             "Responsive & Mobile-Friendly UI",
+//             "SEO-Optimized Architecture with SSR",
+//             "Blog Section for Travel Guides",
+//             "High-Quality Image Gallery for Hotels",
+//             "Attraction & Destination Highlights"
+//         ],
+//         challengeSolutions: [
+//             {
+//                 title: "SEO Optimization with SSR",
+//                 desc: "Implemented Server-Side Rendering (SSR) in Next.js to improve website performance and SEO ranking, ensuring faster load times and better visibility on search engines."
+//             },
+//             {
+//                 title: "Dynamic Hotel & Location Management",
+//                 desc: "Built dynamic pages for multiple hotel destinations with reusable components, allowing the admin to easily add or modify hotels and attractions."
+//             },
+//             {
+//                 title: "Payment Integration with Airpay",
+//                 desc: "Integrated Airpay payment gateway to enable secure and reliable online transactions with proper error handling and transaction validation."
+//             },
+//             {
+//                 title: "Responsive UI/UX Development",
+//                 desc: "Designed and developed a fully responsive layout using Tailwind CSS to ensure seamless user experience across all devices and screen sizes."
+//             },
+//             {
+//                 title: "Image Gallery & Blog Implementation",
+//                 desc: "Added interactive image galleries for hotel rooms and integrated a content-driven blog section to improve user engagement and organic SEO reach."
+//             }
+//         ]
+//     },
+//     {
+//         id: 5,
+//         title: "SLA-FS – Financial Services Website",
+//         slug: "sla-fs-financial-services",
+//         company: "Exceleur Services Pvt Ltd",
+//         companyUrl: "https://exceleur.in/",
+//         role: "Frontend Developer (Next JS)",
+//         description: `<p>SLA-FS is a finance company website built to showcase their services and help clients make informed investment decisions. The platform highlights various financial solutions, including personalized budgeting, wealth creation and management, children's education planning, retirement planning, emergency fund management, and risk mitigation strategies. It also focuses on empowering women to achieve financial independence.</p>
 
-<p>Developed using Next.js with SCSS, the website emphasizes a smooth and engaging user experience through animated interactions. To address performance issues caused by the animation library, I implemented lazy loading and Server-Side Rendering (SSR), significantly improving page load speed and responsiveness.</p>
+// <p>Developed using Next.js with SCSS, the website emphasizes a smooth and engaging user experience through animated interactions. To address performance issues caused by the animation library, I implemented lazy loading and Server-Side Rendering (SSR), significantly improving page load speed and responsiveness.</p>
 
-<p>Although the website primarily serves as a portfolio and service showcase, it effectively communicates SLA-FS's expertise and builds trust with potential clients. The combination of modern UI/UX, optimized performance, and informative content ensures a professional and engaging digital presence for the company.</p>`,
-        image: slafs,
-        alt: "Financial Services Website",
-        tech: ["Next.js", "SCSS", "JavaScript", "Animations Library", "SSR Optimization", "Lazy Loading"],
-        github: null,
-        live: "https://slafs.in/",
-        category: "Frontend",
-        projectCategory: "Financial Services Website",
-        featured: false,
-        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
-        keyFeatures: [
-            "Showcase of Financial Services",
-            "Custom Budgeting & Lifestyle Planning",
-            "Children's Education & Retirement Planning",
-            "Wealth Creation & Management Insights",
-            "Risk Mitigation Guidance",
-            "Interactive Animations for Better UX",
-            "Server-Side Rendering (SSR) for Performance",
-            "Lazy Loading Implementation",
-            "Responsive & Mobile-Friendly Design",
-            "Informative & Professional Layout"
-        ],
-        challengeSolutions: [
-            {
-                title: "Performance Issues due to Animations",
-                desc: "The animations library enhanced UX but caused slow page loads. I implemented lazy loading for heavy components and optimized rendering to improve overall page speed."
-            },
-            {
-                title: "SSR Implementation",
-                desc: "Applied Server-Side Rendering in Next.js to ensure faster initial load, better SEO, and improved performance across all devices."
-            },
-            {
-                title: "Responsive & Engaging UI",
-                desc: "Designed a clean, responsive layout using SCSS, ensuring a smooth browsing experience across desktops, tablets, and mobile devices."
-            },
-            {
-                title: "Content Organization for Clarity",
-                desc: "Structured the website to highlight key services clearly and professionally, making it easy for potential clients to understand SLA-FS's offerings."
-            },
-            {
-                title: "Optimized UX with Animations",
-                desc: "Added subtle animations to enhance user interaction while keeping performance in check through optimization techniques."
-            }
-        ]
-    },
-    {
-        id: 6,
-        title: "Gamerji Fantasy Sport",
-        slug: "gamerji-fantasy-sport",
-        company: "Exceleur Services Pvt Ltd",
-        companyUrl: "https://exceleur.in/",
-        role: "Full stack Developer (MERN Stack)",
-        description: `<p>Gamerji Fantasy Sport is a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities. I specifically worked on the Picker (Picker) Game module, where users can create their own teams and compete according to Picker (Picker) Game rules in either public or private matches.</p>
+// <p>Although the website primarily serves as a portfolio and service showcase, it effectively communicates SLA-FS's expertise and builds trust with potential clients. The combination of modern UI/UX, optimized performance, and informative content ensures a professional and engaging digital presence for the company.</p>`,
+//         image: slafs,
+//         alt: "Financial Services Website",
+//         tech: ["Next.js", "SCSS", "JavaScript", "Animations Library", "SSR Optimization", "Lazy Loading"],
+//         github: null,
+//         live: "https://slafs.in/",
+//         category: "Frontend",
+//         projectCategory: "Financial Services Website",
+//         featured: false,
+//         note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
+//         keyFeatures: [
+//             "Showcase of Financial Services",
+//             "Custom Budgeting & Lifestyle Planning",
+//             "Children's Education & Retirement Planning",
+//             "Wealth Creation & Management Insights",
+//             "Risk Mitigation Guidance",
+//             "Interactive Animations for Better UX",
+//             "Server-Side Rendering (SSR) for Performance",
+//             "Lazy Loading Implementation",
+//             "Responsive & Mobile-Friendly Design",
+//             "Informative & Professional Layout"
+//         ],
+//         challengeSolutions: [
+//             {
+//                 title: "Performance Issues due to Animations",
+//                 desc: "The animations library enhanced UX but caused slow page loads. I implemented lazy loading for heavy components and optimized rendering to improve overall page speed."
+//             },
+//             {
+//                 title: "SSR Implementation",
+//                 desc: "Applied Server-Side Rendering in Next.js to ensure faster initial load, better SEO, and improved performance across all devices."
+//             },
+//             {
+//                 title: "Responsive & Engaging UI",
+//                 desc: "Designed a clean, responsive layout using SCSS, ensuring a smooth browsing experience across desktops, tablets, and mobile devices."
+//             },
+//             {
+//                 title: "Content Organization for Clarity",
+//                 desc: "Structured the website to highlight key services clearly and professionally, making it easy for potential clients to understand SLA-FS's offerings."
+//             },
+//             {
+//                 title: "Optimized UX with Animations",
+//                 desc: "Added subtle animations to enhance user interaction while keeping performance in check through optimization techniques."
+//             }
+//         ]
+//     },
+//     {
+//         id: 6,
+//         title: "Gamerji Fantasy Sport",
+//         slug: "gamerji-fantasy-sport",
+//         company: "Exceleur Services Pvt Ltd",
+//         companyUrl: "https://exceleur.in/",
+//         role: "Full stack Developer (MERN Stack)",
+//         description: `<p>Gamerji Fantasy Sport is a SaaS-based fantasy gaming platform where users participate in real-time cricket-based games and other gambling activities. I specifically worked on the Picker (Picker) Game module, where users can create their own teams and compete according to Picker (Picker) Game rules in either public or private matches.</p>
 
-<p>As a dedicated MERN stack developer, I built both the frontend and backend for managing private and public Picker (Picker) flows, including database management, admin panel functionalities, and real-time game updates. Socket.IO was integrated to handle real-time data transfer, ensuring smooth gameplay and instant updates. The platform also included payment gateway integration for managing deposits and winnings.</p>
+// <p>As a dedicated MERN stack developer, I built both the frontend and backend for managing private and public Picker (Picker) flows, including database management, admin panel functionalities, and real-time game updates. Socket.IO was integrated to handle real-time data transfer, ensuring smooth gameplay and instant updates. The platform also included payment gateway integration for managing deposits and winnings.</p>
 
-<p>This project allowed users to enjoy interactive fantasy gaming experiences with secure, real-time operations and a fully managed administrative workflow.</p>`,
-        image: projectImg,
-        alt: "Fantasy Sports Platform",
-        tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.IO", "CSS", "REST APIs", "Payment Gateway Integration"],
-        github: null,
-        live: null,
-        category: "Full Stack",
-        projectCategory: "SAAS-based Fantasy Sports Platform",
-        featured: true,
-        underDevelopment: true,
-        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
-        keyFeatures: [
-            "Fantasy Cricket & Gambling Platform",
-            "Picker Game: Public & Private Matches",
-            "Team Creation & Management",
-            "Real-Time Game Updates with Socket.IO",
-            "Admin Panel for Public Picker Creation",
-            "Frontend & Backend MERN Stack Development",
-            "Database Design & Management",
-            "Secure Payment Gateway Integration",
-            "Interactive & Responsive UI",
-            "Real-Time Score & Event Tracking"
-        ],
-        challengeSolutions: [
-            {
-                title: "Real-Time Gameplay Management",
-                desc: "Integrated Socket.IO to handle instant updates for game events, team scores, and player actions, ensuring smooth and synchronized gameplay for all users."
-            },
-            {
-                title: "Private & Public Picker Flow",
-                desc: "Developed dynamic logic to allow users to create private matches and participate in public Pickers generated by the admin, maintaining proper access control and game rules."
-            },
-            {
-                title: "MERN Fullstack Development",
-                desc: "Built frontend and backend components using React.js, Node.js, Express, and MongoDB, ensuring seamless integration and data consistency across the platform."
-            },
-            {
-                title: "Admin Panel Functionality",
-                desc: "Created an admin panel to manage public Picker games, monitor user activity, and enforce game rules efficiently."
-            },
-            {
-                title: "Payment Gateway Integration",
-                desc: "Integrated a payment system to handle deposits and winnings securely, ensuring reliable transactions for all users."
-            }
-        ]
-    },
-    {
-        id: 7,
-        title: "PROAITS-CRM",
-        slug: "proaits-crm",
-        company: "Exceleur Services Pvt Ltd",
-        companyUrl: "https://exceleur.in/",
-        role: "Backend Developer (PostgreSQL)",
-        description: `<p>PROAITS is a CRM platform designed to automate and optimize the hiring process for multiple companies through a microservices-based backend architecture. It enables companies to manage recruitment workflows including company profiles, contacts, jobs, and candidates efficiently.</p>
+// <p>This project allowed users to enjoy interactive fantasy gaming experiences with secure, real-time operations and a fully managed administrative workflow.</p>`,
+//         image: projectImg,
+//         alt: "Fantasy Sports Platform",
+//         tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.IO", "CSS", "REST APIs", "Payment Gateway Integration"],
+//         github: null,
+//         live: null,
+//         category: "Full Stack",
+//         projectCategory: "SAAS-based Fantasy Sports Platform",
+//         featured: true,
+//         underDevelopment: true,
+//         note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
+//         keyFeatures: [
+//             "Fantasy Cricket & Gambling Platform",
+//             "Picker Game: Public & Private Matches",
+//             "Team Creation & Management",
+//             "Real-Time Game Updates with Socket.IO",
+//             "Admin Panel for Public Picker Creation",
+//             "Frontend & Backend MERN Stack Development",
+//             "Database Design & Management",
+//             "Secure Payment Gateway Integration",
+//             "Interactive & Responsive UI",
+//             "Real-Time Score & Event Tracking"
+//         ],
+//         challengeSolutions: [
+//             {
+//                 title: "Real-Time Gameplay Management",
+//                 desc: "Integrated Socket.IO to handle instant updates for game events, team scores, and player actions, ensuring smooth and synchronized gameplay for all users."
+//             },
+//             {
+//                 title: "Private & Public Picker Flow",
+//                 desc: "Developed dynamic logic to allow users to create private matches and participate in public Pickers generated by the admin, maintaining proper access control and game rules."
+//             },
+//             {
+//                 title: "MERN Fullstack Development",
+//                 desc: "Built frontend and backend components using React.js, Node.js, Express, and MongoDB, ensuring seamless integration and data consistency across the platform."
+//             },
+//             {
+//                 title: "Admin Panel Functionality",
+//                 desc: "Created an admin panel to manage public Picker games, monitor user activity, and enforce game rules efficiently."
+//             },
+//             {
+//                 title: "Payment Gateway Integration",
+//                 desc: "Integrated a payment system to handle deposits and winnings securely, ensuring reliable transactions for all users."
+//             }
+//         ]
+//     },
+//     {
+//         id: 7,
+//         title: "PROAITS-CRM",
+//         slug: "proaits-crm",
+//         company: "Exceleur Services Pvt Ltd",
+//         companyUrl: "https://exceleur.in/",
+//         role: "Backend Developer (PostgreSQL)",
+//         description: `<p>PROAITS is a CRM platform designed to automate and optimize the hiring process for multiple companies through a microservices-based backend architecture. It enables companies to manage recruitment workflows including company profiles, contacts, jobs, and candidates efficiently.</p>
 
-<p>Each module — Company, Company Contacts, Jobs, and Candidates — features complete CRUD operations with Role-Based Access Control (RBAC). The system includes advanced capabilities such as audit logging, analytics and reporting, backend-driven filtering and pagination, push notifications, and global plus Boolean search functionality. Additionally, it supports AI-powered resume parsing using Python and integrates Outlook email for seamless communication across modules.</p>
+// <p>Each module — Company, Company Contacts, Jobs, and Candidates — features complete CRUD operations with Role-Based Access Control (RBAC). The system includes advanced capabilities such as audit logging, analytics and reporting, backend-driven filtering and pagination, push notifications, and global plus Boolean search functionality. Additionally, it supports AI-powered resume parsing using Python and integrates Outlook email for seamless communication across modules.</p>
 
-<p>We are expanding the platform with AI-driven features like automated screening, candidate communication, and performance-based filtering.</p>
+// <p>We are expanding the platform with AI-driven features like automated screening, candidate communication, and performance-based filtering.</p>
 
-<p>As a backend developer, I worked on architecting and developing the microservices using Node.js with TypeScript, Express.js, and PostgreSQL with Prisma ORM. I also implemented Docker for containerization and set up CI/CD pipelines for automated deployment and scalability.</p>`,
-        image: projectImg,
-        alt: "Hiring CRM System",
-        tech: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Docker", "CI/CD", "Microservices", "Outlook Integration", "Python (AI Resume Parsing)"],
-        github: null,
-        live: null,
-        category: "Backend",
-        projectCategory: "CRM software - Hiring management",
-        featured: true,
-        underDevelopment: true,
-        note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
-        keyFeatures: [
-            "Microservices-Based Backend Architecture",
-            "Role-Based Access Control (RBAC)",
-            "Comprehensive CRUD Operations for All Modules",
-            "Audit Logs and Reporting with Analytics",
-            "Backend-Driven Filtering and Pagination",
-            "Push Notifications System",
-            "Global and Boolean Search (AND, OR, NOT)",
-            "AI-Powered Resume Parsing (Python Integration)",
-            "Outlook Email Integration for Communication",
-            "CI/CD Deployment with Docker"
-        ],
-        challengeSolutions: [
-            {
-                title: "Scalable Microservices Architecture",
-                desc: "Implemented modular backend services for independent deployment and scaling of core CRM modules like jobs, candidates, and companies."
-            },
-            {
-                title: "AI Resume Parsing",
-                desc: "Integrated Python-based AI model for resume parsing, enabling structured data extraction and faster candidate profiling."
-            },
-            {
-                title: "Advanced Search and Filtering",
-                desc: "Developed complex backend logic for global and Boolean search functionality, allowing efficient filtering of records across multiple modules."
-            },
-            {
-                title: "RBAC and Audit Logs",
-                desc: "Ensured secure user access and accountability by implementing role-based permissions and maintaining detailed audit logs of all user actions."
-            },
-            {
-                title: "Outlook Integration & Automation",
-                desc: "Integrated Outlook APIs to manage candidate and client communications directly from within the CRM ecosystem."
-            },
-            {
-                title: "CI/CD and Docker Deployment",
-                desc: "Configured Dockerized services with continuous integration and deployment pipelines for automated and consistent delivery."
-            }
-        ]
-    }
+// <p>As a backend developer, I worked on architecting and developing the microservices using Node.js with TypeScript, Express.js, and PostgreSQL with Prisma ORM. I also implemented Docker for containerization and set up CI/CD pipelines for automated deployment and scalability.</p>`,
+//         image: projectImg,
+//         alt: "Hiring CRM System",
+//         tech: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Prisma ORM", "Docker", "CI/CD", "Microservices", "Outlook Integration", "Python (AI Resume Parsing)"],
+//         github: null,
+//         live: null,
+//         category: "Backend",
+//         projectCategory: "CRM software - Hiring management",
+//         featured: true,
+//         underDevelopment: true,
+//         note: "This project was developed during my employment at Exceleur Services Pvt Ltd. All rights and ownership belong to the respective company.",
+//         keyFeatures: [
+//             "Microservices-Based Backend Architecture",
+//             "Role-Based Access Control (RBAC)",
+//             "Comprehensive CRUD Operations for All Modules",
+//             "Audit Logs and Reporting with Analytics",
+//             "Backend-Driven Filtering and Pagination",
+//             "Push Notifications System",
+//             "Global and Boolean Search (AND, OR, NOT)",
+//             "AI-Powered Resume Parsing (Python Integration)",
+//             "Outlook Email Integration for Communication",
+//             "CI/CD Deployment with Docker"
+//         ],
+//         challengeSolutions: [
+//             {
+//                 title: "Scalable Microservices Architecture",
+//                 desc: "Implemented modular backend services for independent deployment and scaling of core CRM modules like jobs, candidates, and companies."
+//             },
+//             {
+//                 title: "AI Resume Parsing",
+//                 desc: "Integrated Python-based AI model for resume parsing, enabling structured data extraction and faster candidate profiling."
+//             },
+//             {
+//                 title: "Advanced Search and Filtering",
+//                 desc: "Developed complex backend logic for global and Boolean search functionality, allowing efficient filtering of records across multiple modules."
+//             },
+//             {
+//                 title: "RBAC and Audit Logs",
+//                 desc: "Ensured secure user access and accountability by implementing role-based permissions and maintaining detailed audit logs of all user actions."
+//             },
+//             {
+//                 title: "Outlook Integration & Automation",
+//                 desc: "Integrated Outlook APIs to manage candidate and client communications directly from within the CRM ecosystem."
+//             },
+//             {
+//                 title: "CI/CD and Docker Deployment",
+//                 desc: "Configured Dockerized services with continuous integration and deployment pipelines for automated and consistent delivery."
+//             }
+//         ]
+//     }
 ]
 
 // ---------------------------------------------------
