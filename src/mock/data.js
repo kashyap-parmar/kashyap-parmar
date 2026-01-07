@@ -456,64 +456,64 @@ export const SampleProjectsData = [
             }
         ]
     },
-    {
-        id: 3,
-        title: "MXM News",
-        slug: "mxm-news-aggregator",
-        company: "Jain Bhavesh Solution",
-        companyUrl: "https://www.jbsolutions.in/",
-        role: "Full Stack Developer (Next.js)",
-        description: `<p>MXM News is a modern news aggregation platform built with Next.js that curates and displays trending articles from multiple reliable sources and publishers. The platform delivers real-time news updates in a visually engaging card layout, categorized into various sections like Entertainment, Sports, Technology, and Business.</p>
+//     {
+//         id: 3,
+//         title: "MXM News",
+//         slug: "mxm-news-aggregator",
+//         company: "Jain Bhavesh Solution",
+//         companyUrl: "https://www.jbsolutions.in/",
+//         role: "Full Stack Developer (Next.js)",
+//         description: `<p>MXM News is a modern news aggregation platform built with Next.js that curates and displays trending articles from multiple reliable sources and publishers. The platform delivers real-time news updates in a visually engaging card layout, categorized into various sections like Entertainment, Sports, Technology, and Business.</p>
 
-<p>Users can sign up and personalize their news experience by selecting preferred categories, saving articles, and receiving personalized recommendations based on their reading interests. I implemented secure user authentication and state management to maintain user sessions and preferences efficiently.</p>
+// <p>Users can sign up and personalize their news experience by selecting preferred categories, saving articles, and receiving personalized recommendations based on their reading interests. I implemented secure user authentication and state management to maintain user sessions and preferences efficiently.</p>
 
-<p>A custom push notification system was also integrated to keep users informed of breaking news or updates in their chosen categories. The project features a responsive design with smooth navigation and optimized API handling to ensure fast loading and performance.</p>
+// <p>A custom push notification system was also integrated to keep users informed of breaking news or updates in their chosen categories. The project features a responsive design with smooth navigation and optimized API handling to ensure fast loading and performance.</p>
 
-<p>Overall, MXM News provides a dynamic and personalized news-reading experience, merging real-time data aggregation with intelligent user preference tracking for a smarter and more engaging platform.</p>`,
-        image: mxmNews,
-        alt: "MXM news Aggregator App",
-        tech: ["Next.js", "Node.js", "MongoDB", "REST APIs", "CSS3", "Firebase Cloud Messaging"],
-        github: null,
-        live: "https://mxmNews.com/",
-        category: "Full Stack",
-        projectCategory: "News Aggregation Platform",
-        featured: false,
-        note: "This project was developed during my employment at Jain Bhavesh Solution. All rights and ownership belong to the respective company.",
-        keyFeatures: [
-            "Real-Time News Aggregation",
-            "Category-Based News Filtering",
-            "Personalized User Dashboard",
-            "User Authentication & Authorization",
-            "Save & Bookmark News Articles",
-            "Push Notification System for Breaking News",
-            "Responsive Card-Based UI Design",
-            "Interest-Based News Recommendations",
-            "Optimized API Handling & Caching",
-            "Dark Mode Support for Better UX"
-        ],
-        challengeSolutions: [
-            {
-                title: "News Aggregation from Multiple Sources",
-                desc: "Integrated third-party APIs to fetch and combine articles from various publishers, ensuring up-to-date and relevant content while maintaining performance through API rate optimization."
-            },
-            {
-                title: "Personalized News Recommendations",
-                desc: "Developed an interest-based recommendation system that filters and displays news according to each user’s saved categories and reading history."
-            },
-            {
-                title: "Push Notification System",
-                desc: "Implemented Firebase Cloud Messaging to send real-time push notifications for breaking news and category-specific updates, improving user engagement."
-            },
-            {
-                title: "User Authentication & Data Management",
-                desc: "Integrated secure login and registration using JWT-based authentication. Stored user preferences, saved news, and selected categories in MongoDB for persistent personalization."
-            },
-            {
-                title: "Performance Optimization & UI Responsiveness",
-                desc: "Used Next.js dynamic rendering and caching to reduce API load and implemented responsive, mobile-friendly card layouts for a seamless reading experience across devices."
-            }
-        ]
-    },
+// <p>Overall, MXM News provides a dynamic and personalized news-reading experience, merging real-time data aggregation with intelligent user preference tracking for a smarter and more engaging platform.</p>`,
+//         image: mxmNews,
+//         alt: "MXM news Aggregator App",
+//         tech: ["Next.js", "Node.js", "MongoDB", "REST APIs", "CSS3", "Firebase Cloud Messaging"],
+//         github: null,
+//         live: "https://mxmNews.com/",
+//         category: "Full Stack",
+//         projectCategory: "News Aggregation Platform",
+//         featured: false,
+//         note: "This project was developed during my employment at Jain Bhavesh Solution. All rights and ownership belong to the respective company.",
+//         keyFeatures: [
+//             "Real-Time News Aggregation",
+//             "Category-Based News Filtering",
+//             "Personalized User Dashboard",
+//             "User Authentication & Authorization",
+//             "Save & Bookmark News Articles",
+//             "Push Notification System for Breaking News",
+//             "Responsive Card-Based UI Design",
+//             "Interest-Based News Recommendations",
+//             "Optimized API Handling & Caching",
+//             "Dark Mode Support for Better UX"
+//         ],
+//         challengeSolutions: [
+//             {
+//                 title: "News Aggregation from Multiple Sources",
+//                 desc: "Integrated third-party APIs to fetch and combine articles from various publishers, ensuring up-to-date and relevant content while maintaining performance through API rate optimization."
+//             },
+//             {
+//                 title: "Personalized News Recommendations",
+//                 desc: "Developed an interest-based recommendation system that filters and displays news according to each user’s saved categories and reading history."
+//             },
+//             {
+//                 title: "Push Notification System",
+//                 desc: "Implemented Firebase Cloud Messaging to send real-time push notifications for breaking news and category-specific updates, improving user engagement."
+//             },
+//             {
+//                 title: "User Authentication & Data Management",
+//                 desc: "Integrated secure login and registration using JWT-based authentication. Stored user preferences, saved news, and selected categories in MongoDB for persistent personalization."
+//             },
+//             {
+//                 title: "Performance Optimization & UI Responsiveness",
+//                 desc: "Used Next.js dynamic rendering and caching to reduce API load and implemented responsive, mobile-friendly card layouts for a seamless reading experience across devices."
+//             }
+//         ]
+//     },
 //     {
 //         id: 4,
 //         title: "Moustachescapes – Hotel Booking Platform",
