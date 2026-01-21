@@ -25,14 +25,14 @@ const HeroSection = () => {
                         <div className='w-full flex flex-col gap-2 items-end text-2xl' >
                             <div class="w-full gap-y-4 flex flex-col">
                                 <p class="text-5xl lg:text-7xl font-bold leading-tight">
-                                    Hi, I'm
+                                    Hi, I&apos;m
                                     <span class="text-gradient ml-2">
                                         Kashyap
                                     </span>
                                 </p>
-                                <p class="text-xl lg:text-2xl text-[#64748b] dark:text-[#94a3b8] font-medium">More Than Just Code,<span class="text-black ml-2 dark:text-white">It's Your Digital Vision</span></p></div>
+                                <p class="text-xl lg:text-2xl text-[#64748b] dark:text-[#94a3b8] font-medium">More Than Just Code,<span class="text-black ml-2 dark:text-white">It&apos;s Your Digital Vision</span></p></div>
                             <p class="text-lg text-[#64748b] dark:text-[#94a3b8] leading-relaxed text-justify">
-                                As a skilled MERN stack developer, I bring ideas to life by creating dynamic, responsive, and user-centric web applications. Whether it's designing intuitive front-end interfaces or building robust back-end systems, I ensure every project is both scalable and optimized for performance.
+                                As a skilled MERN stack developer, I bring ideas to life by creating dynamic, responsive, and user-centric web applications. Whether it&apos;s designing intuitive front-end interfaces or building robust back-end systems, I ensure every project is both scalable and optimized for performance.
                             </p>
                         </div>
                     </div>
