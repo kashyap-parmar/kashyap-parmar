@@ -22,30 +22,23 @@ const HeroSection = () => {
                     </div>
 
                     <div className='w-full gap-y-2 pt-8 flex flex-col'>
-                        <div className='w-full flex gap-2 items-end text-2xl' >
-                            <p className='font-bold leading-tight flex gap-1'>
-                                Hi, I&apos;m{" "}
-                                <span className='text-gradient'>
-                                    Kashyap,
-                                </span>
-                            </p>
-                            <p className='text-xl' >
-                                Founder @ <span className='font-bold' >MERN Studio!</span>
+                        <div className='w-full flex flex-col gap-2 items-end text-2xl' >
+                            <div class="w-full gap-y-4 flex flex-col">
+                                <p class="text-5xl lg:text-7xl font-bold leading-tight">
+                                    Hi, I'm
+                                    <span class="text-gradient ml-2">
+                                        Kashyap
+                                    </span>
+                                </p>
+                                <p class="text-xl lg:text-2xl text-[#64748b] dark:text-[#94a3b8] font-medium">More Than Just Code,<span class="text-black ml-2 dark:text-white">It's Your Digital Vision</span></p></div>
+                            <p class="text-lg text-[#64748b] dark:text-[#94a3b8] leading-relaxed text-justify">
+                                As a skilled MERN stack developer, I bring ideas to life by creating dynamic, responsive, and user-centric web applications. Whether it's designing intuitive front-end interfaces or building robust back-end systems, I ensure every project is both scalable and optimized for performance.
                             </p>
                         </div>
-                        <span className="text-6xl lg:text-7xl mt-2 sm:leading-[76px] text-primary font-extrabold mr-2 uppercase">10x Faster</span>
-                        <p className="text-base lg:text-xl font-semibold">
-                            Introducing 3D Model — Design, Development, and Deployment.
-                        </p>
-                        <p className='text-lg lg:text-lg text-justify text-[#64748b] dark:text-[#94a3b8]'>
-                            This model outperforms traditional development by integrates AI automation to remove repetitive and time-consuming tasks from the workflow.
-                            The result is a smoother development experience with fewer bottlenecks and faster output.
-                            Your product reaches market faster, stronger, and with greater reliability than the usual approach.
-                        </p>
                     </div>
 
                     <div className='w-full pt-12 flex gap-y-6 md:gap-y-0 flex-col sm:flex-row sm:gap-x-8'>
-                        <Link href={"/3d-model"}>
+                        <Link href={"/3d-model"} className='hidden' >
                             <button data-testid="home-hero-explore-3d-model-btn" className="w-full max-w-[300px] relative overflow-hidden bg-primary text-white font-semibold text-sm py-4 h-fit flex justify-center gap-x-4 items-center px-8 rounded-full group">
                                 <span className="relative z-10 flex items-center gap-x-4">
                                     Explore 10x Faster 3D Model

@@ -13,7 +13,7 @@ const Navbar = ({ show }) => {
     const { theme, setTheme } = useTheme();
     const pathname = usePathname();
     const router = useRouter();
-    const notShowingTrue = (pathname.includes("project") || pathname.includes("blog") || pathname.includes("admin"));
+    const notShowingTrue = (pathname.includes("pjt") || pathname.includes("blog") || pathname.includes("admin"));
     const regex = /^\/(#\w+)?$/;
     const otherRoutes = /^\/\w.+$/;
 
@@ -45,7 +45,7 @@ const Navbar = ({ show }) => {
         >
             {/* Desktop Navbar */}
             <div className="hidden lg:flex items-center justify-center w-full bg-transparent">
-                <div className="flex px-8 card-glow items-center py-4 max-w-[920px] justify-between w-full backdrop-blur-xl rounded-full bg-[#FDFEFF] dark:bg-[#030919] transition-colors duration-300">
+                <div className="flex gap-8 px-8 card-glow items-center py-4 justify-between w-fit backdrop-blur-xl rounded-full bg-[#FDFEFF] dark:bg-[#030919] transition-colors duration-300">
                     <NextLink href="/#contact">
                         <p className="cursor-pointer text-2xl bg-gradient-to-r from-primary via-blue-600 to-cyan-600 bg-clip-text text-transparent logo-animate font-bold">
                             Mern <span className="dark:text-white text-black" > Developer </span>

@@ -7,7 +7,8 @@ import { SampleProjectsData } from "@/mock/data";
 // ----------------------------------------------
 
 const RecentProjectSection = () => {
-    return (
+
+    SampleProjectsData?.length > 0 ? (
         <div
             id="projects"
             className="pt-28 max-w-full flex justify-center dark:bg-[#040B1C] section-bg items-center lapxl:px-0 p-4 sm:px-8 overflow-hidden"
@@ -55,7 +56,8 @@ const RecentProjectSection = () => {
                 </div>
             </div>
         </div>
-    );
+    )
+        : null
 };
 
 export default RecentProjectSection;
