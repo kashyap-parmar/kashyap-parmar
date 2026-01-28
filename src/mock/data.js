@@ -237,13 +237,13 @@ export const FeaturedSkillsData = [
             {
                 icon: "mdi:graphql",
                 heading: "GraphQL",
-                level: "Intermediate",
+                level: "Basic",
                 type: "API Language"
             },
             {
                 icon: "cib:socket-io",
                 heading: "Socket.io",
-                level: "Advanced",
+                level: "Intermediate",
                 type: "Communication library"
             },
             {
@@ -295,13 +295,13 @@ export const FeaturedSkillsData = [
             {
                 icon: "streamline-logos:docker-logo",
                 heading: "Docker",
-                level: "Intermediate",
+                level: "Basic",
                 type: "Containrized Platform"
             },
             {
                 icon: "material-symbols:cloud-outline",
                 heading: "AWS",
-                level: "Intermediate",
+                level: "Basic",
                 type: "Cloud Platform"
             },
             {
@@ -313,7 +313,7 @@ export const FeaturedSkillsData = [
             {
                 icon: "simple-icons:render",
                 heading: "Render",
-                level: "Advanced",
+                level: "Intermediate",
                 type: "Cloud Platform"
             },
             {
